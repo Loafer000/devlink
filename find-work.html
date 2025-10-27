@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevLink - Find Work</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#FF7A00",
+              "secondary": "#00C4B3",
+              "background-light": "#f8f7f5",
+              "background-dark": "#1A1A1A",
+              "surface-dark": "#2C2C2C",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"],
+              "body": ["Inter", "sans-serif"]
+            },
+            borderRadius: {
+                "DEFAULT": "0.5rem", 
+                "lg": "0.75rem", 
+                "xl": "1rem", 
+                "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-white font-body">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<header class="sticky top-0 z-50 bg-background-dark/80 backdrop-blur-lg">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-20 items-center justify-between border-b border-white/10">
+<a href="index.html" class="flex items-center gap-4">
+<svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="font-display text-white text-xl font-bold">DevLink</h2>
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="index.html">Home</a>
+<a class="text-white hover:text-white text-sm font-medium transition-colors" href="find-work.html">Find Work</a>
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="community.html">Community</a>
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="premium.html">Premium</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden sm:block text-white/80 hover:text-white text-sm font-medium transition-colors" href="login.html">Log In</a>
+<a href="signup.html" class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold tracking-wide transition-transform hover:scale-105">
+<span class="truncate">Sign Up</span>
+</a>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+<div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
+<div class="text-center md:text-left">
+<h1 class="font-display text-4xl sm:text-5xl font-bold tracking-tight">Find Your Next Challenge</h1>
+<p class="mt-2 text-lg text-white/70">Browse through client issues and find where your skills can make an impact.</p>
+</div>
+<a href="login.html" class="flex shrink-0 min-w-[140px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold tracking-wide transition-transform hover:scale-105">
+<span class="material-symbols-outlined">add</span>
+<span class="truncate">Post an Issue</span>
+</a>
+</div>
+<div class="flex flex-col lg:flex-row gap-6 mb-8">
+<aside class="w-full lg:w-64 xl:w-72 flex-shrink-0">
+<div class="sticky top-28 space-y-6">
+<div class="rounded-xl border border-white/10 bg-surface-dark p-6">
+<h3 class="font-display text-lg font-bold mb-4">Filters</h3>
+<div class="space-y-4">
+<div>
+<label class="sr-only" for="search">Search</label>
+<div class="relative">
+<input class="w-full rounded-md border-white/10 bg-background-dark text-white placeholder-white/50 focus:border-primary focus:ring-primary" id="search" name="search" placeholder="Search by keyword..." type="search"/>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+<span class="material-symbols-outlined text-white/50">search</span>
+</div>
+</div>
+</div>
+<div>
+<label class="sr-only" for="category">Category</label>
+<select class="w-full rounded-md border-white/10 bg-background-dark text-white placeholder-white/50 focus:border-primary focus:ring-primary" id="category" name="category">
+<option>All Categories</option>
+<option>Frontend Development</option>
+<option>Backend Development</option>
+<option>DevOps &amp; Cloud</option>
+<option>Mobile Development</option>
+<option>UI/UX Design</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-white/80 mb-2" for="price-range">Price Range</label>
+<input class="w-full h-2 bg-background-dark rounded-lg appearance-none cursor-pointer accent-primary" id="price-range" max="5000" min="0" name="price-range" type="range"/>
+<div class="flex justify-between text-xs text-white/60 mt-1">
+<span>$0</span>
+<span>$5000+</span>
+</div>
+</div>
+<div class="space-y-2">
+<h4 class="text-sm font-medium text-white/80">Experience Level</h4>
+<div class="flex items-center gap-2">
+<input class="h-4 w-4 rounded border-white/20 bg-background-dark text-primary focus:ring-primary" id="entry" type="checkbox"/>
+<label class="text-sm text-white/80" for="entry">Entry Level</label>
+</div>
+<div class="flex items-center gap-2">
+<input class="h-4 w-4 rounded border-white/20 bg-background-dark text-primary focus:ring-primary" id="intermediate" type="checkbox"/>
+<label class="text-sm text-white/80" for="intermediate">Intermediate</label>
+</div>
+<div class="flex items-center gap-2">
+<input class="h-4 w-4 rounded border-white/20 bg-background-dark text-primary focus:ring-primary" id="expert" type="checkbox"/>
+<label class="text-sm text-white/80" for="expert">Expert</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<div class="flex-1">
+<div class="space-y-4">
+<div class="rounded-xl border border-white/10 bg-surface-dark p-6 transition-all hover:border-primary/80 hover:shadow-2xl hover:shadow-primary/10">
+<div class="flex flex-col sm:flex-row justify-between gap-4">
+<div>
+<div class="flex items-center gap-3">
+<h3 class="font-display text-xl font-bold text-white hover:text-primary transition-colors"><a href="issue-details.html">Optimize Frontend Performance for E-commerce Site</a></h3>
+<span class="inline-flex items-center rounded-full bg-secondary/10 px-2.5 py-0.5 text-xs font-medium text-secondary">Frontend</span>
+</div>
+<p class="mt-2 text-sm text-white/60 max-w-xl">We're experiencing slow load times on our product pages. Looking for a React expert to analyze and implement performance improvements, including code splitting, lazy loading, and image optimization.</p>
+</div>
+<div class="flex-shrink-0 text-left sm:text-right">
+<p class="font-display text-2xl font-bold text-secondary">$1,200</p>
+<p class="text-xs text-white/50">Estimated Budget</p>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="avatar of a smiling woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBBHEF1RCe2sF6r1i7TeAqQ0PqvmWC-1GqiyIjidJjw84aKM0a9Ez3L6ugfjaWp9dueX6YQQgY0m2iEztKHGqq90rkh2RkEMWiYgvMk_JEMEicjiTrpJZXk0eBWHyAYErl5oNbMM-4kQUaapXVFpbTXS_jnEwLwEanCVsWKEnWGuPiAEqz20tTvCbg_cG1z1V3ES4DiKLRI-g8rUrQOWk15jzgfohvXH3c6_ULR2g3PpOSlOX3THlPgCDp-HUDSgfGmknSWlGIFbe-9");'></div>
+<div>
+<p class="font-bold text-sm text-white">Sarah L.</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm text-white/80">4.9</span>
+<span class="text-xs text-white/60">(32 reviews)</span>
+</div>
+</div>
+</div>
+</div>
+<a href="issue-details.html" class="w-full sm:w-auto flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary/20 text-primary text-sm font-bold tracking-wide ring-1 ring-primary/50 transition-all hover:bg-primary/30 hover:ring-primary">
+<span class="truncate">View Details</span>
+</a>
+</div>
+</div>
+<div class="rounded-xl border border-white/10 bg-surface-dark p-6 transition-all hover:border-primary/80 hover:shadow-2xl hover:shadow-primary/10">
+<div class="flex flex-col sm:flex-row justify-between gap-4">
+<div>
+<div class="flex items-center gap-3">
+<h3 class="font-display text-xl font-bold text-white hover:text-primary transition-colors"><a href="issue-details.html">Setup CI/CD Pipeline for a Node.js Application</a></h3>
+<span class="inline-flex items-center rounded-full bg-secondary/10 px-2.5 py-0.5 text-xs font-medium text-secondary">DevOps</span>
+</div>
+<p class="mt-2 text-sm text-white/60 max-w-xl">Need an experienced DevOps engineer to create a robust CI/CD pipeline using GitHub Actions and AWS. The goal is to automate testing, building, and deployment to our staging and production environments.</p>
+</div>
+<div class="flex-shrink-0 text-left sm:text-right">
+<p class="font-display text-2xl font-bold text-secondary">$2,500</p>
+<p class="text-xs text-white/50">Estimated Budget</p>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="avatar of a man with glasses" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDt0TIklJUL65zYNdHmkDRzFnxFEHwf4OnAYPipeB0B15fKj7OPxCXnS0A9pKl48GqGwPJbMDymbomte8wh0RojZx8CZYB4OhIOO6V19iVUJB0cL1Tm2JkgIPLrxAaenezyYQXwdsYSoNXDTqUTra5iTDTvirBIrlkN3MdVV2mFNPOMD24GPUf8yTO0QeP8-g3DXRR16cug4mdaBc-qvwTEG8V4pmbecyLcQezI_pmMak4Y8iVNzNdNW4I7cNMyS8f1DJfu61f0lJTR");'></div>
+<div>
+<p class="font-bold text-sm text-white">David Chen</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm text-white/80">5.0</span>
+<span class="text-xs text-white/60">(51 reviews)</span>
+</div>
+</div>
+</div>
+</div>
+<a href="issue-details.html" class="w-full sm:w-auto flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary/20 text-primary text-sm font-bold tracking-wide ring-1 ring-primary/50 transition-all hover:bg-primary/30 hover:ring-primary">
+<span class="truncate">View Details</span>
+</a>
+</div>
+</div>
+<div class="rounded-xl border border-white/10 bg-surface-dark p-6 transition-all hover:border-primary/80 hover:shadow-2xl hover:shadow-primary/10">
+<div class="flex flex-col sm:flex-row justify-between gap-4">
+<div>
+<div class="flex items-center gap-3">
+<h3 class="font-display text-xl font-bold text-white hover:text-primary transition-colors"><a href="issue-details.html">Build a REST API for a Mobile App Backend</a></h3>
+<span class="inline-flex items-center rounded-full bg-secondary/10 px-2.5 py-0.5 text-xs font-medium text-secondary">Backend</span>
+</div>
+<p class="mt-2 text-sm text-white/60 max-w-xl">We are looking for a Python/Django developer to build a secure and scalable REST API. Responsibilities include database design, endpoint creation, and user authentication.</p>
+</div>
+<div class="flex-shrink-0 text-left sm:text-right">
+<p class="font-display text-2xl font-bold text-secondary">$3,000 - $4,500</p>
+<p class="text-xs text-white/50">Estimated Budget</p>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="avatar of a professional woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCykTSdJ_r8FpLXltQeiwEnTRWokejJz_GoNPuebFO_ItTBTBuWpOWFREwuN0smEcaYtawLFHR7foGdNEosSb0yjpNFREtERAkZDOtBgggiSi8FDP73h6_FOeo885-WWny6Stlp_sCwn7e1BSf8jkJUnsi5CpB4_P0SIIxvFKBw1lTLF25eIpy-9zDt8UV2BfRdcqXGuCas0I2CTwCoxUMxmLMLWBXN6k4MbPhxNYwKFkT1_73k1cenHJQYgU0-BGnUmV2wYv-y2fM8");'></div>
+<div>
+<p class="font-bold text-sm text-white">Maria Garcia</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm text-white/80">4.8</span>
+<span class="text-xs text-white/60">(19 reviews)</span>
+</div>
+</div>
+</div>
+</div>
+<a href="issue-details.html" class="w-full sm:w-auto flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary/20 text-primary text-sm font-bold tracking-wide ring-1 ring-primary/50 transition-all hover:bg-primary/30 hover:ring-primary">
+<span class="truncate">View Details</span>
+</a>
+</div>
+</div>
+<div class="rounded-xl border border-white/10 bg-surface-dark p-6 transition-all hover:border-primary/80 hover:shadow-2xl hover:shadow-primary/10">
+<div class="flex flex-col sm:flex-row justify-between gap-4">
+<div>
+<div class="flex items-center gap-3">
+<h3 class="font-display text-xl font-bold text-white hover:text-primary transition-colors"><a href="issue-details.html">UI/UX Design for a SaaS Dashboard</a></h3>
+<span class="inline-flex items-center rounded-full bg-secondary/10 px-2.5 py-0.5 text-xs font-medium text-secondary">UI/UX Design</span>
+</div>
+<p class="mt-2 text-sm text-white/60 max-w-xl">We need a talented designer to create an intuitive and visually appealing dashboard for our new analytics tool. Deliverables should include wireframes, mockups, and a prototype in Figma.</p>
+</div>
+<div class="flex-shrink-0 text-left sm:text-right">
+<p class="font-display text-2xl font-bold text-secondary">$1,800</p>
+<p class="text-xs text-white/50">Estimated Budget</p>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="avatar of a smiling woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBBHEF1RCe2sF6r1i7TeAqQ0PqvmWC-1GqiyIjidJjw84aKM0a9Ez3L6ugfjaWp9dueX6YQQgY0m2iEztKHGqq90rkh2RkEMWiYgvMk_JEMEicjiTrpJZXk0eBWHyAYErl5oNbMM-4kQUaapXVFpbTXS_jnEwLwEanCVsWKEnWGuPiAEqz20tTvCbg_cG1z1V3ES4DiKLRI-g8rUrQOWk15jzgfohvXH3c6_ULR2g3PpOSlOX3THlPgCDp-HUDSgfGmknSWlGIFbe-9");'></div>
+<div>
+<p class="font-bold text-sm text-white">Sarah L.</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary" style="font-size: 16px; font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm text-white/80">4.9</span>
+<span class="text-xs text-white/60">(32 reviews)</span>
+</div>
+</div>
+</div>
+</div>
+<a href="issue-details.html" class="w-full sm:w-auto flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary/20 text-primary text-sm font-bold tracking-wide ring-1 ring-primary/50 transition-all hover:bg-primary/30 hover:ring-primary">
+<span class="truncate">View Details</span>
+</a>
+</div>
+</div>
+<div class="mt-8 flex justify-center">
+<nav aria-label="Pagination" class="flex items-center gap-2">
+<a class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-white/60 ring-1 ring-white/10 hover:bg-surface-dark" href="#">
+<span class="material-symbols-outlined">chevron_left</span>
+</a>
+<a class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white font-bold ring-1 ring-primary" href="#">1</a>
+<a class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-white/80 ring-1 ring-white/10 hover:bg-surface-dark" href="#">2</a>
+<a class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-white/80 ring-1 ring-white/10 hover:bg-surface-dark" href="#">3</a>
+<span class="text-white/60">...</span>
+<a class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-white/80 ring-1 ring-white/10 hover:bg-surface-dark" href="#">8</a>
+<a class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-white/60 ring-1 ring-white/10 hover:bg-surface-dark" href="#">
+<span class="material-symbols-outlined">chevron_right</span>
+</a>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-surface-dark border-t border-white/10">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+<div class="col-span-2 lg:col-span-1">
+<div class="flex items-center gap-2">
+<svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="font-display text-white text-xl font-bold">DevLink</h2>
+</div>
+<p class="mt-4 text-sm text-white/50">The future of freelance is here.</p>
+</div>
+<div>
+<h4 class="font-display font-semibold text-white">Product</h4>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="client-dashboard.html">Find Talent</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="find-work.html">Find Work</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="premium.html">Premium</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="index.html#features">Features</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-display font-semibold text-white">Company</h4>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">About Us</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Careers</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="community.html">Community</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-display font-semibold text-white">Support</h4>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Help Center</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Contact Us</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between">
+<p class="text-sm text-white/50">© 2024 DevLink. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

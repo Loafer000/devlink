@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevLink - Stop Bidding. Start Solving.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;family=Fira+Code&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link href="assets/css/styles.css" rel="stylesheet"/>
+<script src="assets/js/tailwind-config.js"></script>
+</head>
+<body class="bg-background-dark text-white font-body">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Top Nav Bar -->
+<header class="sticky top-0 z-50 bg-background-dark/80 backdrop-blur-lg">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-20 items-center justify-between border-b border-white/10">
+<a href="index.html" class="flex items-center gap-4">
+<svg class="h-6 w-6 text-primary" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="font-display text-white text-xl font-bold">DevLink</h2>
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="#features">How It Works</a>
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="community.html">Community</a>
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="premium.html">Premium</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden sm:block text-white/80 hover:text-white text-sm font-medium transition-colors" href="login.html">Log In</a>
+<a href="signup.html" class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold tracking-wide transition-transform hover:scale-105">
+<span class="truncate">Sign Up</span>
+</a>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="py-20 md:py-32 relative overflow-hidden">
+<canvas id="codeCanvas" class="absolute inset-0 pointer-events-none"></canvas>
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+<div class="flex flex-col items-center gap-8">
+<h1 class="font-display text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl max-w-4xl">
+                            Stop Bidding. <br/><span class="text-primary">Start Solving.</span>
+</h1>
+<p class="text-lg md:text-xl text-white/70 max-w-2xl">
+                            A new freelancing model where clients post issues and the best talent approaches them. No more endless bidding wars.
+                        </p>
+<div class="mt-4 flex flex-col sm:flex-row gap-4">
+<a href="find-talent.html" class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold tracking-wide transition-transform hover:scale-105">
+<span class="truncate">Find Talent</span>
+</a>
+<a href="find-work.html" class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-surface-dark text-white text-base font-bold tracking-wide ring-1 ring-white/20 transition-transform hover:scale-105 hover:bg-white/10">
+<span class="truncate">Find Work</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Showcase Section -->
+<section class="py-16 sm:py-24 relative overflow-hidden" id="features">
+<div class="absolute inset-0 pointer-events-none">
+<div class="mesh-gradient"></div>
+<svg class="absolute inset-0 w-full h-full opacity-[0.02]" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+<path d="M 20 0 L 0 0 0 20" fill="none" stroke="white" stroke-width="0.5"/>
+</pattern>
+</defs>
+<rect width="100%" height="100%" fill="url(#smallGrid)"/>
+</svg>
+</div>
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<!-- Section Header -->
+<div class="text-center mb-12">
+<h2 class="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">A Better Way to Connect and Collaborate</h2>
+<p class="mt-4 text-lg text-white/60">Discover a streamlined process for hiring and working.</p>
+</div>
+<!-- Tabs -->
+<div class="max-w-4xl mx-auto">
+<div class="pb-3">
+<div class="flex border-b border-white/10 justify-between">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-white pb-[13px] pt-4 flex-1" href="#">
+<p class="font-display text-sm font-bold tracking-wide">How It Works</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-white/50 hover:text-white/80 pb-[13px] pt-4 flex-1 transition-colors" href="community.html">
+<p class="font-display text-sm font-bold tracking-wide">Doubt-Solver</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-white/50 hover:text-white/80 pb-[13px] pt-4 flex-1 transition-colors" href="premium.html">
+<p class="font-display text-sm font-bold tracking-wide">Premium Benefits</p>
+</a>
+</div>
+</div>
+<!-- Feature Section Content -->
+<div class="flex flex-col gap-10 px-4 py-10 @container">
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-4">
+<h3 class="font-display text-white tracking-tight text-3xl font-bold max-w-[720px]">
+                                        Simple, Direct, and Efficient
+                                    </h3>
+<p class="text-white/70 text-base font-normal leading-relaxed max-w-[720px]">
+                                        Our unique model streamlines the hiring process, connecting clients with the right expertise instantly. Get started in minutes and find the perfect match for your project.
+                                    </p>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<div class="flex flex-1 gap-4 rounded-xl border border-white/10 bg-surface-dark p-6 flex-col">
+<span class="material-symbols-outlined text-secondary" style="font-size: 32px;">edit_document</span>
+<div class="flex flex-col gap-2">
+<h4 class="font-display text-white text-lg font-bold">Client Posts Issue</h4>
+<p class="text-white/60 text-sm font-normal leading-relaxed">Clearly define your project or problem for our community to see.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-4 rounded-xl border border-white/10 bg-surface-dark p-6 flex-col">
+<span class="material-symbols-outlined text-secondary" style="font-size: 32px;">groups</span>
+<div class="flex flex-col gap-2">
+<h4 class="font-display text-white text-lg font-bold">Freelancers Approach</h4>
+<p class="text-white/60 text-sm font-normal leading-relaxed">Receive proposals and ideas from our pool of verified, expert freelancers.</p>
+</div>
+</div>
+<div class="flex flex-1 gap-4 rounded-xl border border-white/10 bg-surface-dark p-6 flex-col">
+<span class="material-symbols-outlined text-secondary" style="font-size: 32px;">verified</span>
+<div class="flex flex-col gap-2">
+<h4 class="font-display text-white text-lg font-bold">Hire the Best Fit</h4>
+<p class="text-white/60 text-sm font-normal leading-relaxed">Select the professional who best understands your needs and start collaborating.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof Section -->
+<section class="py-16 sm:py-24 bg-surface-dark">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">Trusted by the Best</h2>
+<p class="mt-4 text-lg text-white/60">Hear what our community members are saying about DevLink.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="flex flex-col gap-6 rounded-xl border border-white/10 bg-background-dark p-6">
+<p class="text-white/80">"The quality of talent on DevLink is unmatched. I posted a complex backend issue and had a solution proposed within hours. A total game-changer for our startup."</p>
+<div class="flex items-center gap-4 mt-auto">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="avatar of a smiling woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBBHEF1RCe2sF6r1i7TeAqQ0PqvmWC-1GqiyIjidJjw84aKM0a9Ez3L6ugfjaWp9dueX6YQQgY0m2iEztKHGqq90rkh2RkEMWiYgvMk_JEMEicjiTrpJZXk0eBWHyAYErl5oNbMM-4kQUaapXVFpbTXS_jnEwLwEanCVsWKEnWGuPiAEqz20tTvCbg_cG1z1V3ES4DiKLRI-g8rUrQOWk15jzgfohvXH3c6_ULR2g3PpOSlOX3THlPgCDp-HUDSgfGmknSWlGIFbe-9");'></div>
+<div>
+<h5 class="font-display font-bold text-white">Sarah L.</h5>
+<p class="text-sm text-white/60">Founder, TechCorp</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6 rounded-xl border border-white/10 bg-background-dark p-6">
+<p class="text-white/80">"As a freelancer, DevLink has been a breath of fresh air. No more bidding wars. I can focus on showcasing my skills and connecting with clients who value expertise."</p>
+<div class="flex items-center gap-4 mt-auto">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="avatar of a man with glasses" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDt0TIklJUL65zYNdHmkDRzFnxFEHwf4OnAYPipeB0B15fKj7OPxCXnS0A9pKl48GqGwPJbMDymbomte8wh0RojZx8CZYB4OhIOO6V19iVUJB0cL1Tm2JkgIPLrxAaenezyYQXwdsYSoNXDTqUTra5iTDTvirBIrlkN3MdVV2mFNPOMD24GPUf8yTO0QeP8-g3DXRR16cug4mdaBc-qvwTEG8V4pmbecyLcQezI_pmMak4Y8iVNzNdNW4I7cNMyS8f1DJfu61f0lJTR");'></div>
+<div>
+<h5 class="font-display font-bold text-white">David Chen</h5>
+<p class="text-sm text-white/60">Senior DevOps Engineer</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6 rounded-xl border border-white/10 bg-background-dark p-6">
+<p class="text-white/80">"I found my best clients here. The projects are interesting and the direct approach saves so much time and effort. I highly recommend it to any serious developer."</p>
+<div class="flex items-center gap-4 mt-auto">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="avatar of a professional woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCykTSdJ_r8FpLXltQeiwEnTRWokejJz_GoNPuebFO_ItTBTBuWpOWFREwuN0smEcaYtawLFHR7foGdNEosSb0yjpNFREtERAkZDOtBgggiSi8FDP73h6_FOeo885-WWny6Stlp_sCwn7e1BSf8jkJUnsi5CpB4_P0SIIxvFKBw1lTLF25eIpy-9zDt8UV2BfRdcqXGuCas0I2CTwCoxUMxmLMLWBXN6k4MbPhxNYwKFkT1_73k1cenHJQYgU0-BGnUmV2wYv-y2fM8");'></div>
+<div>
+<h5 class="font-display font-bold text-white">Maria Garcia</h5>
+<p class="text-sm text-white/60">Frontend Developer</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Premium Section -->
+<section class="py-16 sm:py-24" id="premium">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+<div>
+<span class="font-display text-primary font-bold tracking-widest uppercase">Premium Membership</span>
+<h2 class="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl mt-2">Unlock Your Full Potential</h2>
+<p class="mt-4 text-lg text-white/70">Go premium to access exclusive high-value projects, get priority support, and stand out with a verified profile badge.</p>
+<ul class="mt-6 space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<span class="text-white/80">Access to exclusive, high-value projects.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<span class="text-white/80">Verified member badge on your profile.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<span class="text-white/80">Reduced platform fees on all earnings.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<span class="text-white/80">Advanced analytics on your proposals.</span>
+</li>
+</ul>
+</div>
+<div class="flex flex-col rounded-xl border-2 border-primary bg-surface-dark p-8 text-center shadow-2xl shadow-primary/20">
+<h3 class="font-display text-2xl font-bold text-white">Premium Plan</h3>
+<p class="mt-2 text-white/60">All the best features, unlimited access.</p>
+<p class="mt-6">
+<span class="text-5xl font-bold tracking-tight text-white">$29</span>
+<span class="text-base font-medium text-white/60">/month</span>
+</p>
+<a href="premium.html" class="mt-8 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold tracking-wide transition-transform hover:scale-105">
+<span class="truncate">Go Premium</span>
+</a>
+<p class="mt-4 text-xs text-white/50">Billed annually. Cancel anytime.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-dark border-t border-white/10">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+<div class="col-span-2 lg:col-span-1">
+<div class="flex items-center gap-2">
+<svg class="h-6 w-6 text-primary" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="font-display text-white text-xl font-bold">DevLink</h2>
+</div>
+<p class="mt-4 text-sm text-white/50">The future of freelance is here.</p>
+</div>
+<div>
+<h4 class="font-display font-semibold text-white">Product</h4>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="client-dashboard.html">Find Talent</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="freelancer-dashboard.html">Find Work</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="premium.html">Premium</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#features">Features</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-display font-semibold text-white">Company</h4>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">About Us</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Careers</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="community.html">Community</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-display font-semibold text-white">Support</h4>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Help Center</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Contact Us</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between">
+<p class="text-sm text-white/50">© 2024 DevLink. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+<script src="assets/js/hero-animation.js"></script>
+</body></html>

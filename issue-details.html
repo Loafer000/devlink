@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevLink - View Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#FF7A00",
+              "secondary": "#00C4B3",
+              "background-light": "#f8f7f5",
+              "background-dark": "#1A1A1A",
+              "surface-dark": "#2C2C2C",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"],
+              "body": ["Inter", "sans-serif"]
+            },
+            borderRadius: {
+                "DEFAULT": "0.5rem", 
+                "lg": "0.75rem", 
+                "xl": "1rem", 
+                "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-white font-body">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<header class="sticky top-0 z-50 bg-background-dark/80 backdrop-blur-lg">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-20 items-center justify-between border-b border-white/10">
+<a href="index.html" class="flex items-center gap-4">
+<svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="font-display text-white text-xl font-bold">DevLink</h2>
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="index.html">Home</a>
+<a class="text-white hover:text-white text-sm font-medium transition-colors" href="find-work.html">Find Work</a>
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="community.html">Community</a>
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="premium.html">Premium</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden sm:block text-white/80 hover:text-white text-sm font-medium transition-colors" href="login.html">Log In</a>
+<a href="signup.html" class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold tracking-wide transition-transform hover:scale-105">
+<span class="truncate">Sign Up</span>
+</a>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+<div class="mx-auto max-w-7xl">
+<div class="flex flex-col lg:flex-row gap-8 xl:gap-12">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-4 text-sm text-white/60">
+<a class="hover:text-primary" href="find-work.html">Find Work</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span>Project Details</span>
+</div>
+<div class="bg-surface-dark rounded-xl p-6 sm:p-8">
+<div class="flex flex-col sm:flex-row justify-between gap-4 mb-6 pb-6 border-b border-white/10">
+<div>
+<h1 class="font-display text-3xl sm:text-4xl font-bold text-white leading-tight">Setup CI/CD Pipeline for a Node.js Application</h1>
+<div class="flex items-center gap-3 mt-3">
+<span class="inline-flex items-center rounded-full bg-secondary/10 px-3 py-1 text-sm font-medium text-secondary">DevOps</span>
+<span class="text-sm text-white/60">Posted 2 days ago</span>
+</div>
+</div>
+</div>
+<div class="prose prose-invert prose-p:text-white/80 prose-headings:text-white prose-strong:text-white max-w-none">
+<h2 class="font-display text-2xl font-bold">Project Description</h2>
+<p>We are seeking an experienced DevOps engineer to design and implement a robust Continuous Integration/Continuous Deployment (CI/CD) pipeline for our primary Node.js application. The application is hosted on Amazon Web Services (AWS), and we utilize GitHub for our version control.</p>
+<p>The main objective is to automate our software delivery process, allowing for faster and more reliable deployments. The ideal candidate will have a strong background in AWS, GitHub Actions, and containerization technologies like Docker.</p>
+<h3 class="font-display text-xl font-bold">Key Responsibilities:</h3>
+<ul>
+<li>Configure GitHub Actions workflows for building, testing, and packaging the application.</li>
+<li>Automate deployment to AWS services (e.g., EC2, ECS, or Lambda).</li>
+<li>Implement automated testing suites (unit, integration) within the pipeline.</li>
+<li>Set up monitoring and alerting for the pipeline and deployed application.</li>
+<li>Provide documentation and guidance to our development team.</li>
+</ul>
+</div>
+</div>
+<div class="bg-surface-dark rounded-xl p-6 sm:p-8 mt-8">
+<h2 class="font-display text-2xl font-bold mb-6">Proposals (2)</h2>
+<div class="space-y-4">
+<div class="flex flex-col sm:flex-row items-start gap-4 p-4 border border-white/10 rounded-lg">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 flex-shrink-0" data-alt="avatar of a woman with long hair" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwW1NXScBJoiAGM8jAO_t8x35HmRuyd-hb3xQn3TlUU3yL_Q1zYxkVhepn1YkQseJgsCfhNpLcBn9z2SCy_f9LgRc61Y0cqhGbiWelDjIeN7ztznTREgF8zeojShJc7I8n7RssEQomYhuGeKC_OK6Z96NVQ1xZOp90h30qqIWqQxAKTB9KnV7OmRbCVKfa4hXgEdZbxwlz5NFj5CsnFnBEIPzzzMqyT9W3DwF8U9Wpp-faAjMr2CL2XRUGFKTH86E97kmaZNSZ-WcZ");'></div>
+<div class="flex-1">
+<div class="flex flex-col sm:flex-row justify-between items-start">
+<div>
+<p class="font-bold text-white">Anika Sharma</p>
+<div class="flex items-center gap-1 text-sm text-white/60">
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5.0 (120 reviews)</span>
+</div>
+</div>
+<div class="mt-2 sm:mt-0 text-left sm:text-right">
+<p class="font-display text-xl font-bold text-secondary">$2,200</p>
+<p class="text-xs text-white/60">in 3 Weeks</p>
+</div>
+</div>
+<p class="mt-3 text-sm text-white/80 line-clamp-2">"I have extensive experience with AWS and GitHub Actions. I can set up a scalable and efficient pipeline, including automated testing and monitoring, to streamline your deployment process..."</p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-start gap-4 p-4 border border-white/10 rounded-lg">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 flex-shrink-0" data-alt="avatar of a man with a beard" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwW1NXScBJoiAGM8jAO_t8x35HmRuyd-hb3xQn3TlUU3yL_Q1zYxkVhepn1YkQseJgsCfhNpLcBn9z2SCy_f9LgRc61Y0cqhGbiWelDjIeN7ztznTREgF8zeojShJc7I8n7RssEQomYhuGeKC_OK6Z96NVQ1xZOp90h30qqIWqQxAKTB9KnV7OmRbCVKfa4hXgEdZbxwlz5NFj5CsnFnBEIPzzzMqyT9W3DwF8U9Wpp-faAjMr2CL2XRUGFKTH86E97kmaZNSZ-WcZ");'></div>
+<div class="flex-1">
+<div class="flex flex-col sm:flex-row justify-between items-start">
+<div>
+<p class="font-bold text-white">James Carter</p>
+<div class="flex items-center gap-1 text-sm text-white/60">
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9 (85 reviews)</span>
+</div>
+</div>
+<div class="mt-2 sm:mt-0 text-left sm:text-right">
+<p class="font-display text-xl font-bold text-secondary">$2,800</p>
+<p class="text-xs text-white/60">in 2 Weeks</p>
+</div>
+</div>
+<p class="mt-3 text-sm text-white/80 line-clamp-2">"As a certified DevOps professional, I can deliver a comprehensive CI/CD solution using Docker for containerization and GitHub Actions for orchestration. I'll provide full documentation..."</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="w-full lg:w-96 flex-shrink-0">
+<div class="sticky top-28 space-y-6">
+<div class="bg-surface-dark rounded-xl p-6">
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div>
+<p class="text-xs text-white/60">Estimated Budget</p>
+<p class="font-display text-3xl font-bold text-secondary">$2,500</p>
+</div>
+<div>
+<p class="text-xs text-white/60 text-right">Project Timeline</p>
+<p class="font-display text-lg font-bold text-white">2-4 Weeks</p>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<button class="flex w-full min-w-[140px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold tracking-wide transition-transform hover:scale-105">
+<span class="material-symbols-outlined">send</span>
+<span class="truncate">Submit Proposal</span>
+</button>
+<button class="flex w-full min-w-[140px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-6 bg-primary/20 text-primary ring-1 ring-primary/50 transition-all hover:bg-primary/30 hover:ring-primary">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="truncate">Chat with Client</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-dark rounded-xl p-6">
+<h3 class="font-display text-lg font-bold mb-4">Required Skills</h3>
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-white">AWS</span>
+<span class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-white">DevOps</span>
+<span class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-white">CI/CD</span>
+<span class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-white">GitHub Actions</span>
+<span class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-white">Node.js</span>
+<span class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-white">Docker</span>
+</div>
+</div>
+<div class="bg-surface-dark rounded-xl p-6">
+<h3 class="font-display text-lg font-bold mb-4">About the Client</h3>
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-16" data-alt="avatar of a man with glasses" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDt0TIklJUL65zYNdHmkDRzFnxFEHwf4OnAYPipeB0B15fKj7OPxCXnS0A9pKl48GqGwPJbMDymbomte8wh0RojZx8CZYB4OhIOO6V19iVUJB0cL1Tm2JkgIPLrxAaenezyYQXwdsYSoNXDTqUTra5iTDTvirBIrlkN3MdVV2mFNPOMD24GPUf8yTO0QeP8-g3DXRR16cug4mdaBc-qvwTEG8V4pmbecyLcQezI_pmMak4Y8iVNzNdNW4I7cNMyS8f1DJfu61f0lJTR");'></div>
+<div>
+<p class="font-bold text-lg text-white">David Chen</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-base text-white/90 font-bold">5.0</span>
+<span class="text-sm text-white/60">(51 reviews)</span>
+</div>
+<p class="text-sm text-white/60 mt-1">San Francisco, CA</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-dark rounded-xl p-6">
+<h3 class="font-display text-lg font-bold mb-4">Attachments</h3>
+<ul class="space-y-3">
+<li>
+<a class="flex items-center gap-3 p-3 bg-background-dark rounded-lg border border-white/10 hover:border-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-secondary">description</span>
+<div class="flex-1">
+<p class="text-sm font-medium text-white">project_brief.pdf</p>
+<p class="text-xs text-white/60">1.2 MB</p>
+</div>
+<span class="material-symbols-outlined text-white/60">download</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 p-3 bg-background-dark rounded-lg border border-white/10 hover:border-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-secondary">architecture</span>
+<div class="flex-1">
+<p class="text-sm font-medium text-white">architecture_diagram.png</p>
+<p class="text-xs text-white/60">876 KB</p>
+</div>
+<span class="material-symbols-outlined text-white/60">download</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-surface-dark border-t border-white/10">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+<div class="col-span-2 lg:col-span-1">
+<div class="flex items-center gap-2">
+<svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="font-display text-white text-xl font-bold">DevLink</h2>
+</div>
+<p class="mt-4 text-sm text-white/50">The future of freelance is here.</p>
+</div>
+<div>
+<h4 class="font-display font-semibold text-white">Product</h4>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="client-dashboard.html">Find Talent</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="find-work.html">Find Work</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="premium.html">Premium</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="index.html#features">Features</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-display font-semibold text-white">Company</h4>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">About Us</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Careers</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="community.html">Community</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-display font-semibold text-white">Support</h4>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Help Center</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Contact Us</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between">
+<p class="text-sm text-white/50">© 2024 DevLink. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

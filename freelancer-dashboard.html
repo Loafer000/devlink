@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Dashboard - DevLink</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FF7A00",
+                        "secondary": "#00C4B3",
+                        "background-dark": "#1A1A1A",
+                        "surface-dark": "#2C2C2C",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background-dark text-white font-body">
+    <header class="sticky top-0 z-50 bg-background-dark/80 backdrop-blur-lg border-b border-white/10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-20 items-center justify-between">
+                <a href="index.html" class="flex items-center gap-4">
+                    <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                    <h2 class="font-display text-white text-xl font-bold">DevLink</h2>
+                </a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="freelancer-dashboard.html" class="text-primary text-sm font-medium">Dashboard</a>
+                    <a href="community.html" class="text-white/80 hover:text-white text-sm font-medium">Community</a>
+                    <a href="premium.html" class="text-white/80 hover:text-white text-sm font-medium">Premium</a>
+                    <a href="chat.html" class="text-white/80 hover:text-white text-sm font-medium">Messages</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button class="p-2 hover:bg-white/10 rounded-lg">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center font-bold">JD</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="mb-8">
+            <h1 class="font-display text-4xl font-bold mb-2">Available Issues</h1>
+            <p class="text-white/60">Browse client needs and submit your proposals</p>
+        </div>
+
+        <div class="flex gap-6 mb-8">
+            <div class="flex-1">
+                <input type="text" placeholder="Search issues..." class="w-full bg-surface-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-primary">
+            </div>
+            <select class="bg-surface-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary">
+                <option>All Categories</option>
+                <option>Web Development</option>
+                <option>Mobile Apps</option>
+                <option>Design</option>
+            </select>
+        </div>
+
+        <div class="grid gap-6">
+            <a href="issue-details.html" class="block bg-surface-dark border border-white/10 rounded-xl p-6 hover:border-primary/50 transition-colors">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="px-3 py-1 bg-primary/20 text-primary text-xs font-bold rounded-full">PREMIUM</span>
+                            <span class="text-white/40 text-sm">Posted 2 hours ago</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">Need React Developer for E-commerce Dashboard</h3>
+                        <p class="text-white/70 mb-4">Looking for an experienced React developer to build a comprehensive admin dashboard for our e-commerce platform.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary text-xs font-medium rounded-full">React</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary text-xs font-medium rounded-full">TypeScript</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary text-xs font-medium rounded-full">Redux</span>
+                        </div>
+                    </div>
+                    <div class="text-right ml-6">
+                        <div class="font-display text-2xl font-bold text-primary">$2,500</div>
+                        <div class="text-white/40 text-sm">Fixed Price</div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-white/10">
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-white/40" style="font-size: 20px;">schedule</span>
+                            <span class="text-sm text-white/60">2-3 weeks</span>
+                        </div>
+                    </div>
+                    <div class="text-sm text-white/40">12 proposals</div>
+                </div>
+            </a>
+
+            <div class="bg-surface-dark border border-white/10 rounded-xl p-6 hover:border-primary/50 transition-colors cursor-pointer">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-white/40 text-sm">Posted 5 hours ago</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-2">Python Script for Data Scraping</h3>
+                        <p class="text-white/70 mb-4">Need a Python developer to create a web scraping script that collects product data from multiple e-commerce sites.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary text-xs font-medium rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-secondary/20 text-secondary text-xs font-medium rounded-full">BeautifulSoup</span>
+                        </div>
+                    </div>
+                    <div class="text-right ml-6">
+                        <div class="font-display text-2xl font-bold text-primary">$800</div>
+                        <div class="text-white/40 text-sm">Fixed Price</div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-white/10">
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-white/40" style="font-size: 20px;">schedule</span>
+                            <span class="text-sm text-white/60">1 week</span>
+                        </div>
+                    </div>
+                    <div class="text-sm text-white/40">8 proposals</div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

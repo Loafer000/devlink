@@ -1,0 +1,44 @@
+/* Authentication Pages Styles */
+
+/* Radial gradient backgrounds for signup */
+.auth-gradient-bg {
+    position: absolute;
+    inset: 0;
+    background-color: #1A1A1A;
+}
+
+.auth-gradient-orange {
+    position: absolute;
+    bottom: 0;
+    left: -20%;
+    right: 0;
+    top: -10%;
+    height: 500px;
+    width: 500px;
+    border-radius: 9999px;
+    background: radial-gradient(circle farthest-side, rgba(255, 122, 0, 0.15), rgba(255, 255, 255, 0));
+}
+
+.auth-gradient-teal {
+    position: absolute;
+    bottom: -10%;
+    right: -20%;
+    top: 0;
+    height: 500px;
+    width: 500px;
+    border-radius: 9999px;
+    background: radial-gradient(circle farthest-side, rgba(0, 196, 179, 0.15), rgba(255, 255, 255, 0));
+}
+
+/* Form input styles */
+.form-input {
+    background-color: #2C2C2C;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.form-input:focus {
+    border-color: #FF7A00;
+    box-shadow: 0 0 0 1px #FF7A00;
+    outline: none;
+}

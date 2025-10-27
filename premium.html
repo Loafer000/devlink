@@ -11,6 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">
     <script src="assets/js/tailwind-config.js"></script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
 </head>
 <body class="bg-background-dark text-white font-body">
     <header class="sticky top-0 z-50 bg-background-dark/80 backdrop-blur-lg border-b border-white/10">
@@ -22,18 +27,57 @@
                     </svg>
                     <h2 class="font-display text-white text-xl font-bold">DevLink</h2>
                 </a>
-                <nav class="flex items-center gap-4 md:gap-8">
-                    <a href="index.html" class="text-white/80 hover:text-white text-xs md:text-sm font-medium">Home</a>
-                    <a href="community.html" class="text-white/80 hover:text-white text-xs md:text-sm font-medium">Community</a>
-                    <a href="premium.html" class="text-primary text-xs md:text-sm font-medium">Premium</a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-white/80 hover:text-white text-sm font-medium">Home</a>
+                    <a href="community.html" class="text-white/80 hover:text-white text-sm font-medium">Community</a>
+                    <a href="premium.html" class="text-primary text-sm font-medium">Premium</a>
                 </nav>
-                <div class="flex items-center gap-2 md:gap-4">
-                    <a href="login.html" class="text-white/80 hover:text-white text-xs md:text-sm font-medium">Log In</a>
-                    <a href="signup.html" class="bg-primary hover:bg-primary/90 text-white px-3 md:px-5 py-2 rounded-lg font-bold text-xs md:text-sm">Sign Up</a>
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="login.html" class="text-white/80 hover:text-white text-sm font-medium">Log In</a>
+                    <a href="signup.html" class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg font-bold">Sign Up</a>
                 </div>
+                <button id="mobileMenuBtn" class="md:hidden text-white">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
             </div>
         </div>
     </header>
+    <div id="mobileMenu" class="fixed inset-0 bg-black/50 z-40 hidden">
+        <div class="fixed right-0 top-0 h-full w-64 bg-surface-dark shadow-xl transform transition-transform">
+            <div class="flex justify-end p-4">
+                <button id="closeMobileMenu" class="text-white">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 px-6">
+                <a href="index.html" class="text-white/80 hover:text-white text-sm font-medium py-2">Home</a>
+                <a href="community.html" class="text-white/80 hover:text-white text-sm font-medium py-2">Community</a>
+                <a href="premium.html" class="text-primary text-sm font-medium py-2">Premium</a>
+                <hr class="border-white/10 my-2">
+                <a href="login.html" class="text-white/80 hover:text-white text-sm font-medium py-2">Log In</a>
+                <a href="signup.html" class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg font-bold text-center">Sign Up</a>
+            </nav>
+        </div>
+    </div>
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+        
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+        
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
 
     <main>
         <section class="py-20">

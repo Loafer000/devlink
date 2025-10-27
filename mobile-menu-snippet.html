@@ -1,0 +1,25 @@
+<!-- Mobile Menu Button (add to header) -->
+<button id="mobileMenuBtn" class="md:hidden text-white">
+    <span class="material-symbols-outlined">menu</span>
+</button>
+
+<!-- Mobile Menu Overlay (add before closing body tag) -->
+<div id="mobileMenu" class="fixed inset-0 bg-black/50 z-40 hidden">
+    <div class="fixed right-0 top-0 h-full w-64 bg-surface-dark shadow-xl transform transition-transform">
+        <div class="flex justify-end p-4">
+            <button id="closeMobileMenu" class="text-white">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-4 px-6">
+            <a href="index.html" class="text-white/80 hover:text-white text-sm font-medium py-2">Home</a>
+            <a href="find-work.html" class="text-white/80 hover:text-white text-sm font-medium py-2">Find Work</a>
+            <a href="community.html" class="text-white/80 hover:text-white text-sm font-medium py-2">Community</a>
+            <a href="premium.html" class="text-white/80 hover:text-white text-sm font-medium py-2">Premium</a>
+            <hr class="border-white/10 my-2">
+            <a href="login.html" class="text-white/80 hover:text-white text-sm font-medium py-2">Log In</a>
+            <a href="signup.html" class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg font-bold text-center">Sign Up</a>
+        </nav>
+    </div>
+</div>
+<script src="assets/js/mobile-menu.js"></script>

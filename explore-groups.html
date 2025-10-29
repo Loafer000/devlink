@@ -109,7 +109,7 @@
 <p class="text-[#00C4CC] text-sm font-normal leading-normal flex items-center gap-2">
 <span class="material-symbols-outlined text-lg">group</span> 3.5k members
 </p>
-<button class="bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded-lg text-sm transition-colors w-full">Join Group</button>
+<button onclick="checkAuthAndJoin()" class="bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded-lg text-sm transition-colors w-full">Join Group</button>
 </div>
 </div>
 <div class="flex flex-col gap-4 p-4 bg-white/5 rounded-xl border border-white/10 transition-transform duration-300 hover:-translate-y-1 hover:border-primary/50">
@@ -135,7 +135,7 @@
 <p class="text-[#00C4CC] text-sm font-normal leading-normal flex items-center gap-2">
 <span class="material-symbols-outlined text-lg">group</span> 5.2k members
 </p>
-<button class="bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded-lg text-sm transition-colors w-full">Join Group</button>
+<button onclick="checkAuthAndJoin()" class="bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded-lg text-sm transition-colors w-full">Join Group</button>
 </div>
 </div>
 <div class="flex flex-col gap-4 p-4 bg-white/5 rounded-xl border border-white/10 transition-transform duration-300 hover:-translate-y-1 hover:border-primary/50">
@@ -161,7 +161,7 @@
 <p class="text-[#00C4CC] text-sm font-normal leading-normal flex items-center gap-2">
 <span class="material-symbols-outlined text-lg">group</span> 1.9k members
 </p>
-<button class="bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded-lg text-sm transition-colors w-full">Join Group</button>
+<button onclick="checkAuthAndJoin()" class="bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded-lg text-sm transition-colors w-full">Join Group</button>
 </div>
 </div>
 <div class="flex flex-col gap-4 p-4 bg-white/5 rounded-xl border border-white/10 transition-transform duration-300 hover:-translate-y-1 hover:border-primary/50">
@@ -174,7 +174,7 @@
 <p class="text-[#00C4CC] text-sm font-normal leading-normal flex items-center gap-2">
 <span class="material-symbols-outlined text-lg">group</span> 6.0k members
 </p>
-<button class="bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded-lg text-sm transition-colors w-full">Join Group</button>
+<button onclick="checkAuthAndJoin()" class="bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded-lg text-sm transition-colors w-full">Join Group</button>
 </div>
 </div>
 <div class="flex flex-col gap-4 p-4 bg-white/5 rounded-xl border border-white/10 transition-transform duration-300 hover:-translate-y-1 hover:border-primary/50">
@@ -200,7 +200,7 @@
 <p class="text-[#00C4CC] text-sm font-normal leading-normal flex items-center gap-2">
 <span class="material-symbols-outlined text-lg">group</span> 3.2k members
 </p>
-<button class="bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded-lg text-sm transition-colors w-full">Join Group</button>
+<button onclick="checkAuthAndJoin()" class="bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded-lg text-sm transition-colors w-full">Join Group</button>
 </div>
 </div>
 </div>
@@ -231,6 +231,14 @@ function checkAuthAndCreate() {
     window.location.href = 'login.html';
   } else {
     window.location.href = 'create-new-group.html';
+  }
+}
+
+function checkAuthAndJoin() {
+  if (!Auth.isLoggedIn()) {
+    window.location.href = 'login.html';
+  } else {
+    alert('Successfully joined the group!');
   }
 }
 </script>

@@ -1,157 +1,209 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Dashboard - DevLink</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#FF7A00",
-                        "secondary": "#00C4B3",
-                        "background-dark": "#1A1A1A",
-                        "surface-dark": "#2C2C2C",
-                    },
-                    fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"],
-                        "body": ["Inter", "sans-serif"]
-                    }
-                }
-            }
-        }
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevLink - Client Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#FF7A00",
+              "secondary": "#00C4B3",
+              "background-light": "#f8f7f5",
+              "background-dark": "#1A1A1A",
+              "surface-dark": "#2C2C2C",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"],
+              "body": ["Inter", "sans-serif"]
+            },
+            borderRadius: {
+                "DEFAULT": "0.5rem", 
+                "lg": "0.75rem", 
+                "xl": "1rem", 
+                "full": "9999px"
+            },
+          },
+        },
+      }
     </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
 </head>
 <body class="bg-background-dark text-white font-body">
-    <header class="sticky top-0 z-50 bg-background-dark/80 backdrop-blur-lg border-b border-white/10">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex h-20 items-center justify-between">
-                <a href="index.html" class="flex items-center gap-4">
-                    <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                        <path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
-                    </svg>
-                    <h2 class="font-display text-white text-xl font-bold">DevLink</h2>
-                </a>
-                <nav class="hidden md:flex items-center gap-8">
-                    <a href="client-dashboard.html" class="text-primary text-sm font-medium">Dashboard</a>
-                    <a href="community.html" class="text-white/80 hover:text-white text-sm font-medium">Community</a>
-                    <a href="premium.html" class="text-white/80 hover:text-white text-sm font-medium">Premium</a>
-                    <a href="chat.html" class="text-white/80 hover:text-white text-sm font-medium">Messages</a>
-                </nav>
-                <div class="flex items-center gap-4">
-                    <button class="p-2 hover:bg-white/10 rounded-lg">
-                        <span class="material-symbols-outlined">notifications</span>
-                    </button>
-                    <div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center font-bold">SC</div>
-                </div>
-            </div>
-        </div>
-    </header>
+<div class="relative flex min-h-screen w-full flex-row group/design-root overflow-x-hidden">
+<aside class="sticky top-0 h-screen w-16 md:w-64 flex flex-col bg-surface-dark border-r border-white/10 transition-all duration-300">
+<div class="flex items-center justify-center md:justify-start gap-4 h-20 border-b border-white/10 px-4">
+<svg class="h-8 w-8 text-primary flex-shrink-0" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="font-display text-white text-xl font-bold hidden md:block">DevLink</h2>
+</div>
+<nav class="flex-grow p-2 md:p-4 space-y-2">
+<a class="flex items-center gap-3 rounded-lg bg-primary/10 px-3 py-2.5 text-primary" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-bold hidden md:block">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-white/60 hover:bg-white/5 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">edit_document</span>
+<span class="text-sm font-medium hidden md:block">My Issues</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-white/60 hover:bg-white/5 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">local_offer</span>
+<span class="text-sm font-medium hidden md:block">Offers</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-white/60 hover:bg-white/5 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="text-sm font-medium hidden md:block">Messages</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-white/60 hover:bg-white/5 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="text-sm font-medium hidden md:block">Past Projects</span>
+</a>
+</nav>
+<div class="p-2 md:p-4 border-t border-white/10">
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-white/60 hover:bg-white/5 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium hidden md:block">Settings</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-white/60 hover:bg-white/5 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm font-medium hidden md:block">Logout</span>
+</a>
+</div>
+</aside>
+<div class="flex-1 flex flex-col">
+<header class="sticky top-0 z-40 bg-background-dark/80 backdrop-blur-lg">
+<div class="flex h-20 items-center justify-between border-b border-white/10 px-4 sm:px-6 lg:px-8">
+<h1 class="font-display text-2xl font-bold text-white">Dashboard</h1>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold tracking-wide transition-transform hover:scale-105 gap-2">
+<span class="material-symbols-outlined text-base">add_circle</span>
+<span class="truncate hidden sm:block">Post New Issue</span>
+</button>
+<div class="relative">
+<button class="relative flex items-center justify-center size-10 rounded-full bg-surface-dark hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-1 right-1.5 flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVTvqv8VF50ZLRZWC50sNT8mHdC3xGvQTdY9Q7dAUuU_233aiJplJxuJ3OqVnGdyLyZ-erqefrgo6tpH_NvNnXKZObCsDmggj0-mMgUHwoKR_mzPJvF3xYZIdUac41RwwlFu6YZm84m5O8-raEyYZn7w-BVwPfE_v0nN84w2MRWES503_0ZPjR1H24D9xUw1iCJuQ_oHpHWqo05iZSjCzBsaOZg8L4AORe1Z9-6NvJ_1444NRk2LSdhsKmmntMhLdkbmnDYqHy9m_X");'></div>
+</div>
+</div>
+</header>
+<main class="flex-grow p-4 sm:p-6 lg:p-8">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2 flex flex-col gap-6">
+<div class="rounded-xl bg-gradient-to-br from-primary/80 to-secondary/80 p-6 md:p-8 flex items-center justify-between">
+<div>
+<h2 class="font-display text-2xl md:text-3xl font-bold text-white">Welcome back, Sarah!</h2>
+<p class="mt-1 text-white/80 max-w-md">You have 3 active projects and 5 new offers waiting for your review. Let's get things done!</p>
+</div>
+<span class="material-symbols-outlined text-white/20 text-8xl hidden md:block -rotate-12">task_alt</span>
+</div>
+<div class="rounded-xl border border-white/10 bg-surface-dark p-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-display text-xl font-bold text-white">Active Projects</h3>
+<a class="text-sm font-medium text-primary hover:underline" href="view-all-proposals.html">View All</a>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 rounded-lg bg-background-dark hover:bg-white/5 transition-colors">
+<div class="mb-3 sm:mb-0">
+<h4 class="font-bold text-white">E-commerce Backend Refactor</h4>
+<p class="text-sm text-white/60">Status: <span class="text-secondary font-medium">In Progress</span></p>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-medium text-white/50">Next Deadline:</span>
+<span class="text-sm font-bold text-white bg-white/10 px-2 py-0.5 rounded">3 days</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 rounded-lg bg-background-dark hover:bg-white/5 transition-colors">
+<div class="mb-3 sm:mb-0">
+<h4 class="font-bold text-white">Mobile App UI/UX Design</h4>
+<p class="text-sm text-white/60">Status: <span class="text-yellow-400 font-medium">Awaiting Feedback</span></p>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-medium text-white/50">Next Deadline:</span>
+<span class="text-sm font-bold text-white bg-white/10 px-2 py-0.5 rounded">1 week</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 rounded-lg bg-background-dark hover:bg-white/5 transition-colors">
+<div class="mb-3 sm:mb-0">
+<h4 class="font-bold text-white">API Integration for Analytics</h4>
+<p class="text-sm text-white/60">Status: <span class="text-secondary font-medium">In Progress</span></p>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-medium text-white/50">Next Deadline:</span>
+<span class="text-sm font-bold text-white bg-white/10 px-2 py-0.5 rounded">5 days</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1 flex flex-col gap-6">
+<div class="rounded-xl border border-white/10 bg-surface-dark p-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-display text-xl font-bold text-white">Recent Offers</h3>
+<a class="text-sm font-medium text-primary hover:underline" href="view-all-proposals.html">View All</a>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-start gap-4 p-4 rounded-lg bg-background-dark">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVTvqv8VF50ZLRZWC50sNT8mHdC3xGvQTdY9Q7dAUuU_233aiJplJxuJ3OqVnGdyLyZ-erqefrgo6tpH_NvNnXKZObCsDmggj0-mMgUHwoKR_mzPJvF3xYZIdUac41RwwlFu6YZm84m5O8-raEyYZn7w-BVwPfE_v0nN84w2MRWES503_0ZPjR1H24D9xUw1iCJuQ_oHpHWqo05iZSjCzBsaOZg8L4AORe1Z9-6NvJ_1444NRk2LSdhsKmmntMhLdkbmnDYqHy9m_X");'></div>
+<div class="flex-1">
+<p class="text-sm text-white/80"><span class="font-bold text-white">David Chen</span> sent an offer for <span class="font-semibold text-secondary">Database Optimization</span>.</p>
+<span class="text-xs text-white/50">2 hours ago</span>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-lg bg-background-dark">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVTvqv8VF50ZLRZWC50sNT8mHdC3xGvQTdY9Q7dAUuU_233aiJplJxuJ3OqVnGdyLyZ-erqefrgo6tpH_NvNnXKZObCsDmggj0-mMgUHwoKR_mzPJvF3xYZIdUac41RwwlFu6YZm84m5O8-raEyYZn7w-BVwPfE_v0nN84w2MRWES503_0ZPjR1H24D9xUw1iCJuQ_oHpHWqo05iZSjCzBsaOZg8L4AORe1Z9-6NvJ_1444NRk2LSdhsKmmntMhLdkbmnDYqHy9m_X");'></div>
+<div class="flex-1">
+<p class="text-sm text-white/80"><span class="font-bold text-white">Maria Garcia</span> sent an offer for <span class="font-semibold text-secondary">React Component Library</span>.</p>
+<span class="text-xs text-white/50">5 hours ago</span>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-lg bg-background-dark">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVTvqv8VF50ZLRZWC50sNT8mHdC3xGvQTdY9Q7dAUuU_233aiJplJxuJ3OqVnGdyLyZ-erqefrgo6tpH_NvNnXKZObCsDmggj0-mMgUHwoKR_mzPJvF3xYZIdUac41RwwlFu6YZm84m5O8-raEyYZn7w-BVwPfE_v0nN84w2MRWES503_0ZPjR1H24D9xUw1iCJuQ_oHpHWqo05iZSjCzBsaOZg8L4AORe1Z9-6NvJ_1444NRk2LSdhsKmmntMhLdkbmnDYqHy9m_X')"></div>
+<div class="flex-1">
+<p class="text-sm text-white/80"><span class="font-bold text-white">Alex Johnson</span> sent an offer for <span class="font-semibold text-secondary">CI/CD Pipeline Setup</span>.</p>
+<span class="text-xs text-white/50">1 day ago</span>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-xl border border-white/10 bg-surface-dark p-6">
+<h3 class="font-display text-xl font-bold text-white mb-4">Quick Stats</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col items-center justify-center p-4 rounded-lg bg-background-dark">
+<span class="font-display text-3xl font-bold text-primary">12</span>
+<span class="text-sm text-white/60">Issues Posted</span>
+</div>
+<div class="flex flex-col items-center justify-center p-4 rounded-lg bg-background-dark">
+<span class="font-display text-3xl font-bold text-secondary">8</span>
+<span class="text-sm text-white/60">Projects Done</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
 
-    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="flex items-center justify-between mb-8">
-            <div>
-                <h1 class="font-display text-4xl font-bold mb-2">My Issues</h1>
-                <p class="text-white/60">Manage your posted needs and review proposals</p>
-            </div>
-            <button class="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-bold transition-colors">
-                <span class="material-symbols-outlined">add</span>
-                Post New Issue
-            </button>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div class="bg-surface-dark border border-white/10 rounded-xl p-6">
-                <div class="flex items-center justify-between mb-2">
-                    <span class="text-white/60">Active Issues</span>
-                    <span class="material-symbols-outlined text-primary">description</span>
-                </div>
-                <div class="font-display text-3xl font-bold">3</div>
-            </div>
-            <div class="bg-surface-dark border border-white/10 rounded-xl p-6">
-                <div class="flex items-center justify-between mb-2">
-                    <span class="text-white/60">Total Proposals</span>
-                    <span class="material-symbols-outlined text-secondary">mail</span>
-                </div>
-                <div class="font-display text-3xl font-bold">35</div>
-            </div>
-            <div class="bg-surface-dark border border-white/10 rounded-xl p-6">
-                <div class="flex items-center justify-between mb-2">
-                    <span class="text-white/60">Completed</span>
-                    <span class="material-symbols-outlined text-green-500">check_circle</span>
-                </div>
-                <div class="font-display text-3xl font-bold">12</div>
-            </div>
-        </div>
-
-        <div class="grid gap-6">
-            <div class="bg-surface-dark border border-white/10 rounded-xl p-6">
-                <div class="flex items-start justify-between mb-4">
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-2">
-                            <span class="px-3 py-1 bg-primary/20 text-primary text-xs font-bold rounded-full">PREMIUM</span>
-                            <span class="px-3 py-1 bg-green-500/20 text-green-500 text-xs font-bold rounded-full">ACTIVE</span>
-                            <span class="text-white/40 text-sm">Posted 2 hours ago</span>
-                        </div>
-                        <h3 class="font-display text-xl font-bold mb-2">Need React Developer for E-commerce Dashboard</h3>
-                        <p class="text-white/70 mb-4">Looking for an experienced React developer to build a comprehensive admin dashboard...</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-secondary/20 text-secondary text-xs font-medium rounded-full">React</span>
-                            <span class="px-3 py-1 bg-secondary/20 text-secondary text-xs font-medium rounded-full">TypeScript</span>
-                        </div>
-                    </div>
-                    <div class="text-right ml-6">
-                        <div class="font-display text-2xl font-bold text-primary">$2,500</div>
-                    </div>
-                </div>
-                <div class="flex items-center justify-between pt-4 border-t border-white/10">
-                    <div class="flex items-center gap-2">
-                        <span class="material-symbols-outlined text-white/40" style="font-size: 20px;">mail</span>
-                        <span class="text-sm text-white/60">12 proposals received</span>
-                    </div>
-                    <div class="flex gap-3">
-                        <button class="px-4 py-2 bg-primary/20 text-primary rounded-lg font-medium hover:bg-primary/30">View Proposals</button>
-                        <button class="px-4 py-2 bg-white/10 text-white rounded-lg font-medium hover:bg-white/20">Edit</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-surface-dark border border-white/10 rounded-xl p-6">
-                <div class="flex items-start justify-between mb-4">
-                    <div class="flex-1">
-                        <div class="flex items-center gap-3 mb-2">
-                            <span class="px-3 py-1 bg-green-500/20 text-green-500 text-xs font-bold rounded-full">ACTIVE</span>
-                            <span class="text-white/40 text-sm">Posted 1 day ago</span>
-                        </div>
-                        <h3 class="font-display text-xl font-bold mb-2">Python Script for Data Scraping</h3>
-                        <p class="text-white/70 mb-4">Need a Python developer to create a web scraping script...</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-secondary/20 text-secondary text-xs font-medium rounded-full">Python</span>
-                        </div>
-                    </div>
-                    <div class="text-right ml-6">
-                        <div class="font-display text-2xl font-bold text-primary">$800</div>
-                    </div>
-                </div>
-                <div class="flex items-center justify-between pt-4 border-t border-white/10">
-                    <div class="flex items-center gap-2">
-                        <span class="material-symbols-outlined text-white/40" style="font-size: 20px;">mail</span>
-                        <span class="text-sm text-white/60">8 proposals received</span>
-                    </div>
-                    <div class="flex gap-3">
-                        <button class="px-4 py-2 bg-primary/20 text-primary rounded-lg font-medium hover:bg-primary/30">View Proposals</button>
-                        <button class="px-4 py-2 bg-white/10 text-white rounded-lg font-medium hover:bg-white/20">Edit</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-</body>
-</html>
+</body></html>

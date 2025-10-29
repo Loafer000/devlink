@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Proposal Confirmation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f97306",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-white/10 px-4 sm:px-10 lg:px-20 py-4">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">DevLink</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-center gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal" href="#">Find Work</a>
+<a class="text-white text-sm font-medium leading-normal" href="#">My Proposals</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal" href="#">Community</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal" href="#">Messages</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Post a Job</span>
+</button>
+<div class="flex items-center gap-2">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#1E1E1E] text-white/80 hover:text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAeoTwxzuIsFUkFOOx96rFDKvKXcpnPCFBAvPox5POpILK-lD7amYuieMfNx0XYtTmHagx2xYrW2yffcA8KLlr_YNvWGyaKS-pUu_ouUo1Cgz9o6uYHhTRq3dUxbUIWfKaWlvBqXOpLLqbV_rtSY0Vine-UOhq58JGSpFO9FydNwWNECqRgmXxPJxL20gIcn_wuNjEkt5aWJ77iH1zXDx1foEGa7259vr4fuiIMYOOQVNg3wZIKR0cFKUlvUZQOyrG2at5XhYSC61lo");'></div>
+</div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-10 sm:py-16 px-4">
+<div class="layout-content-container flex flex-col w-full max-w-2xl flex-1">
+<div class="flex flex-col items-center gap-4 text-center">
+<div class="flex h-16 w-16 items-center justify-center rounded-full bg-teal-500/10 text-teal-400">
+<span class="material-symbols-outlined !text-4xl">task_alt</span>
+</div>
+<h1 class="text-white tracking-tight text-3xl sm:text-4xl font-bold leading-tight">Proposal Sent Successfully!</h1>
+<p class="text-slate-300 text-base font-normal leading-normal max-w-md">You're one step closer to your next project. The client has been notified and we'll let you know when they respond.</p>
+</div>
+<div class="mt-8 sm:mt-12 w-full rounded-xl border border-white/10 bg-[#1E1E1E] p-6 sm:p-8">
+<h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Proposal Summary</h3>
+<div class="mt-6 grid gap-y-5">
+<div class="grid grid-cols-1 sm:grid-cols-[120px_1fr] gap-x-6 gap-y-1">
+<p class="text-slate-400 text-sm font-normal leading-normal">Project Title</p>
+<p class="text-white text-sm font-medium leading-normal">UI/UX Design for E-commerce App</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-[120px_1fr] gap-x-6 gap-y-1">
+<p class="text-slate-400 text-sm font-normal leading-normal">Client Name</p>
+<p class="text-white text-sm font-medium leading-normal">InnovateTech Solutions</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-[120px_1fr] gap-x-6 gap-y-1">
+<p class="text-slate-400 text-sm font-normal leading-normal">Your Bid</p>
+<p class="text-white text-sm font-medium leading-normal">$2,500 (Fixed Rate)</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-[120px_1fr] gap-x-6 gap-y-1">
+<p class="text-slate-400 text-sm font-normal leading-normal">Cover Letter</p>
+<p class="text-slate-300 text-sm font-normal leading-normal line-clamp-2">"Excited by the opportunity to design the UI/UX for your e-commerce app. With my extensive experience in creating intuitive, user-centric mobile interfaces for retail brands, I'm confident I can deliver a product that not only looks great but also drives conversions..."</p>
+</div>
+</div>
+<div class="mt-8 border-t border-white/10 pt-8">
+<h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">What's Next?</h3>
+<ul class="mt-4 list-disc list-inside space-y-2 text-slate-300 text-sm">
+<li>The client has been notified of your proposal.</li>
+<li>You will receive an email and a notification if they respond or shortlist you.</li>
+<li>Keep an eye on your 'My Proposals' page for any status updates.</li>
+</ul>
+</div>
+</div>
+<div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="flex w-full sm:w-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">View My Proposals</span>
+</button>
+<button class="flex w-full sm:w-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-6 bg-transparent text-teal-400 text-base font-bold leading-normal tracking-[0.015em] border border-teal-500/50 hover:bg-teal-500/10 transition-colors">
+<span class="truncate">Return to Dashboard</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

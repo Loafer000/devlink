@@ -1,0 +1,14 @@
+<!-- Add this before closing </body> tag on pages that require authentication -->
+<script src="assets/js/auth.js"></script>
+<script>
+    // Protect this page - requires login
+    Auth.requireAuth();
+    
+    // Optional: Require specific user type
+    // Auth.requireUserType('freelancer'); // or 'client'
+</script>
+
+<!-- Add logout button to header (optional) -->
+<button onclick="Auth.logout()" class="text-white/80 hover:text-white text-sm font-medium">
+    Logout
+</button>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevLink - Chat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#FF7A00",
+              "secondary": "#00C4B3",
+              "background-light": "#f8f7f5",
+              "background-dark": "#1A1A1A",
+              "surface-dark": "#2C2C2C",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"],
+              "body": ["Inter", "sans-serif"]
+            },
+            borderRadius: {
+                "DEFAULT": "0.5rem", 
+                "lg": "0.75rem", 
+                "xl": "1rem", 
+                "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-white font-body">
+<div class="flex h-screen w-full flex-col group/design-root overflow-hidden">
+<header class="sticky top-0 z-50 flex-shrink-0 bg-background-dark/80 backdrop-blur-lg">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-20 items-center justify-between border-b border-white/10">
+<div class="flex items-center gap-4">
+<svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="font-display text-white text-xl font-bold">DevLink</h2>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="#">Dashboard</a>
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="#">Projects</a>
+<a class="text-primary hover:text-white text-sm font-bold transition-colors" href="#">Messages</a>
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="#">Community</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-white/80 hover:text-white transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="avatar of a professional woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCykTSdJ_r8FpLXltQeiwEnTRWokejJz_GoNPuebFO_ItTBTBuWpOWFREwuN0smEcaYtawLFHR7foGdNEosSb0yjpNFREtERAkZDOtBgggiSi8FDP73h6_FOeo885-WWny6Stlp_sCwn7e1BSf8jkJUnsi5CpB4_P0SIIxvFKBw1lTLF25eIpy-9zDt8UV2BfRdcqXGuCas0I2CTwCoxUMxmLMLWBXN6k4MbPhxNYwKFkT1_73k1cenHJQYgU0-BGnUmV2wYv-y2fM8");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow flex h-[calc(100vh-80px)]">
+<aside class="w-full md:w-96 flex-shrink-0 border-r border-white/10 bg-surface-dark/50 flex flex-col">
+<div class="p-4 border-b border-white/10 flex-shrink-0">
+<h2 class="font-display text-lg font-bold">Conversations</h2>
+<div class="relative mt-4">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-white/50">search</span>
+<input class="w-full bg-background-dark border border-white/10 rounded-lg h-10 pl-10 pr-4 text-sm focus:ring-primary focus:border-primary" placeholder="Search messages..." type="text"/>
+</div>
+</div>
+<div class="flex-grow overflow-y-auto">
+<nav class="p-2 space-y-1">
+<a class="flex items-center gap-4 p-3 rounded-lg bg-primary/20 cursor-pointer" href="#">
+<div class="relative flex-shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="avatar of a smiling woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBBHEF1RCe2sF6r1i7TeAqQ0PqvmWC-1GqiyIjidJjw84aKM0a9Ez3L6ugfjaWp9dueX6YQQgY0m2iEztKHGqq90rkh2RkEMWiYgvMk_JEMEicjiTrpJZXk0eBWHyAYErl5oNbMM-4kQUaapXVFpbTXS_jnEwLwEanCVsWKEnWGuPiAEqz20tTvCbg_cG1z1V3ES4DiKLRI-g8rUrQOWk15jzgfohvXH3c6_ULR2g3PpOSlOX3THlPgCDp-HUDSgfGmknSWlGIFbe-9");'></div>
+<span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-secondary ring-2 ring-surface-dark"></span>
+</div>
+<div class="flex-grow overflow-hidden">
+<div class="flex justify-between items-center">
+<h3 class="font-bold text-white truncate">Sarah L.</h3>
+<time class="text-xs text-white/50 flex-shrink-0">10:42 AM</time>
+</div>
+<div class="flex justify-between items-start">
+<p class="text-sm text-white/70 truncate mt-1">Perfect, I'll review the new deploy...</p>
+<span class="flex items-center justify-center text-xs font-bold text-background-dark bg-secondary rounded-full size-5 mt-1 flex-shrink-0">1</span>
+</div>
+</div>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-lg hover:bg-white/5 cursor-pointer transition-colors" href="#">
+<div class="relative flex-shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="avatar of a man with glasses" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDt0TIklJUL65zYNdHmkDRzFnxFEHwf4OnAYPipeB0B15fKj7OPxCXnS0A9pKl48GqGwPJbMDymbomte8wh0RojZx8CZYB4OhIOO6V19iVUJB0cL1Tm2JkgIPLrxAaenezyYQXwdsYSoNXDTqUTra5iTDTvirBIrlkN3MdVV2mFNPOMD24GPUf8yTO0QeP8-g3DXRR16cug4mdaBc-qvwTEG8V4pmbecyLcQezI_pmMak4Y8iVNzNdNW4I7cNMyS8f1DJfu61f0lJTR");'></div>
+<span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-gray-500 ring-2 ring-surface-dark"></span>
+</div>
+<div class="flex-grow overflow-hidden">
+<div class="flex justify-between items-center">
+<h3 class="font-bold text-white/80 truncate">David Chen</h3>
+<time class="text-xs text-white/50 flex-shrink-0">Yesterday</time>
+</div>
+<p class="text-sm text-white/60 truncate mt-1">Here is the documentation you asked for.</p>
+</div>
+</a>
+<a class="flex items-center gap-4 p-3 rounded-lg hover:bg-white/5 cursor-pointer transition-colors" href="#">
+<div class="relative flex-shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="avatar of a project manager" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCykTSdJ_r8FpLXltQeiwEnTRWokejJz_GoNPuebFO_ItTBTBuWpOWFREwuN0smEcaYtawLFHR7foGdNEosSb0yjpNFREtERAkZDOtBgggiSi8FDP73h6_FOeo885-WWny6Stlp_sCwn7e1BSf8jkJUnsi5CpB4_P0SIIxvFKBw1lTLF25eIpy-9zDt8UV2BfRdcqXGuCas0I2CTwCoxUMxmLMLWBXN6k4MbPhxNYwKFkT1_73k1cenHJQYgU0-BGnUmV2wYv-y2fM8");'></div>
+<span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-secondary ring-2 ring-surface-dark"></span>
+</div>
+<div class="flex-grow overflow-hidden">
+<div class="flex justify-between items-center">
+<h3 class="font-bold text-white/80 truncate">Maria Garcia</h3>
+<time class="text-xs text-white/50 flex-shrink-0">3d ago</time>
+</div>
+<p class="text-sm text-white/60 truncate mt-1">You: Sounds good, I'll get started on the...</p>
+</div>
+</a>
+</nav>
+</div>
+</aside>
+<section class="flex flex-col flex-1 bg-background-dark">
+<header class="flex items-center justify-between p-4 border-b border-white/10 flex-shrink-0">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="avatar of a smiling woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBBHEF1RCe2sF6r1i7TeAqQ0PqvmWC-1GqiyIjidJjw84aKM0a9Ez3L6ugfjaWp9dueX6YQQgY0m2iEztKHGqq90rkh2RkEMWiYgvMk_JEMEicjiTrpJZXk0eBWHyAYErl5oNbMM-4kQUaapXVFpbTXS_jnEwLwEanCVsWKEnWGuPiAEqz20tTvCbg_cG1z1V3ES4DiKLRI-g8rUrQOWk15jzgfohvXH3c6_ULR2g3PpOSlOX3THlPgCDp-HUDSgfGmknSWlGIFbe-9");'></div>
+<span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-secondary ring-2 ring-background-dark"></span>
+</div>
+<div>
+<h3 class="font-display font-bold text-lg text-white">Sarah L.</h3>
+<div class="flex items-center gap-2">
+<div class="h-2 w-2 rounded-full bg-secondary"></div>
+<p class="text-sm text-secondary">Online</p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-white/10 text-white/70 hover:text-white transition-colors">
+<span class="material-symbols-outlined">call</span>
+</button>
+<button class="p-2 rounded-full hover:bg-white/10 text-white/70 hover:text-white transition-colors">
+<span class="material-symbols-outlined">videocam</span>
+</button>
+<button class="p-2 rounded-full hover:bg-white/10 text-white/70 hover:text-white transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</header>
+<div class="flex-grow p-6 overflow-y-auto space-y-6">
+<div class="flex items-start gap-4 max-w-lg">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 flex-shrink-0" data-alt="avatar of a smiling woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBBHEF1RCe2sF6r1i7TeAqQ0PqvmWC-1GqiyIjidJjw84aKM0a9Ez3L6ugfjaWp9dueX6YQQgY0m2iEztKHGqq90rkh2RkEMWiYgvMk_JEMEicjiTrpJZXk0eBWHyAYErl5oNbMM-4kQUaapXVFpbTXS_jnEwLwEanCVsWKEnWGuPiAEqz20tTvCbg_cG1z1V3ES4DiKLRI-g8rUrQOWk15jzgfohvXH3c6_ULR2g3PpOSlOX3THlPgCDp-HUDSgfGmknSWlGIFbe-9");'></div>
+<div class="flex flex-col gap-2">
+<div class="bg-surface-dark p-4 rounded-xl rounded-tl-none">
+<p class="text-white/90">Hey! I saw your proposal for the database migration project. Your experience looks like a perfect fit. I'd love to discuss it further.</p>
+</div>
+<time class="text-xs text-white/50">10:35 AM</time>
+</div>
+</div>
+<div class="flex items-start gap-4 max-w-lg ml-auto flex-row-reverse">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 flex-shrink-0" data-alt="avatar of a professional woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCykTSdJ_r8FpLXltQeiwEnTRWokejJz_GoNPuebFO_ItTBTBuWpOWFREwuN0smEcaYtawLFHR7foGdNEosSb0yjpNFREtERAkZDOtBgggiSi8FDP73h6_FOeo885-WWny6Stlp_sCwn7e1BSf8jkJUnsi5CpB4_P0SIIxvFKBw1lTLF25eIpy-9zDt8UV2BfRdcqXGuCas0I2CTwCoxUMxmLMLWBXN6k4MbPhxNYwKFkT1_73k1cenHJQYgU0-BGnUmV2wYv-y2fM8");'></div>
+<div class="flex flex-col gap-2 items-end">
+<div class="bg-primary p-4 rounded-xl rounded-tr-none">
+<p class="text-white">Hi Sarah, thanks for reaching out! I'm excited about the opportunity. I'm available to chat anytime this afternoon.</p>
+</div>
+<time class="text-xs text-white/50">10:38 AM</time>
+</div>
+</div>
+<div class="flex items-start gap-4 max-w-lg">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 flex-shrink-0" data-alt="avatar of a smiling woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBBHEF1RCe2sF6r1i7TeAqQ0PqvmWC-1GqiyIjidJjw84aKM0a9Ez3L6ugfjaWp9dueX6YQQgY0m2iEztKHGqq90rkh2RkEMWiYgvMk_JEMEicjiTrpJZXk0eBWHyAYErl5oNbMM-4kQUaapXVFpbTXS_jnEwLwEanCVsWKEnWGuPiAEqz20tTvCbg_cG1z1V3ES4DiKLRI-g8rUrQOWk15jzgfohvXH3c6_ULR2g3PpOSlOX3THlPgCDp-HUDSgfGmknSWlGIFbe-9");'></div>
+<div class="flex flex-col gap-2">
+<div class="bg-surface-dark p-4 rounded-xl rounded-tl-none">
+<p class="text-white/90">Great. I've just pushed the latest version of the repo to the staging environment. Can you take a look?</p>
+</div>
+<div class="bg-surface-dark p-4 rounded-xl">
+<p class="text-white/90">Perfect, I'll review the new deployment and get back to you with my initial findings shortly.</p>
+</div>
+<time class="text-xs text-white/50">10:42 AM</time>
+</div>
+</div>
+</div>
+<footer class="p-4 border-t border-white/10 flex-shrink-0 bg-surface-dark">
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-white/10 text-white/70 hover:text-white transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+<input class="w-full bg-background-dark border-none rounded-lg h-12 px-4 text-white focus:ring-0 placeholder-white/50" placeholder="Type a message..." type="text"/>
+<button class="p-2 rounded-full hover:bg-white/10 text-white/70 hover:text-white transition-colors">
+<span class="material-symbols-outlined">sentiment_satisfied</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-12 px-5 bg-primary text-white font-bold transition-transform hover:scale-105">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</footer>
+</section>
+</main>
+</div>
+
+</body></html>

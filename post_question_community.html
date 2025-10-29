@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevLink - Post a Question</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FF7A00",
+                        "secondary": "#00C4B3",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#1A1A1A",
+                        "surface-dark": "#2C2C2C",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-white font-body">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<header class="sticky top-0 z-50 bg-background-dark/80 backdrop-blur-lg">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-20 items-center justify-between border-b border-white/10">
+<div class="flex items-center gap-4">
+<svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="font-display text-white text-xl font-bold">DevLink</h2>
+</div>
+<nav class="hidden md:flex items-center gap-2">
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors px-4 py-2 rounded-lg" href="#">Find Work</a>
+<a class="text-white font-medium transition-colors px-4 py-2 rounded-lg bg-white/5" href="#">Community</a>
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors px-4 py-2 rounded-lg" href="#">Premium</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="hidden sm:block text-white/80 hover:text-white text-sm font-medium transition-colors" href="#">Log In</a>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold tracking-wide transition-transform hover:scale-105">
+<span class="truncate">Sign Up</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<section class="py-16 md:py-24">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-10">
+<h1 class="font-display text-4xl font-bold tracking-tighter sm:text-5xl">Post a Question</h1>
+<p class="mt-4 text-lg text-white/70">Share your technical challenge with the community and get help from fellow developers.</p>
+</div>
+<form class="space-y-8">
+<div class="bg-surface-dark border border-white/10 rounded-xl p-6 sm:p-8">
+<div class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-white/80 mb-2" for="question-title">Question Title</label>
+<input class="block w-full bg-background-dark border-white/10 rounded-lg h-12 px-4 focus:ring-primary focus:border-primary transition-colors" id="question-title" placeholder="e.g., How to implement authentication with Next.js?" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-white/80 mb-2">Detailed Description</label>
+<div class="bg-background-dark border border-white/10 rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-primary focus-within:border-primary transition-all">
+<div class="p-2 border-b border-white/10 flex items-center flex-wrap gap-1">
+<button class="p-2 rounded hover:bg-white/10 text-white/70 hover:text-white transition-colors" type="button"><span class="material-symbols-outlined text-base">format_bold</span></button>
+<button class="p-2 rounded hover:bg-white/10 text-white/70 hover:text-white transition-colors" type="button"><span class="material-symbols-outlined text-base">format_italic</span></button>
+<button class="p-2 rounded hover:bg-white/10 text-white/70 hover:text-white transition-colors" type="button"><span class="material-symbols-outlined text-base">format_underlined</span></button>
+<button class="p-2 rounded hover:bg-white/10 text-white/70 hover:text-white transition-colors" type="button"><span class="material-symbols-outlined text-base">format_list_bulleted</span></button>
+<button class="p-2 rounded hover:bg-white/10 text-white/70 hover:text-white transition-colors" type="button"><span class="material-symbols-outlined text-base">format_list_numbered</span></button>
+<button class="p-2 rounded hover:bg-white/10 text-white/70 hover:text-white transition-colors" type="button"><span class="material-symbols-outlined text-base">code</span></button>
+<button class="p-2 rounded hover:bg-white/10 text-white/70 hover:text-white transition-colors" type="button"><span class="material-symbols-outlined text-base">link</span></button>
+</div>
+<textarea class="block w-full bg-background-dark p-4 text-white placeholder-white/50 focus:outline-none resize-y" id="question-description" placeholder="Describe your issue in detail. Include code snippets, error messages, and what you've already tried." rows="10"></textarea>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-white/80 mb-2">Supporting Context</label>
+<div class="flex items-center justify-center w-full">
+<label class="flex flex-col items-center justify-center w-full h-32 border-2 border-white/20 border-dashed rounded-lg cursor-pointer bg-background-dark hover:bg-white/5 transition-colors" for="dropzone-file">
+<div class="flex flex-col items-center justify-center pt-5 pb-6">
+<span class="material-symbols-outlined text-3xl text-white/60">cloud_upload</span>
+<p class="mb-2 text-sm text-white/60"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+<p class="text-xs text-white/50">Images or short videos (MAX. 10MB)</p>
+</div>
+<input class="hidden" id="dropzone-file" multiple="" type="file"/>
+</label>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-white/80 mb-2" for="question-tags">Tags</label>
+<input class="block w-full bg-background-dark border-white/10 rounded-lg h-12 px-4 focus:ring-primary focus:border-primary transition-colors" id="question-tags" placeholder="Add up to 5 tags, e.g., react, javascript, tailwindcss" type="text"/>
+<div class="flex flex-wrap gap-2 mt-3">
+<span class="flex items-center gap-1.5 bg-primary/20 text-primary text-sm font-medium px-3 py-1.5 rounded-full">
+<span>React</span>
+<button class="text-primary/70 hover:text-primary" type="button"><span class="material-symbols-outlined text-base">close</span></button>
+</span>
+<span class="flex items-center gap-1.5 bg-secondary/20 text-secondary text-sm font-medium px-3 py-1.5 rounded-full">
+<span>TypeScript</span>
+<button class="text-secondary/70 hover:text-secondary" type="button"><span class="material-symbols-outlined text-base">close</span></button>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-end gap-4">
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-surface-dark text-white text-base font-bold tracking-wide ring-1 ring-white/20 transition-transform hover:scale-105 hover:bg-white/10" type="button">
+<span class="truncate">Save as Draft</span>
+</button>
+<button class="flex min-w-[150px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold tracking-wide transition-transform hover:scale-105 gap-2" type="submit">
+<span class="material-symbols-outlined text-xl">send</span>
+<span class="truncate">Submit Question</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-surface-dark border-t border-white/10">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+<div class="col-span-2 lg:col-span-1">
+<div class="flex items-center gap-2">
+<svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="font-display text-white text-xl font-bold">DevLink</h2>
+</div>
+<p class="mt-4 text-sm text-white/50">The future of freelance is here.</p>
+</div>
+<div>
+<h4 class="font-display font-semibold text-white">Product</h4>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Find Talent</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Find Work</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Premium</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Features</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-display font-semibold text-white">Company</h4>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">About Us</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Careers</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Community</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-display font-semibold text-white">Support</h4>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Help Center</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Contact Us</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-sm text-white/60 hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between">
+<p class="text-sm text-white/50">© 2024 DevLink. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

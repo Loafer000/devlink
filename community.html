@@ -80,10 +80,10 @@
               Stuck on a technical problem? Ask our community of expert developers and get the answers you need to keep moving forward.
             </p>
 <div class="mt-4 flex flex-col sm:flex-row gap-4">
-<a href="post_question_community.html" class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold tracking-wide transition-transform hover:scale-105 gap-2">
+<button onclick="checkAuthAndPost()" class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold tracking-wide transition-transform hover:scale-105 gap-2">
 <span class="material-symbols-outlined">add</span>
 <span class="truncate">Post a Question</span>
-</a>
+</button>
 <a href="explore-groups.html" class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-surface-dark text-white text-base font-bold tracking-wide ring-1 ring-white/20 transition-transform hover:scale-105 hover:bg-white/10 gap-2">
 <span class="material-symbols-outlined">group</span>
 <span class="truncate">Explore Groups</span>
@@ -107,7 +107,7 @@
 <button class="text-white/60 hover:text-secondary transition-colors p-2 rounded-full"><span class="material-symbols-outlined">videocam</span></button>
 <button class="text-white/60 hover:text-secondary transition-colors p-2 rounded-full"><span class="material-symbols-outlined">code</span></button>
 </div>
-<a href="post_question_community.html" class="flex min-w-[90px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold tracking-wide transition-transform hover:scale-105">Post</a>
+<button onclick="checkAuthAndPost()" class="flex min-w-[90px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold tracking-wide transition-transform hover:scale-105">Post</button>
 </div>
 </div>
 </div>
@@ -344,4 +344,14 @@
 </div>
 </footer>
 </div>
+<script src="assets/js/auth.js"></script>
+<script>
+function checkAuthAndPost() {
+  if (!Auth.isLoggedIn()) {
+    window.location.href = 'login.html';
+  } else {
+    window.location.href = 'post_question_community.html';
+  }
+}
+</script>
 </body></html>

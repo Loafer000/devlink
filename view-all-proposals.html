@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>All Client Proposals</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f97306",
+            "secondary": "#00C9A7",
+            "background-light": "#f8f7f5",
+            "background-dark": "#1A1A2E",
+            "surface-dark": "#2D3748",
+            "text-light": "#E0E0E0",
+            "text-medium": "#A0AEC0",
+            "text-dark": "#718096"
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+</head>
+<body class="bg-background-dark font-display text-text-light">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center">
+<div class="layout-content-container flex flex-col w-full max-w-7xl">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-surface-dark/50 px-4 sm:px-6 lg:px-8 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">DevLink</h2>
+</div>
+<div class="hidden md:flex items-center gap-9">
+<a class="text-text-medium hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Dashboard</a>
+<a class="text-text-medium hover:text-white text-sm font-medium leading-normal transition-colors" href="#">My Issues</a>
+<a class="text-white text-sm font-medium leading-normal" href="#">Proposals</a>
+<a class="text-text-medium hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Community</a>
+<a class="text-text-medium hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Messages</a>
+</div>
+<div class="flex items-center gap-2">
+<button class="hidden sm:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Post a New Issue</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-surface-dark text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 hover:bg-surface-dark/80 transition-colors">
+<span class="material-symbols-outlined text-text-medium text-xl">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCE-l9cMNYGlJkeNYuOAcwH76oXUsFS3WUl617l1pOwsSpQD4QrMPDNurs5zboEnf_0DUaxPKvVjX6A5pEVmqLQ_CcutSXjqykdmNmt4Qis1VCdMwAmcJG6WGdi7greMyV0-sCI-4K-jbVQe_VIYrIYj9Fwqk5g8vkK6pezQNo8SL2QNhxLOcJpe5YVKPtXT8-NAy0Wp7pqhrLgaNwh5KEOADRIkrtUbQX-u95YTO9tjFF7wk0ndLVVwAWTx8uJ4PBZDSJJguxpSTUr");'></div>
+</div>
+</header>
+<main class="flex flex-col lg:flex-row flex-1 p-4 sm:p-6 lg:p-8 gap-8">
+<aside class="flex-shrink-0 lg:w-80 space-y-6">
+<div class="p-6 bg-surface-dark rounded-xl">
+<h3 class="text-lg font-bold text-white mb-4">Filter &amp; Sort</h3>
+<div class="space-y-6">
+<div>
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-background-dark ring-1 ring-surface-dark/50 focus-within:ring-primary transition-all">
+<div class="text-text-medium flex items-center justify-center pl-3">
+<span class="material-symbols-outlined text-2xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-background-dark focus:border-none h-full placeholder:text-text-medium pl-2 text-base font-normal leading-normal" placeholder="Search proposals..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-col gap-3">
+<button class="flex h-10 w-full items-center justify-between gap-x-2 rounded-lg bg-background-dark px-4 ring-1 ring-surface-dark/50 hover:bg-surface-dark/60 transition-colors">
+<p class="text-white text-sm font-medium leading-normal">Issue Title</p>
+<span class="material-symbols-outlined text-text-medium text-xl">expand_more</span>
+</button>
+<button class="flex h-10 w-full items-center justify-between gap-x-2 rounded-lg bg-background-dark px-4 ring-1 ring-surface-dark/50 hover:bg-surface-dark/60 transition-colors">
+<p class="text-white text-sm font-medium leading-normal">Proposal Status</p>
+<span class="material-symbols-outlined text-text-medium text-xl">expand_more</span>
+</button>
+<button class="flex h-10 w-full items-center justify-between gap-x-2 rounded-lg bg-background-dark px-4 ring-1 ring-surface-dark/50 hover:bg-surface-dark/60 transition-colors">
+<p class="text-white text-sm font-medium leading-normal">Freelancer Level</p>
+<span class="material-symbols-outlined text-text-medium text-xl">expand_more</span>
+</button>
+</div>
+<div class="@container">
+<div class="relative flex w-full flex-col items-start justify-between gap-3 pt-2">
+<p class="text-white text-base font-medium leading-normal w-full">Price Range</p>
+<div class="flex h-[38px] w-full pt-1.5">
+<div class="flex h-1.5 w-full items-center rounded-full bg-background-dark">
+<div class="relative h-full" style="width: 80%;">
+<div class="h-1.5 rounded-full bg-primary"></div>
+<div class="absolute -left-2 -top-2 flex flex-col items-center gap-1.5" style="left: 0%;">
+<div class="size-5 cursor-pointer rounded-full bg-primary ring-2 ring-background-dark"></div>
+<p class="text-text-medium text-sm font-normal leading-normal">$100</p>
+</div>
+<div class="absolute -right-2 -top-2 flex flex-col items-center gap-1.5" style="right: 0%;">
+<div class="size-5 cursor-pointer rounded-full bg-primary ring-2 ring-background-dark"></div>
+<p class="text-text-medium text-sm font-normal leading-normal">$2500</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 pt-4">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">Apply Filters</button>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-transparent text-text-medium text-sm font-medium leading-normal hover:bg-white/5 transition-colors">Clear All</button>
+</div>
+</div>
+</div>
+</aside>
+<div class="flex-1">
+<div class="flex flex-wrap justify-between items-start gap-4 mb-6">
+<div class="flex flex-col gap-2">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">All Proposals</h1>
+<p class="text-text-medium text-base font-normal leading-normal">Review and manage all proposals submitted for your issues.</p>
+</div>
+<div class="flex items-center gap-2">
+<p class="text-text-medium text-sm">Sort By:</p>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-surface-dark pl-4 pr-3 hover:bg-surface-dark/80 transition-colors">
+<p class="text-white text-sm font-medium leading-normal">Newest First</p>
+<span class="material-symbols-outlined text-text-medium">expand_more</span>
+</button>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-dark p-6 rounded-xl border border-transparent hover:border-primary/50 transition-all duration-300">
+<div class="flex flex-col sm:flex-row gap-6">
+<div class="flex flex-col items-center sm:items-start text-center sm:text-left">
+<img class="size-16 rounded-full mb-3" data-alt="Freelancer avatar, male with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy-Tk43wlpRjTMXXxPwW91FrkYyZLdCToWA9xncuX4CXrVTkX_prhE1Y271rFtOZEhhCRdGj0ntHzYszSaOBcNmk3-4BGVIKpYL0tnUH4Gb7yAx47AMqsh8_isEJC5YOJR4urVFIluuUlBAnc83wPkE7ZYYUaByMzEFf650cWVMqK7-1wIc-VpmOtItOrOInfFvhBovRIYffjF8vHa5CGnDt3Tx_X6hKEwIVvILp04ZPFkEm_Pk-aNOq3ZasubgzffYGgyzBTe5OLR"/>
+<h4 class="font-bold text-white">Alex Rodriguez</h4>
+<div class="flex items-center gap-1 text-sm text-text-medium">
+<span>4.9</span>
+<span class="material-symbols-outlined text-yellow-400 !text-base">star</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-2 flex-wrap gap-2">
+<h3 class="font-bold text-lg text-white">Re-design of E-commerce Dashboard</h3>
+<div class="flex items-center gap-4">
+<span class="text-lg font-bold text-secondary">$1,200</span>
+<span class="bg-secondary/20 text-secondary text-xs font-bold px-2.5 py-1 rounded-full">New</span>
+</div>
+</div>
+<p class="text-text-medium text-sm leading-relaxed mb-4">I've reviewed your project requirements for the e-commerce dashboard redesign and I'm confident I can deliver a modern, intuitive, and high-performing UI/UX. My approach focuses on user-centric design principles to increase engagement...</p>
+<div class="flex flex-col sm:flex-row gap-3">
+<button class="flex w-full sm:w-auto cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal hover:bg-primary/90 transition-colors">View Details</button>
+<button class="flex w-full sm:w-auto cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-secondary text-background-dark text-sm font-bold leading-normal hover:bg-secondary/90 transition-colors">Chat with Freelancer</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-dark p-6 rounded-xl border border-transparent hover:border-primary/50 transition-all duration-300">
+<div class="flex flex-col sm:flex-row gap-6">
+<div class="flex flex-col items-center sm:items-start text-center sm:text-left">
+<img class="size-16 rounded-full mb-3" data-alt="Freelancer avatar, female with blonde hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvPOL1AhUCguVTP_j5AyWuQ7chUKhE7Vb7F-R4v1UHIq4K_TBZ2Wl95RXu7ruwNFGRWIXUcuUilFMmPup49X_jNUopxMJ0tRW5flbBsC0n7TSJ_zm-yvbdp0cc_emsLQV0zgUidrwIpqfMXmyurE8zta_156AqIORQbf332B0-3A-6urpmGHTOZunHtEOiA-apQ1U2IZo_NaKkEyHBqjxYd7wF6aJ5gPNwOE-YuGjmVQtsXN07POiWT04AzQvd82hVipe7CkAYqLiu"/>
+<h4 class="font-bold text-white">Samantha Chen</h4>
+<div class="flex items-center gap-1 text-sm text-text-medium">
+<span>5.0</span>
+<span class="material-symbols-outlined text-yellow-400 !text-base">star</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-2 flex-wrap gap-2">
+<h3 class="font-bold text-lg text-white">API Integration for Mobile App</h3>
+<div class="flex items-center gap-4">
+<span class="text-lg font-bold text-secondary">$850</span>
+<span class="bg-blue-500/20 text-blue-400 text-xs font-bold px-2.5 py-1 rounded-full">In Review</span>
+</div>
+</div>
+<p class="text-text-medium text-sm leading-relaxed mb-4">With over 5 years of experience in backend development and RESTful API integrations, I can efficiently connect your mobile application to the required third-party services. I will ensure the integration is secure, scalable, and well-documented for future maintenance...</p>
+<div class="flex flex-col sm:flex-row gap-3">
+<button class="flex w-full sm:w-auto cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal hover:bg-primary/90 transition-colors">View Details</button>
+<button class="flex w-full sm:w-auto cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-secondary text-background-dark text-sm font-bold leading-normal hover:bg-secondary/90 transition-colors">Chat with Freelancer</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-dark p-6 rounded-xl border border-transparent hover:border-primary/50 transition-all duration-300">
+<div class="flex flex-col sm:flex-row gap-6">
+<div class="flex flex-col items-center sm:items-start text-center sm:text-left">
+<img class="size-16 rounded-full mb-3" data-alt="Freelancer avatar, male with a beard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzt9YNFzOMlxojsHKasBC1qOkIsWs1tvZ8EV3uDKlnbPKToimhtuZWBDGOyNfpwHmqEkQ8F_er_AbbMnkGyWuBF5TVoSmoUqwQhJdvn0uacAQGB-DDMMRr54WHFpmwK6DMM2T3DGu6OIYVFOjgdnoz48JUthLf4BUu_pH1ctMs5piYNl81teWCdtH7JGT1xELyZiBWNUFbAiX_mSrgHroShgEfdUbdhPQCXI4fXmZrirIDsIu9ADTKJQrc3NQ_420e1Q7d2xuNcLor"/>
+<h4 class="font-bold text-white">David Miller</h4>
+<div class="flex items-center gap-1 text-sm text-text-medium">
+<span>4.7</span>
+<span class="material-symbols-outlined text-yellow-400 !text-base">star</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-2 flex-wrap gap-2">
+<h3 class="font-bold text-lg text-white">Re-design of E-commerce Dashboard</h3>
+<div class="flex items-center gap-4">
+<span class="text-lg font-bold text-secondary">$950</span>
+<span class="bg-green-500/20 text-green-400 text-xs font-bold px-2.5 py-1 rounded-full">Accepted</span>
+</div>
+</div>
+<p class="text-text-medium text-sm leading-relaxed mb-4">Hello! I am a Figma expert and UI designer with a keen eye for clean and user-friendly interfaces. My portfolio showcases similar dashboard projects, and I am excited by the opportunity to apply my skills to enhance your platform's user experience...</p>
+<div class="flex flex-col sm:flex-row gap-3">
+<button class="flex w-full sm:w-auto cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold leading-normal hover:bg-primary/90 transition-colors">View Details</button>
+<button class="flex w-full sm:w-auto cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-secondary text-background-dark text-sm font-bold leading-normal hover:bg-secondary/90 transition-colors">Chat with Freelancer</button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-center pt-6">
+<nav aria-label="Pagination" class="flex items-center gap-2">
+<button class="flex items-center justify-center size-9 rounded-lg bg-surface-dark text-text-medium hover:bg-primary hover:text-white transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="flex items-center justify-center size-9 rounded-lg bg-primary text-white font-bold text-sm">1</button>
+<button class="flex items-center justify-center size-9 rounded-lg bg-surface-dark text-text-light hover:bg-primary transition-colors text-sm">2</button>
+<button class="flex items-center justify-center size-9 rounded-lg bg-surface-dark text-text-light hover:bg-primary transition-colors text-sm">3</button>
+<span class="text-text-medium">...</span>
+<button class="flex items-center justify-center size-9 rounded-lg bg-surface-dark text-text-light hover:bg-primary transition-colors text-sm">10</button>
+<button class="flex items-center justify-center size-9 rounded-lg bg-surface-dark text-text-medium hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</nav>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

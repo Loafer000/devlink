@@ -77,10 +77,10 @@
 <h1 class="font-display text-4xl sm:text-5xl font-bold tracking-tight">Find Your Next Challenge</h1>
 <p class="mt-2 text-lg text-white/70">Browse through client issues and find where your skills can make an impact.</p>
 </div>
-<a href="login.html" class="flex shrink-0 min-w-[140px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold tracking-wide transition-transform hover:scale-105">
+<button onclick="checkAuthAndPostIssue()" class="flex shrink-0 min-w-[140px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold tracking-wide transition-transform hover:scale-105">
 <span class="material-symbols-outlined">add</span>
 <span class="truncate">Post an Issue</span>
-</a>
+</button>
 </div>
 <div class="flex flex-col lg:flex-row gap-6 mb-8">
 <aside class="w-full lg:w-64 xl:w-72 flex-shrink-0">
@@ -335,4 +335,14 @@
 </div>
 </footer>
 </div>
+<script src="assets/js/auth.js"></script>
+<script>
+function checkAuthAndPostIssue() {
+  if (!Auth.isLoggedIn()) {
+    window.location.href = 'login.html';
+  } else {
+    window.location.href = 'client_post_issue.html';
+  }
+}
+</script>
 </body></html>

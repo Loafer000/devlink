@@ -27,21 +27,9 @@
 <a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="#features">How It Works</a>
 <a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="community.html">Community</a>
 <a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="premium.html">Premium</a>
-<div class="relative">
-<button onclick="toggleJobDropdown()" class="relative px-4 py-2 text-sm font-bold text-white bg-gradient-to-r from-primary to-secondary rounded-lg shadow-lg hover:shadow-primary/50 transition-all duration-300 animate-pulse">
+<a href="job-marketplace.html" class="relative px-4 py-2 text-sm font-bold text-white bg-gradient-to-r from-primary to-secondary rounded-lg shadow-lg hover:shadow-primary/50 transition-all duration-300 animate-pulse">
 Job Marketplace
-</button>
-<div id="jobDropdown" class="hidden absolute top-full mt-2 right-0 w-48 bg-surface-dark border border-white/10 rounded-lg shadow-xl overflow-hidden">
-<button class="block w-full text-left px-4 py-3 text-sm text-white hover:bg-primary/20 transition-colors border-b border-white/10">
-<span class="material-symbols-outlined text-base align-middle mr-2">add_circle</span>
-Post a Job
-</button>
-<button class="block w-full text-left px-4 py-3 text-sm text-white hover:bg-primary/20 transition-colors">
-<span class="material-symbols-outlined text-base align-middle mr-2">search</span>
-Find a Job
-</button>
-</div>
-</div>
+</a>
 </div>
 <div class="flex items-center gap-4">
 <a class="hidden sm:block text-white/80 hover:text-white text-sm font-medium transition-colors" href="login.html">Log In</a>
@@ -280,19 +268,5 @@ Find a Job
 </footer>
 </div>
 <script src="assets/js/hero-animation.js"></script>
-<script>
-function toggleJobDropdown() {
-  document.getElementById('jobDropdown').classList.toggle('hidden');
-}
-
-document.addEventListener('click', function(event) {
-  const dropdown = document.getElementById('jobDropdown');
-  const button = event.target.closest('button');
-  if (!button || !button.textContent.includes('Job Marketplace')) {
-    if (!dropdown.contains(event.target)) {
-      dropdown.classList.add('hidden');
-    }
-  }
-});
-</script>
+<script></script>
 </body></html>

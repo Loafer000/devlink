@@ -27,19 +27,19 @@
 <a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="#features">How It Works</a>
 <a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="community.html">Community</a>
 <a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="premium.html">Premium</a>
-<div class="relative" onmouseenter="showJobDropdown()" onmouseleave="hideJobDropdown()">
-<button class="relative px-4 py-2 text-sm font-bold text-white bg-gradient-to-r from-primary to-secondary rounded-lg shadow-lg hover:shadow-primary/50 transition-all duration-300 animate-pulse">
+<div class="relative">
+<button onclick="toggleJobDropdown()" class="relative px-4 py-2 text-sm font-bold text-white bg-gradient-to-r from-primary to-secondary rounded-lg shadow-lg hover:shadow-primary/50 transition-all duration-300 animate-pulse">
 Job Marketplace
 </button>
 <div id="jobDropdown" class="hidden absolute top-full mt-2 right-0 w-48 bg-surface-dark border border-white/10 rounded-lg shadow-xl overflow-hidden">
-<a href="client_post_issue.html" class="block px-4 py-3 text-sm text-white hover:bg-primary/20 transition-colors border-b border-white/10">
+<button class="block w-full text-left px-4 py-3 text-sm text-white hover:bg-primary/20 transition-colors border-b border-white/10">
 <span class="material-symbols-outlined text-base align-middle mr-2">add_circle</span>
 Post a Job
-</a>
-<a href="find-work.html" class="block px-4 py-3 text-sm text-white hover:bg-primary/20 transition-colors">
+</button>
+<button class="block w-full text-left px-4 py-3 text-sm text-white hover:bg-primary/20 transition-colors">
 <span class="material-symbols-outlined text-base align-middle mr-2">search</span>
 Find a Job
-</a>
+</button>
 </div>
 </div>
 </div>
@@ -281,15 +281,18 @@ Find a Job
 </div>
 <script src="assets/js/hero-animation.js"></script>
 <script>
-let dropdownTimeout;
-function showJobDropdown() {
-  clearTimeout(dropdownTimeout);
-  document.getElementById('jobDropdown').classList.remove('hidden');
+function toggleJobDropdown() {
+  document.getElementById('jobDropdown').classList.toggle('hidden');
 }
-function hideJobDropdown() {
-  dropdownTimeout = setTimeout(() => {
-    document.getElementById('jobDropdown').classList.add('hidden');
-  }, 200);
-}
+
+document.addEventListener('click', function(event) {
+  const dropdown = document.getElementById('jobDropdown');
+  const button = event.target.closest('button');
+  if (!button || !button.textContent.includes('Job Marketplace')) {
+    if (!dropdown.contains(event.target)) {
+      dropdown.classList.add('hidden');
+    }
+  }
+});
 </script>
 </body></html>

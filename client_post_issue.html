@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Post a New Issue - DevConnect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f97306",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#121212", 
+                        "container-dark": "#1E1E1E",
+                        "teal": "#00FFFF",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-200">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- TopNavBar Component -->
+<header class="sticky top-0 z-10 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-white/10">
+<div class="container mx-auto px-4">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.845 2.873a2.5 2.5 0 0 0-4.012.21l-7 12.125a2.5 2.5 0 0 0 2.173 3.792h14a2.5 2.5 0 0 0 2.173-3.792l-7-12.125a2.5 2.5 0 0 0-2.334-.21Zm-3.155.366a.5.5 0 0 1 .802-.042l7 12.125a.5.5 0 0 1-.435.75H4.173a.5.5 0 0 1-.434-.75l7-12.125a.5.5 0 0 1 .194-.368Z"></path></svg>
+</div>
+<h2 class="text-white text-lg font-bold tracking-[-0.015em]">DevConnect</h2>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="#">Dashboard</a>
+<a class="text-primary text-sm font-medium" href="#">Issues</a>
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="#">Community</a>
+<a class="text-white/80 hover:text-white text-sm font-medium transition-colors" href="#">Profile</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/50" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDhemJ7ri4EWUHQB-jeEcPSzGNaSZ-aicOZDX0X5uBmdqmWkkRU5OQeuC_Tpy0PK2LT1LZQjWVZYE9Dzxok56aFX5MxZYSWCYd5_MLaDM8xkcki6iYcaWbUbOHuAPvZXLQEdkCIbmupZCSuvV1G4ctugeXnfmDJbtoke-FLEsgbsu_jiDSfXkE5may4CFn4xjtUlpUQS5CuUgE6Ial9_E7Nd-Zpysk_a2F6mq-DUcd4kuVDZZOunzgasGVMUuyDj2PvcsW3k6_4_9Gk");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="layout-container flex h-full grow flex-col items-center py-10 md:py-16">
+<div class="layout-content-container flex flex-col w-full max-w-4xl px-4">
+<!-- PageHeading Component -->
+<div class="flex flex-col gap-3 p-4 mb-8">
+<h1 class="text-white text-4xl md:text-5xl font-black leading-tight tracking-tighter">Post a New Issue</h1>
+<p class="text-gray-400 text-base font-normal leading-normal">Clearly describe your project to attract the right talent from our community.</p>
+</div>
+<!-- Form Container -->
+<div class="bg-background-light dark:bg-container-dark rounded-xl p-6 md:p-10 space-y-10">
+<!-- Section 1: The Basics -->
+<div class="space-y-8">
+<h2 class="text-xl font-bold text-white border-b border-white/10 pb-3">The Basics</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- TextField for Issue Title -->
+<label class="flex flex-col col-span-1">
+<p class="text-white text-base font-medium leading-normal pb-2">Issue Title</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-white/20 bg-background-dark focus:border-primary h-12 placeholder:text-gray-500 p-3 text-base font-normal leading-normal transition-all" placeholder="e.g., Build a responsive landing page" value=""/>
+</label>
+<!-- TextField for Category -->
+<label class="flex flex-col col-span-1">
+<p class="text-white text-base font-medium leading-normal pb-2">Category</p>
+<select class="form-select appearance-none flex w-full min-w-0 flex-1 rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-white/20 bg-background-dark focus:border-primary h-12 placeholder:text-gray-500 p-3 text-base font-normal leading-normal transition-all">
+<option class="bg-background-dark" disabled="" selected="">Select a category</option>
+<option class="bg-background-dark" value="web">Web Development</option>
+<option class="bg-background-dark" value="mobile">Mobile App</option>
+<option class="bg-background-dark" value="uiux">UI/UX Design</option>
+<option class="bg-background-dark" value="copy">Copywriting</option>
+</select>
+</label>
+</div>
+</div>
+<!-- Section 2: The Details -->
+<div class="space-y-8">
+<h2 class="text-xl font-bold text-white border-b border-white/10 pb-3">The Details</h2>
+<!-- TextField for Detailed Description -->
+<label class="flex flex-col">
+<p class="text-white text-base font-medium leading-normal pb-2">Detailed Description</p>
+<textarea class="form-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-white/20 bg-background-dark focus:border-primary min-h-48 placeholder:text-gray-500 p-3 text-base font-normal leading-normal transition-all" placeholder="Describe your project goals, deliverables, timeline, and any other important context..."></textarea>
+</label>
+<!-- File Uploader -->
+<div>
+<p class="text-white text-base font-medium leading-normal pb-2">Attach Files</p>
+<div class="flex justify-center items-center w-full">
+<label class="flex flex-col items-center justify-center w-full h-48 border-2 border-dashed rounded-lg cursor-pointer bg-background-dark border-white/20 hover:border-teal hover:bg-black/20 transition-all" for="dropzone-file">
+<div class="flex flex-col items-center justify-center pt-5 pb-6">
+<span class="material-symbols-outlined text-teal text-4xl mb-3">cloud_upload</span>
+<p class="mb-2 text-sm text-gray-400"><span class="font-semibold text-teal">Click to upload</span> or drag and drop</p>
+<p class="text-xs text-gray-500">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+</div>
+<input class="hidden" id="dropzone-file" type="file"/>
+</label>
+</div>
+</div>
+</div>
+<!-- Section 3: The Requirements -->
+<div class="space-y-8">
+<h2 class="text-xl font-bold text-white border-b border-white/10 pb-3">The Requirements</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+<!-- Skills Input -->
+<div class="flex flex-col">
+<p class="text-white text-base font-medium leading-normal pb-2">Required Skills</p>
+<div class="flex flex-col gap-3">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-white/20 bg-background-dark focus:border-primary h-12 placeholder:text-gray-500 p-3 text-base font-normal leading-normal transition-all" placeholder="e.g., React, Figma, SEO" value=""/>
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-2 bg-teal/20 text-teal px-3 py-1 rounded-full text-sm font-medium">
+                                            React
+                                            <button class="material-symbols-outlined text-sm">close</button>
+</span>
+<span class="inline-flex items-center gap-2 bg-teal/20 text-teal px-3 py-1 rounded-full text-sm font-medium">
+                                            Python
+                                            <button class="material-symbols-outlined text-sm">close</button>
+</span>
+<span class="inline-flex items-center gap-2 bg-teal/20 text-teal px-3 py-1 rounded-full text-sm font-medium">
+                                            UI Design
+                                            <button class="material-symbols-outlined text-sm">close</button>
+</span>
+</div>
+</div>
+</div>
+<!-- Price Input -->
+<div class="flex flex-col">
+<p class="text-white text-base font-medium leading-normal pb-2">Estimated Price</p>
+<div class="flex items-center gap-4">
+<div class="relative flex-grow">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="text-gray-400 sm:text-sm">$</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-white/20 bg-background-dark focus:border-primary h-12 placeholder:text-gray-500 pl-7 pr-3 text-base font-normal leading-normal transition-all" placeholder="2000" type="number"/>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary bg-background-dark" id="negotiable" type="checkbox"/>
+<label class="ml-2 block text-sm text-gray-300" for="negotiable">Negotiable</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: Submission -->
+<div class="flex flex-col sm:flex-row items-center justify-end gap-4 pt-6 border-t border-white/10">
+<button class="text-gray-300 hover:text-white font-medium py-3 px-6 rounded-lg transition-colors">Save as Draft</button>
+<button class="bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary/90 transition-all w-full sm:w-auto">Post Issue</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

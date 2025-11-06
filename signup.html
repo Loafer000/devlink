@@ -8,8 +8,35 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet"/>
-<link href="assets/css/auth.css" rel="stylesheet"/>
 <script src="assets/js/tailwind-config.js"></script>
+<style>
+.auth-gradient-bg {
+  position: absolute;
+  inset: 0;
+  background-color: #1A1A1A;
+}
+.auth-gradient-orange {
+  position: absolute;
+  bottom: 0;
+  left: -20%;
+  right: 0;
+  top: -10%;
+  height: 500px;
+  width: 500px;
+  border-radius: 9999px;
+  background: radial-gradient(circle farthest-side, rgba(255, 122, 0, 0.15), rgba(255, 255, 255, 0));
+}
+.auth-gradient-teal {
+  position: absolute;
+  bottom: -10%;
+  right: -20%;
+  top: 0;
+  height: 500px;
+  width: 500px;
+  border-radius: 9999px;
+  background: radial-gradient(circle farthest-side, rgba(0, 196, 179, 0.15), rgba(255, 255, 255, 0));
+}
+</style>
 </head>
 <body class="bg-background-dark text-white font-body">
 <div class="relative flex min-h-screen w-full flex-col items-center justify-center p-4">

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>All Projects - DevLink</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FF7A00",
+                        "secondary": "#00C4B3",
+                        "background-dark": "#1A1A1A",
+                        "card-dark": "#2C2C2C",
+                        "text-light": "#E0E0E0",
+                        "text-heading-light": "#FFFFFF"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-dark font-display text-text-light">
+<header class="sticky top-0 z-50 bg-background-dark/80 backdrop-blur-sm border-b border-white/10">
+<nav class="container mx-auto px-6 py-3 flex items-center justify-between">
+<a href="freelancer-profile.html" class="flex items-center gap-4 text-text-heading-light">
+<svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="text-xl font-bold">DevLink</h2>
+</a>
+<a href="add-project.html" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-bold hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined">add</span>
+<span>Add Project</span>
+</a>
+</nav>
+</header>
+<main class="container mx-auto px-6 py-8">
+<div class="mb-6">
+<a href="freelancer-profile.html" class="flex items-center gap-2 text-text-light/70 hover:text-white transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+<span>Back to Profile</span>
+</a>
+</div>
+<h1 class="text-text-heading-light text-3xl font-bold mb-8">All Projects</h1>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<a href="project-details.html" class="bg-card-dark rounded-xl overflow-hidden group hover:ring-2 hover:ring-primary transition-all">
+<div class="bg-center bg-no-repeat aspect-video bg-cover" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBzU-KDn8QxO5Umf0B1OXvXpxQv3ZqprNGL501kq26XydcCfhPSBFmgXOt44maXa3E5AxWEe20cYM9_ZtE85Po7d3eLx_KwTCPJDwA9VZHB3-io15kN025qWkoZPklwzhcr5sujO0-pICn7_-7siH5Miv9oGz4zQ8LWo0iGGRNwj4qDkOprORj5U3n9LZva9emZgsuDiPe_b28xs3JMzp3CYBI56VEc2hSLQNlfAexJjVq09FqUXoaQx3QJRykVeuGc5hG27Y9t0tBv');"></div>
+<div class="p-4">
+<h3 class="text-text-heading-light font-bold text-lg">FinTech Mobile App</h3>
+<p class="text-text-light/70 text-sm mt-1">A sleek and user-friendly mobile application for personal finance management.</p>
+<div class="flex items-center gap-2 mt-3 text-xs text-text-light/50">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Completed: Oct 2023</span>
+</div>
+</div>
+</a>
+<a href="project-details.html" class="bg-card-dark rounded-xl overflow-hidden group hover:ring-2 hover:ring-primary transition-all">
+<div class="bg-center bg-no-repeat aspect-video bg-cover" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnUquCm-Dw5suow-IddxYHHb-ybkQv5TjvP4cA6f9oSPss7rV5TYgpOsIeogSQfvesgoSVc6LOlk8q-HNtm4RAW99K9GyprxHBWz6_wn-iICLySynhlHWXMuPURx0XV7cYt-xlyuFLkID8LO1q-C3yCn3WMSNsg5u6sQfan_Ndcs63e1yIOpkbRnOxSFWd9EjQj8KtpiOSgFcfpamzKvZJXKzOcdf6IIUE1PUxZK10jTKh5AqxyVDqQyIh9muTfwD2K9cnZPEaKS2X');"></div>
+<div class="p-4">
+<h3 class="text-text-heading-light font-bold text-lg">SaaS Dashboard Redesign</h3>
+<p class="text-text-light/70 text-sm mt-1">Complete overhaul of a data-intensive analytics dashboard for a B2B platform.</p>
+<div class="flex items-center gap-2 mt-3 text-xs text-text-light/50">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Completed: Sep 2023</span>
+</div>
+</div>
+</a>
+<a href="project-details.html" class="bg-card-dark rounded-xl overflow-hidden group hover:ring-2 hover:ring-primary transition-all">
+<div class="bg-center bg-no-repeat aspect-video bg-cover" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBzU-KDn8QxO5Umf0B1OXvXpxQv3ZqprNGL501kq26XydcCfhPSBFmgXOt44maXa3E5AxWEe20cYM9_ZtE85Po7d3eLx_KwTCPJDwA9VZHB3-io15kN025qWkoZPklwzhcr5sujO0-pICn7_-7siH5Miv9oGz4zQ8LWo0iGGRNwj4qDkOprORj5U3n9LZva9emZgsuDiPe_b28xs3JMzp3CYBI56VEc2hSLQNlfAexJjVq09FqUXoaQx3QJRykVeuGc5hG27Y9t0tBv');"></div>
+<div class="p-4">
+<h3 class="text-text-heading-light font-bold text-lg">E-commerce Platform</h3>
+<p class="text-text-light/70 text-sm mt-1">Modern online shopping experience with seamless checkout flow.</p>
+<div class="flex items-center gap-2 mt-3 text-xs text-text-light/50">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Completed: Aug 2023</span>
+</div>
+</div>
+</a>
+<a href="project-details.html" class="bg-card-dark rounded-xl overflow-hidden group hover:ring-2 hover:ring-primary transition-all">
+<div class="bg-center bg-no-repeat aspect-video bg-cover" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnUquCm-Dw5suow-IddxYHHb-ybkQv5TjvP4cA6f9oSPss7rV5TYgpOsIeogSQfvesgoSVc6LOlk8q-HNtm4RAW99K9GyprxHBWz6_wn-iICLySynhlHWXMuPURx0XV7cYt-xlyuFLkID8LO1q-C3yCn3WMSNsg5u6sQfan_Ndcs63e1yIOpkbRnOxSFWd9EjQj8KtpiOSgFcfpamzKvZJXKzOcdf6IIUE1PUxZK10jTKh5AqxyVDqQyIh9muTfwD2K9cnZPEaKS2X');"></div>
+<div class="p-4">
+<h3 class="text-text-heading-light font-bold text-lg">Healthcare App UI</h3>
+<p class="text-text-light/70 text-sm mt-1">Patient-focused mobile interface for telemedicine services.</p>
+<div class="flex items-center gap-2 mt-3 text-xs text-text-light/50">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Completed: Jul 2023</span>
+</div>
+</div>
+</a>
+<a href="project-details.html" class="bg-card-dark rounded-xl overflow-hidden group hover:ring-2 hover:ring-primary transition-all">
+<div class="bg-center bg-no-repeat aspect-video bg-cover" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBzU-KDn8QxO5Umf0B1OXvXpxQv3ZqprNGL501kq26XydcCfhPSBFmgXOt44maXa3E5AxWEe20cYM9_ZtE85Po7d3eLx_KwTCPJDwA9VZHB3-io15kN025qWkoZPklwzhcr5sujO0-pICn7_-7siH5Miv9oGz4zQ8LWo0iGGRNwj4qDkOprORj5U3n9LZva9emZgsuDiPe_b28xs3JMzp3CYBI56VEc2hSLQNlfAexJjVq09FqUXoaQx3QJRykVeuGc5hG27Y9t0tBv');"></div>
+<div class="p-4">
+<h3 class="text-text-heading-light font-bold text-lg">Travel Booking Website</h3>
+<p class="text-text-light/70 text-sm mt-1">Intuitive booking platform for flights and accommodations.</p>
+<div class="flex items-center gap-2 mt-3 text-xs text-text-light/50">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Completed: Jun 2023</span>
+</div>
+</div>
+</a>
+<a href="project-details.html" class="bg-card-dark rounded-xl overflow-hidden group hover:ring-2 hover:ring-primary transition-all">
+<div class="bg-center bg-no-repeat aspect-video bg-cover" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnUquCm-Dw5suow-IddxYHHb-ybkQv5TjvP4cA6f9oSPss7rV5TYgpOsIeogSQfvesgoSVc6LOlk8q-HNtm4RAW99K9GyprxHBWz6_wn-iICLySynhlHWXMuPURx0XV7cYt-xlyuFLkID8LO1q-C3yCn3WMSNsg5u6sQfan_Ndcs63e1yIOpkbRnOxSFWd9EjQj8KtpiOSgFcfpamzKvZJXKzOcdf6IIUE1PUxZK10jTKh5AqxyVDqQyIh9muTfwD2K9cnZPEaKS2X');"></div>
+<div class="p-4">
+<h3 class="text-text-heading-light font-bold text-lg">Social Media Dashboard</h3>
+<p class="text-text-light/70 text-sm mt-1">Analytics and management tool for social media marketers.</p>
+<div class="flex items-center gap-2 mt-3 text-xs text-text-light/50">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Completed: May 2023</span>
+</div>
+</div>
+</a>
+</div>
+</main>
+</body></html>

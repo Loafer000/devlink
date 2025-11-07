@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add Project - DevLink</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FF7A00",
+                        "secondary": "#00C4B3",
+                        "background-dark": "#1A1A1A",
+                        "card-dark": "#2C2C2C",
+                        "text-light": "#E0E0E0",
+                        "text-heading-light": "#FFFFFF"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-dark font-display text-text-light">
+<header class="sticky top-0 z-50 bg-background-dark/80 backdrop-blur-sm border-b border-white/10">
+<nav class="container mx-auto px-6 py-3 flex items-center justify-between">
+<a href="freelancer-profile.html" class="flex items-center gap-4 text-text-heading-light">
+<svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="text-xl font-bold">DevLink</h2>
+</a>
+</nav>
+</header>
+<main class="container mx-auto px-6 py-8 max-w-4xl">
+<div class="mb-6">
+<a href="freelancer-profile.html" class="flex items-center gap-2 text-text-light/70 hover:text-white transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+<span>Back to Profile</span>
+</a>
+</div>
+<h1 class="text-text-heading-light text-3xl font-bold mb-8">Add New Project</h1>
+<form class="space-y-6">
+<div class="bg-card-dark rounded-xl p-6 space-y-6">
+<div>
+<label class="block text-text-heading-light font-medium mb-2">Project Title *</label>
+<input type="text" placeholder="e.g., E-commerce Website Redesign" class="w-full bg-background-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:border-primary focus:ring-2 focus:ring-primary/50 focus:outline-none"/>
+</div>
+<div>
+<label class="block text-text-heading-light font-medium mb-2">Project Description *</label>
+<textarea rows="6" placeholder="Describe your project, the challenges you solved, and the results achieved..." class="w-full bg-background-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:border-primary focus:ring-2 focus:ring-primary/50 focus:outline-none"></textarea>
+</div>
+<div>
+<label class="block text-text-heading-light font-medium mb-2">Project Image/Thumbnail *</label>
+<div class="border-2 border-dashed border-white/20 rounded-lg p-8 text-center hover:border-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-5xl text-white/40 mb-2">cloud_upload</span>
+<p class="text-text-light/70">Click to upload or drag and drop</p>
+<p class="text-sm text-text-light/50 mt-1">PNG, JPG up to 10MB</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-text-heading-light font-medium mb-2">Client Name</label>
+<input type="text" placeholder="e.g., TechCorp Inc." class="w-full bg-background-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:border-primary focus:ring-2 focus:ring-primary/50 focus:outline-none"/>
+</div>
+<div>
+<label class="block text-text-heading-light font-medium mb-2">Completion Date</label>
+<input type="date" class="w-full bg-background-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:border-primary focus:ring-2 focus:ring-primary/50 focus:outline-none"/>
+</div>
+</div>
+<div>
+<label class="block text-text-heading-light font-medium mb-2">Project URL</label>
+<input type="url" placeholder="https://example.com" class="w-full bg-background-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:border-primary focus:ring-2 focus:ring-primary/50 focus:outline-none"/>
+</div>
+<div>
+<label class="block text-text-heading-light font-medium mb-2">Technologies/Skills Used</label>
+<input type="text" placeholder="e.g., Figma, React, Tailwind CSS" class="w-full bg-background-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/40 focus:border-primary focus:ring-2 focus:ring-primary/50 focus:outline-none"/>
+<p class="text-sm text-text-light/50 mt-1">Separate with commas</p>
+</div>
+</div>
+<div class="flex gap-4 justify-end">
+<a href="freelancer-profile.html" class="px-6 py-3 rounded-lg bg-white/10 text-white font-bold hover:bg-white/20 transition-colors">Cancel</a>
+<button type="submit" class="px-6 py-3 rounded-lg bg-primary text-white font-bold hover:bg-primary/90 transition-colors">Add Project</button>
+</div>
+</form>
+</main>
+</body></html>

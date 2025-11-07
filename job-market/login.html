@@ -5,12 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login - JobSeek</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-<style>
-.material-symbols-outlined {
-font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 <script>
 tailwind.config = {
 theme: {
@@ -24,6 +19,9 @@ primary: '#10b981',
 }
 }
 </script>
+<style>
+#roleModal { display: none !important; }
+</style>
 </head>
 <body class="bg-gradient-to-br from-blue-50 via-white to-green-50 min-h-screen flex items-center justify-center p-4">
 <div class="w-full max-w-md">
@@ -57,7 +55,7 @@ primary: '#10b981',
 <input type="checkbox" class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary">
 <span class="ml-2 text-sm text-gray-600">Remember me</span>
 </label>
-<a href="#" class="text-sm text-primary hover:underline">Forgot password?</a>
+<a href="forgot-password.html" class="text-sm text-primary hover:underline">Forgot password?</a>
 </div>
 
 <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-primary/90 transition">Sign In</button>
@@ -111,7 +109,7 @@ Don't have an account? <a href="signup.html" class="text-primary font-semibold h
 </div>
 </div>
 
-<div id="roleModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
+<div id="roleModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50" style="display: none;">
 <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-8 animate-fade-in">
 <h3 class="text-2xl font-bold text-center mb-2">Choose Your Role</h3>
 <p class="text-gray-600 text-center mb-8">Select how you want to use JobSeek</p>
@@ -119,26 +117,26 @@ Don't have an account? <a href="signup.html" class="text-primary font-semibold h
 <button onclick="selectRole('candidate')" class="group border-2 border-gray-200 rounded-xl p-6 hover:border-primary hover:shadow-lg transition-all">
 <div class="flex justify-center mb-4">
 <div class="size-16 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-primary/10 transition">
-<span class="material-symbols-outlined text-4xl text-primary">person_search</span>
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 0;">person_search</span>
 </div>
 </div>
 <h4 class="text-xl font-bold mb-2">Job Seeker</h4>
 <p class="text-gray-600 text-sm mb-4">Find your dream job</p>
 <ul class="text-sm text-gray-600 space-y-2 text-left">
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+<span class="material-symbols-outlined text-green-500 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
 <span>Browse thousands of jobs</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+<span class="material-symbols-outlined text-green-500 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
 <span>Apply with one click</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+<span class="material-symbols-outlined text-green-500 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
 <span>Track applications</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+<span class="material-symbols-outlined text-green-500 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
 <span>Get salary insights</span>
 </li>
 </ul>
@@ -147,26 +145,26 @@ Don't have an account? <a href="signup.html" class="text-primary font-semibold h
 <button onclick="selectRole('employer')" class="group border-2 border-gray-200 rounded-xl p-6 hover:border-primary hover:shadow-lg transition-all">
 <div class="flex justify-center mb-4">
 <div class="size-16 bg-purple-100 rounded-full flex items-center justify-center group-hover:bg-primary/10 transition">
-<span class="material-symbols-outlined text-4xl text-primary">business_center</span>
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 0;">business_center</span>
 </div>
 </div>
 <h4 class="text-xl font-bold mb-2">Employer</h4>
 <p class="text-gray-600 text-sm mb-4">Hire top talent</p>
 <ul class="text-sm text-gray-600 space-y-2 text-left">
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+<span class="material-symbols-outlined text-green-500 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
 <span>Post unlimited jobs</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+<span class="material-symbols-outlined text-green-500 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
 <span>Search resume database</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+<span class="material-symbols-outlined text-green-500 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
 <span>Manage applications</span>
 </li>
 <li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+<span class="material-symbols-outlined text-green-500 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
 <span>Company branding</span>
 </li>
 </ul>
@@ -190,21 +188,30 @@ icon.textContent = 'visibility';
 
 document.getElementById('loginForm').addEventListener('submit', function(e) {
 e.preventDefault();
-document.getElementById('roleModal').classList.remove('hidden');
+showModal();
 });
 
 function loginWith(provider) {
 console.log('Login with:', provider);
-document.getElementById('roleModal').classList.remove('hidden');
+showModal();
 }
 
 function selectRole(role) {
 console.log('Selected role:', role);
+const modal = document.getElementById('roleModal');
+modal.style.display = 'none';
+modal.classList.add('hidden');
 if (role === 'candidate') {
 window.location.href = 'candidate-dashboard.html';
 } else {
 window.location.href = 'employer-dashboard.html';
 }
+}
+
+function showModal() {
+const modal = document.getElementById('roleModal');
+modal.style.cssText = 'display: flex !important;';
+modal.classList.remove('hidden');
 }
 </script>
 </body>

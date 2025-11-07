@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevLink - Client Offers</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#FF7A00",
+              "secondary": "#00C4B3",
+              "background-light": "#f8f7f5",
+              "background-dark": "#1A1A1A",
+              "surface-dark": "#2C2C2C",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"],
+              "body": ["Inter", "sans-serif"]
+            },
+            borderRadius: {
+                "DEFAULT": "0.5rem", 
+                "lg": "0.75rem", 
+                "xl": "1rem", 
+                "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-white font-body">
+<div class="relative flex min-h-screen w-full flex-row group/design-root overflow-x-hidden">
+<aside class="sticky top-0 h-screen w-16 md:w-64 flex flex-col bg-surface-dark border-r border-white/10 transition-all duration-300">
+<div class="flex items-center justify-center md:justify-start gap-4 h-20 border-b border-white/10 px-4">
+<svg class="h-8 w-8 text-primary flex-shrink-0" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="font-display text-white text-xl font-bold hidden md:block">DevLink</h2>
+</div>
+<nav class="flex-grow p-2 md:p-4 space-y-2">
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-white/60 hover:bg-white/5 hover:text-white transition-colors" href="freelancer-dashboard.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium hidden md:block">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-white/60 hover:bg-white/5 hover:text-white transition-colors" href="my-issues.html">
+<span class="material-symbols-outlined">edit_document</span>
+<span class="text-sm font-medium hidden md:block">My Issues</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg bg-primary/10 px-3 py-2.5 text-primary" href="offers.html">
+<span class="material-symbols-outlined">local_offer</span>
+<span class="text-sm font-bold hidden md:block">Offers</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-white/60 hover:bg-white/5 hover:text-white transition-colors" href="messages.html">
+<span class="material-symbols-outlined">chat</span>
+<span class="text-sm font-medium hidden md:block">Messages</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-white/60 hover:bg-white/5 hover:text-white transition-colors" href="past-projects.html">
+<span class="material-symbols-outlined">history</span>
+<span class="text-sm font-medium hidden md:block">Past Projects</span>
+</a>
+</nav>
+<div class="p-2 md:p-4 border-t border-white/10">
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-white/60 hover:bg-white/5 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium hidden md:block">Settings</span>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-white/60 hover:bg-white/5 hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm font-medium hidden md:block">Logout</span>
+</a>
+</div>
+</aside>
+<div class="flex-1 flex flex-col">
+<header class="sticky top-0 z-40 bg-background-dark/80 backdrop-blur-lg">
+<div class="flex h-20 items-center justify-between border-b border-white/10 px-4 sm:px-6 lg:px-8">
+<h1 class="font-display text-2xl font-bold text-white">Direct Offers</h1>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold tracking-wide transition-transform hover:scale-105 gap-2">
+<span class="material-symbols-outlined text-base">add_circle</span>
+<span class="truncate hidden sm:block">Post New Issue</span>
+</button>
+<div class="relative">
+<button class="relative flex items-center justify-center size-10 rounded-full bg-surface-dark hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-1 right-1.5 flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVTvqv8VF50ZLRZWC50sNT8mHdC3xGvQTdY9Q7dAUuU_233aiJplJxuJ3OqVnGdyLyZ-erqefrgo6tpH_NvNnXKZObCsDmggj0-mMgUHwoKR_mzPJvF3xYZIdUac41RwwlFu6YZm84m5O8-raEyYZn7w-BVwPfE_v0nN84w2MRWES503_0ZPjR1H24D9xUw1iCJuQ_oHpHWqo05iZSjCzBsaOZg8L4AORe1Z9-6NvJ_1444NRk2LSdhsKmmntMhLdkbmnDYqHy9m_X");'></div>
+</div>
+</div>
+</header>
+<main class="flex-grow p-4 sm:p-6 lg:p-8">
+<div class="mx-auto max-w-7xl">
+<div class="mb-6">
+<p class="text-white/70">Review direct project offers from freelancers. These are separate from proposals on your posted issues.</p>
+</div>
+<div class="space-y-6">
+<div class="rounded-xl border border-white/10 bg-surface-dark p-4 sm:p-6">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+<div class="md:col-span-4 flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 flex-shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVTvqv8VF50ZLRZWC50sNT8mHdC3xGvQTdY9Q7dAUuU_233aiJplJxuJ3OqVnGdyLyZ-erqefrgo6tpH_NvNnXKZObCsDmggj0-mMgUHwoKR_mzPJvF3xYZIdUac41RwwlFu6YZm84m5O8-raEyYZn7w-BVwPfE_v0nN84w2MRWES503_0ZPjR1H24D9xUw1iCJuQ_oHpHWqo05iZSjCzBsaOZg8L4AORe1Z9-6NvJ_1444NRk2LSdhsKmmntMhLdkbmnDYqHy9m_X");'></div>
+<div>
+<h3 class="font-bold text-lg text-white">David Chen</h3>
+<p class="text-sm text-white/60">Senior Backend Developer</p>
+</div>
+</div>
+<div class="md:col-span-4">
+<h4 class="font-semibold text-white">Database Optimization</h4>
+<p class="text-sm text-white/60">Project offer for your e-commerce platform.</p>
+</div>
+<div class="md:col-span-4 flex flex-col md:flex-row items-start md:items-center justify-end gap-4">
+<div class="text-left md:text-right">
+<p class="text-sm text-white/60">Estimated Cost</p>
+<p class="font-display font-bold text-xl text-secondary">$2,500</p>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-white/10 flex flex-wrap gap-3 justify-start sm:justify-end">
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 text-sm font-bold bg-white/10 text-white hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined text-base">visibility</span>
+<span>View Offer Details</span>
+</button>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 text-sm font-bold bg-white/10 text-white hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined text-base">chat_bubble</span>
+<span>Chat with Freelancer</span>
+</button>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-5 text-sm font-bold bg-primary text-white hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-base">check_circle</span>
+<span>Accept Offer</span>
+</button>
+</div>
+</div>
+<div class="rounded-xl border border-white/10 bg-surface-dark p-4 sm:p-6">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+<div class="md:col-span-4 flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 flex-shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVTvqv8VF50ZLRZWC50sNT8mHdC3xGvQTdY9Q7dAUuU_233aiJplJxuJ3OqVnGdyLyZ-erqefrgo6tpH_NvNnXKZObCsDmggj0-mMgUHwoKR_mzPJvF3xYZIdUac41RwwlFu6YZm84m5O8-raEyYZn7w-BVwPfE_v0nN84w2MRWES503_0ZPjR1H24D9xUw1iCJuQ_oHpHWqo05iZSjCzBsaOZg8L4AORe1Z9-6NvJ_1444NRk2LSdhsKmmntMhLdkbmnDYqHy9m_X");'></div>
+<div>
+<h3 class="font-bold text-lg text-white">Maria Garcia</h3>
+<p class="text-sm text-white/60">Lead UI/UX Designer</p>
+</div>
+</div>
+<div class="md:col-span-4">
+<h4 class="font-semibold text-white">React Component Library</h4>
+<p class="text-sm text-white/60">Custom components for your design system.</p>
+</div>
+<div class="md:col-span-4 flex flex-col md:flex-row items-start md:items-center justify-end gap-4">
+<div class="text-left md:text-right">
+<p class="text-sm text-white/60">Estimated Cost</p>
+<p class="font-display font-bold text-xl text-secondary">$4,000</p>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-white/10 flex flex-wrap gap-3 justify-start sm:justify-end">
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 text-sm font-bold bg-white/10 text-white hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined text-base">visibility</span>
+<span>View Offer Details</span>
+</button>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 text-sm font-bold bg-white/10 text-white hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined text-base">chat_bubble</span>
+<span>Chat with Freelancer</span>
+</button>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-5 text-sm font-bold bg-primary text-white hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-base">check_circle</span>
+<span>Accept Offer</span>
+</button>
+</div>
+</div>
+<div class="rounded-xl border border-white/10 bg-surface-dark p-4 sm:p-6">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+<div class="md:col-span-4 flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 flex-shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVTvqv8VF50ZLRZWC50sNT8mHdC3xGvQTdY9Q7dAUuU_233aiJplJxuJ3OqVnGdyLyZ-erqefrgo6tpH_NvNnXKZObCsDmggj0-mMgUHwoKR_mzPJvF3xYZIdUac41RwwlFu6YZm84m5O8-raEyYZn7w-BVwPfE_v0nN84w2MRWES503_0ZPjR1H24D9xUw1iCJuQ_oHpHWqo05iZSjCzBsaOZg8L4AORe1Z9-6NvJ_1444NRk2LSdhsKmmntMhLdkbmnDYqHy9m_X");'></div>
+<div>
+<h3 class="font-bold text-lg text-white">Alex Johnson</h3>
+<p class="text-sm text-white/60">DevOps Specialist</p>
+</div>
+</div>
+<div class="md:col-span-4">
+<h4 class="font-semibold text-white">CI/CD Pipeline Setup</h4>
+<p class="text-sm text-white/60">Automate your deployment process on AWS.</p>
+</div>
+<div class="md:col-span-4 flex flex-col md:flex-row items-start md:items-center justify-end gap-4">
+<div class="text-left md:text-right">
+<p class="text-sm text-white/60">Estimated Cost</p>
+<p class="font-display font-bold text-xl text-secondary">$1,800</p>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-white/10 flex flex-wrap gap-3 justify-start sm:justify-end">
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 text-sm font-bold bg-white/10 text-white hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined text-base">visibility</span>
+<span>View Offer Details</span>
+</button>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 text-sm font-bold bg-white/10 text-white hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined text-base">chat_bubble</span>
+<span>Chat with Freelancer</span>
+</button>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-5 text-sm font-bold bg-primary text-white hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-base">check_circle</span>
+<span>Accept Offer</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Proposals</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+             font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f97306",
+              "secondary": "#00BCD4",
+              "background-light": "#f8f7f5",
+              "background-dark": "#121212",
+              "surface-dark": "#1e1e1e",
+              "border-dark": "#2d2d2d",
+              "text-primary-dark": "#e0e0e0",
+              "text-secondary-dark": "#a0a0a0",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-primary-dark">
+<div class="flex min-h-screen">
+<aside class="w-64 flex-shrink-0 bg-background-light dark:bg-surface-dark p-6 flex flex-col justify-between">
+<div class="flex flex-col gap-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">hub</span>
+<h1 class="text-white text-xl font-bold">FreelanceHub</h1>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="Profile picture of Elena Vance" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzx2uv7oeoXhxg9rdGQEAxeyxVIkZvmcbaGqxLedchd_eBxtFf1pRIaz7L78zA7YSaG7Te6JmwtjrZq4cgIRyNOXNOukZ06M6JB168t2g9rCf5g6mZgGIRHpP8KN8MdLB-d544GprhUjqiwc500kQ37aIR-csHmHWMC_amFLLQ-0ZXS6yhuywHu8AaqNUxUaGEtTA5mxpPEeU9kIiyQfv82Zle-kju3yjhNpFhb9i3nj3lNg3SZBXxl17zVsDPUNfjg-dtQMHzudWu");'></div>
+<div class="flex flex-col">
+<h2 class="text-white text-base font-medium leading-normal">Elena Vance</h2>
+<p class="text-text-secondary-dark text-sm font-normal leading-normal">Available for Hire</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/10 text-text-primary-dark" href="freelancer-dashboard.html">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/10 text-text-primary-dark" href="#">
+<span class="material-symbols-outlined">search</span>
+<p class="text-sm font-medium leading-normal">Find Work</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/10 text-text-primary-dark" href="messages.html">
+<span class="material-symbols-outlined">chat</span>
+<p class="text-sm font-medium leading-normal">Messages</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/10 text-text-primary-dark" href="#">
+<span class="material-symbols-outlined">help_center</span>
+<p class="text-sm font-medium leading-normal">Doubt Solver</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-primary" href="my-proposals.html">
+<span class="material-symbols-outlined fill">description</span>
+<p class="text-sm font-medium leading-normal">My Proposals</p>
+</a>
+</nav>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/10 text-text-primary-dark" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/10 text-text-primary-dark" href="#">
+<span class="material-symbols-outlined">logout</span>
+<p class="text-sm font-medium leading-normal">Logout</p>
+</a>
+</div>
+</aside>
+<main class="flex-1 p-8 overflow-y-auto">
+<div class="max-w-7xl mx-auto">
+<header class="mb-8">
+<h1 class="text-white text-4xl font-bold leading-tight tracking-tight">My Submitted Proposals</h1>
+<p class="text-text-secondary-dark mt-2">Track and manage all the proposals you've sent to clients.</p>
+</header>
+<div class="bg-surface-dark rounded-xl border border-border-dark">
+<div class="grid grid-cols-12 gap-4 px-6 py-4 border-b border-border-dark">
+<div class="col-span-4 text-text-secondary-dark text-sm font-bold uppercase tracking-wider">Issue / Client</div>
+<div class="col-span-2 text-text-secondary-dark text-sm font-bold uppercase tracking-wider">Price</div>
+<div class="col-span-2 text-text-secondary-dark text-sm font-bold uppercase tracking-wider">Date Submitted</div>
+<div class="col-span-2 text-text-secondary-dark text-sm font-bold uppercase tracking-wider">Status</div>
+<div class="col-span-2 text-text-secondary-dark text-sm font-bold uppercase tracking-wider text-right">Actions</div>
+</div>
+<div class="grid grid-cols-12 gap-4 items-center px-6 py-5 border-b border-border-dark hover:bg-white/5 transition-colors">
+<div class="col-span-4">
+<p class="text-white font-medium">Brand Identity for 'SynthWave' Startup</p>
+<p class="text-sm text-text-secondary-dark">by Marcus Chen</p>
+</div>
+<div class="col-span-2">
+<p class="text-white font-medium">$1,200</p>
+</div>
+<div class="col-span-2">
+<p class="text-text-secondary-dark">Oct 26, 2023</p>
+</div>
+<div class="col-span-2">
+<span class="inline-flex items-center text-green-400 bg-green-400/10 text-xs font-semibold px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-sm mr-1.5">check_circle</span>
+                            Accepted
+                        </span>
+</div>
+<div class="col-span-2 flex justify-end gap-2">
+<button class="text-secondary font-semibold py-2 px-4 rounded-lg border-2 border-secondary hover:bg-secondary hover:text-white transition-colors text-sm">View Details</button>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-4 items-center px-6 py-5 border-b border-border-dark hover:bg-white/5 transition-colors">
+<div class="col-span-4">
+<p class="text-white font-medium">Fix CSS Bugs on E-commerce Landing Page</p>
+<p class="text-sm text-text-secondary-dark">by Olivia Rodriguez</p>
+</div>
+<div class="col-span-2">
+<p class="text-white font-medium">$350</p>
+</div>
+<div class="col-span-2">
+<p class="text-text-secondary-dark">Oct 24, 2023</p>
+</div>
+<div class="col-span-2">
+<span class="inline-flex items-center text-yellow-400 bg-yellow-400/10 text-xs font-semibold px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-sm mr-1.5">visibility</span>
+                            Viewed
+                        </span>
+</div>
+<div class="col-span-2 flex justify-end gap-2">
+<button class="text-secondary font-semibold py-2 px-4 rounded-lg border-2 border-secondary hover:bg-secondary hover:text-white transition-colors text-sm">View Details</button>
+<button class="text-red-500 font-semibold py-2 px-4 rounded-lg border-2 border-red-500/50 hover:bg-red-500 hover:text-white transition-colors text-sm">Withdraw</button>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-4 items-center px-6 py-5 border-b border-border-dark hover:bg-white/5 transition-colors">
+<div class="col-span-4">
+<p class="text-white font-medium">Develop Python Script for Data Processing</p>
+<p class="text-sm text-text-secondary-dark">by TechSolutions Inc.</p>
+</div>
+<div class="col-span-2">
+<p class="text-white font-medium">$800</p>
+</div>
+<div class="col-span-2">
+<p class="text-text-secondary-dark">Oct 23, 2023</p>
+</div>
+<div class="col-span-2">
+<span class="inline-flex items-center text-text-secondary-dark bg-white/10 text-xs font-semibold px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-sm mr-1.5">schedule</span>
+                            Pending
+                        </span>
+</div>
+<div class="col-span-2 flex justify-end gap-2">
+<button class="text-secondary font-semibold py-2 px-4 rounded-lg border-2 border-secondary hover:bg-secondary hover:text-white transition-colors text-sm">View Details</button>
+<button class="text-red-500 font-semibold py-2 px-4 rounded-lg border-2 border-red-500/50 hover:bg-red-500 hover:text-white transition-colors text-sm">Withdraw</button>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-4 items-center px-6 py-5 hover:bg-white/5 transition-colors">
+<div class="col-span-4">
+<p class="text-white font-medium">UI/UX Design for a Mobile Fitness App</p>
+<p class="text-sm text-text-secondary-dark">by FitLife Apps</p>
+</div>
+<div class="col-span-2">
+<p class="text-white font-medium">$2,500</p>
+</div>
+<div class="col-span-2">
+<p class="text-text-secondary-dark">Oct 20, 2023</p>
+</div>
+<div class="col-span-2">
+<span class="inline-flex items-center text-red-500 bg-red-500/10 text-xs font-semibold px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-sm mr-1.5">cancel</span>
+                            Rejected
+                        </span>
+</div>
+<div class="col-span-2 flex justify-end gap-2">
+<button class="text-secondary font-semibold py-2 px-4 rounded-lg border-2 border-secondary hover:bg-secondary hover:text-white transition-colors text-sm">View Details</button>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center mt-6 px-2">
+<p class="text-sm text-text-secondary-dark">Showing 1 to 4 of 16 proposals</p>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center size-9 rounded-lg border border-border-dark bg-surface-dark hover:bg-white/10 text-text-secondary-dark transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-xl">chevron_left</span>
+</button>
+<button class="flex items-center justify-center size-9 rounded-lg border border-border-dark bg-primary text-white transition-colors">1</button>
+<button class="flex items-center justify-center size-9 rounded-lg border border-border-dark bg-surface-dark hover:bg-white/10 text-text-secondary-dark transition-colors">2</button>
+<button class="flex items-center justify-center size-9 rounded-lg border border-border-dark bg-surface-dark hover:bg-white/10 text-text-secondary-dark transition-colors">3</button>
+<button class="flex items-center justify-center size-9 rounded-lg border border-border-dark bg-surface-dark hover:bg-white/10 text-text-secondary-dark transition-colors">
+<span class="material-symbols-outlined text-xl">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

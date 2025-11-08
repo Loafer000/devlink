@@ -8,6 +8,13 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+@keyframes glow-pulse {
+0%, 100% { box-shadow: 0 0 8px rgba(32,201,151,0.4), 0 0 12px rgba(255,193,7,0.3), 0 0 16px rgba(255,255,255,0.2); }
+50% { box-shadow: 0 0 20px rgba(32,201,151,0.7), 0 0 30px rgba(255,193,7,0.6), 0 0 40px rgba(255,255,255,0.4); }
+}
+.glow-animate { animation: glow-pulse 2s ease-in-out infinite; }
+</style>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -73,10 +80,19 @@
 </div>
 <h2 class="text-2xl font-bold">JobSeek</h2>
 </a>
-<nav class="hidden items-center gap-10 md:flex">
+<nav class="hidden items-center gap-6 md:flex">
 <a class="text-base font-medium hover:text-primary" href="find-job.html">Find Jobs</a>
 <a class="text-base font-medium hover:text-primary" href="company-reviews.html">Company Reviews</a>
-<a class="text-base font-medium hover:text-primary" href="salary-guide.html">Salary Guide</a>
+<div class="relative group">
+<a href="career-resources.html" class="text-base font-medium hover:text-primary inline-block">Career Resources ▾</a>
+<div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+<a href="resume-builder.html" class="block px-4 py-2 hover:bg-gray-100 text-gray-700">Resume Builder</a>
+<a href="interview-prep.html" class="block px-4 py-2 hover:bg-gray-100 text-gray-700">Interview Prep</a>
+<a href="career-advice.html" class="block px-4 py-2 hover:bg-gray-100 text-gray-700">Career Advice</a>
+<a href="salary-guide.html" class="block px-4 py-2 hover:bg-gray-100 text-gray-700">Salary Guide</a>
+</div>
+</div>
+<a class="px-4 py-2 bg-gradient-to-r from-white to-primary text-black rounded-lg font-semibold transition-all border-2 border-primary glow-animate" href="../freelancing/index.html">Freelancing</a>
 </nav>
 <div class="flex items-center gap-3">
 <a href="post-job.html" class="hidden min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-neutral-light dark:bg-neutral-dark text-sm font-bold hover:bg-neutral-light/80 dark:hover:bg-neutral-dark/80 sm:flex">Post a Job</a>
@@ -415,7 +431,7 @@
 </div>
 <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
 <div class="group overflow-hidden rounded-xl bg-white dark:bg-neutral-dark/30 border border-neutral-light dark:border-neutral-dark/60">
-<a href="#">
+<a href="career-resources.html">
 <img alt="Resume writing tips" class="h-56 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsk7U9KugPCFA8Ps__9nzRlnHmzvlgTS4CEVKZswHNLfEN7pyk2zl3lBSmB8VVWDcXDOlLJpodaPWN_67uwBVSvSU0nM2pakmJ43W2Qc4rLvzC9QXmiQuG72SMS2pTAAvri6tNx0WwX15xgo8yaV8Fe4gBZsbl2hAAMbtxV3BYzut0KGL5NZZJefYeXM0qxKxP2R4cjCF5gsEXiJMtaiY6o36QQoQYrvm17XrlU3DECX04lE_jN68crbDvRF5xdq21FBWxStBanapE"/>
 <div class="p-6">
 <span class="text-sm font-medium text-primary">Resumes &amp; Interviews</span>
@@ -425,7 +441,7 @@
 </a>
 </div>
 <div class="group overflow-hidden rounded-xl bg-white dark:bg-neutral-dark/30 border border-neutral-light dark:border-neutral-dark/60">
-<a href="#">
+<a href="career-resources.html">
 <img alt="Career growth workshop" class="h-56 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1rQ0So90Ae6hUGRYyVtfI0e4TwdCwhuLd1jq23nGB9bqJ8ih-CyMLZTap7VH40bA-oqgiqBiHw4GkZRAEPZAj6H1eC6hQ08DmqjvMQl8pCR5SQkYbwlDEiELJYm8xiFGCHOH-nqtPB7kJBTTpShX5vB_qUjZeqK_aCkGLh-p-y3-63fL8roFuo53w4gbu2nhSflGTw5WLibP5EAgNYXgtypll7s6sq8i47rCmxVG8MA4ew8DZAFLSl1lq5n8fURjGsaD4DazzHVd3"/>
 <div class="p-6">
 <span class="text-sm font-medium text-primary">Career Growth</span>
@@ -435,7 +451,7 @@
 </a>
 </div>
 <div class="group overflow-hidden rounded-xl bg-white dark:bg-neutral-dark/30 border border-neutral-light dark:border-neutral-dark/60">
-<a href="#">
+<a href="career-resources.html">
 <img alt="Team working remotely" class="h-56 w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDerr_TcBPdPAECeuilpk_g4yxkEisAX-bjQqcTBjy2NYUaDnQEikfVddPVrAUlXvs_zvzej7PB7GM0AilKFcDvtJcMS3YKawG38e7notTx3t6nB-_ZDV9lDbHf40KwS9Ngjy_IdLWlllaLy-ZgMbQv5zDj5GD21CD0x4xBqHSH-hy3SZUQu3dASmc0k2T0P9PFdMPrxWZjrk1aKkhtSJ17wOZmfqS-FGAfOJ6oHT563XQaybwItqDpbTV0wV2Ee4e5KRqsS66C_-Ve"/>
 <div class="p-6">
 <span class="text-sm font-medium text-primary">Work-Life Balance</span>

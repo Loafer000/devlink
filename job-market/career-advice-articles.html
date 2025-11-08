@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Advice Articles - JobSeek</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#20c997'
+}
+}
+}
+}
+</script>
+</head>
+<body class="bg-gray-50">
+<header class="sticky top-0 z-10 w-full border-b border-gray-200 bg-white/80 backdrop-blur-sm">
+<div class="mx-auto flex max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8 py-4">
+<a href="job-marketplace-home.html" class="flex items-center gap-3 hover:opacity-80 transition">
+<h2 class="text-2xl font-bold">JobSeek</h2>
+</a>
+<nav class="hidden items-center gap-8 md:flex">
+<a class="text-base font-medium hover:text-primary" href="find-job.html">Find Jobs</a>
+<a class="text-base font-medium hover:text-primary" href="company-reviews.html">Companies</a>
+<div class="relative group">
+<a href="career-resources.html" class="text-base font-medium text-primary inline-block">Resources ▾</a>
+<div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+<a href="resume-builder.html" class="block px-4 py-2 hover:bg-gray-100">Resume Builder</a>
+<a href="interview-prep.html" class="block px-4 py-2 hover:bg-gray-100">Interview Prep</a>
+<a href="career-advice.html" class="block px-4 py-2 hover:bg-gray-100">Career Advice</a>
+<a href="salary-guide.html" class="block px-4 py-2 hover:bg-gray-100">Salary Guide</a>
+</div>
+</div>
+</nav>
+<a href="login.html" class="px-6 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition">Sign In</a>
+</div>
+</header>
+
+<main class="w-full">
+<section class="py-16 bg-gradient-to-r from-primary to-emerald-600 text-white">
+<div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center">
+<h1 class="text-5xl font-extrabold mb-4">Career Advice Articles</h1>
+<p class="text-xl max-w-2xl mx-auto">Click on any article to read the full content</p>
+</div>
+</section>
+
+<section class="py-16">
+<div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+<div class="space-y-4">
+
+<div class="bg-white rounded-xl shadow border border-gray-200">
+<div class="p-6 cursor-pointer" onclick="toggleArticle('article1')">
+<div class="flex justify-between items-center">
+<div>
+<span class="text-xs font-semibold text-primary">CAREER GROWTH</span>
+<h3 class="text-2xl font-bold mt-2">How to Ask for a Raise</h3>
+</div>
+<span id="icon1" class="text-2xl">+</span>
+</div>
+</div>
+<div id="article1" class="hidden px-6 pb-6">
+<div class="border-t pt-6 space-y-4 text-gray-700">
+<p>Asking for a raise can be intimidating, but with the right preparation and approach, you can significantly increase your chances of success.</p>
+<h4 class="font-bold text-lg">1. Do Your Research</h4>
+<p>Before requesting a raise, research industry standards for your position and experience level. Use salary comparison websites and talk to recruiters to understand your market value.</p>
+<h4 class="font-bold text-lg">2. Document Your Achievements</h4>
+<p>Create a comprehensive list of your accomplishments, including quantifiable results. Focus on how you've added value to the company through increased revenue, cost savings, or improved processes.</p>
+<h4 class="font-bold text-lg">3. Choose the Right Timing</h4>
+<p>Request a meeting after completing a major project or during performance review season. Avoid asking during company financial difficulties or major organizational changes.</p>
+<h4 class="font-bold text-lg">4. Practice Your Pitch</h4>
+<p>Rehearse what you'll say, focusing on your value proposition rather than personal financial needs. Be confident but not demanding.</p>
+<h4 class="font-bold text-lg">5. Be Prepared for Any Response</h4>
+<p>Have a plan for different scenarios. If they say yes, express gratitude. If they say no, ask what you need to do to earn a raise in the future.</p>
+</div>
+</div>
+</div>
+
+<div class="bg-white rounded-xl shadow border border-gray-200">
+<div class="p-6 cursor-pointer" onclick="toggleArticle('article2')">
+<div class="flex justify-between items-center">
+<div>
+<span class="text-xs font-semibold text-primary">NETWORKING</span>
+<h3 class="text-2xl font-bold mt-2">Building Your Professional Network</h3>
+</div>
+<span id="icon2" class="text-2xl">+</span>
+</div>
+</div>
+<div id="article2" class="hidden px-6 pb-6">
+<div class="border-t pt-6 space-y-4 text-gray-700">
+<p>A strong professional network is essential for career growth and opportunities. Here's how to build meaningful connections.</p>
+<h4 class="font-bold text-lg">Start with LinkedIn</h4>
+<p>Optimize your LinkedIn profile with a professional photo, compelling headline, and detailed experience. Connect with colleagues, classmates, and industry professionals.</p>
+<h4 class="font-bold text-lg">Attend Industry Events</h4>
+<p>Participate in conferences, workshops, and meetups in your field. Come prepared with business cards and conversation starters.</p>
+<h4 class="font-bold text-lg">Provide Value First</h4>
+<p>Focus on how you can help others rather than what you can get. Share useful articles, make introductions, and offer your expertise.</p>
+<h4 class="font-bold text-lg">Follow Up Consistently</h4>
+<p>After meeting someone, send a personalized follow-up message within 24-48 hours. Stay in touch periodically with valuable content or check-ins.</p>
+<h4 class="font-bold text-lg">Join Professional Organizations</h4>
+<p>Become a member of industry associations and participate actively in committees or volunteer opportunities.</p>
+</div>
+</div>
+</div>
+
+<div class="bg-white rounded-xl shadow border border-gray-200">
+<div class="p-6 cursor-pointer" onclick="toggleArticle('article3')">
+<div class="flex justify-between items-center">
+<div>
+<span class="text-xs font-semibold text-primary">SKILLS</span>
+<h3 class="text-2xl font-bold mt-2">Top Skills Employers Want in 2024</h3>
+</div>
+<span id="icon3" class="text-2xl">+</span>
+</div>
+</div>
+<div id="article3" class="hidden px-6 pb-6">
+<div class="border-t pt-6 space-y-4 text-gray-700">
+<p>The job market is constantly evolving. Here are the most in-demand skills employers are looking for in 2024.</p>
+<h4 class="font-bold text-lg">1. Artificial Intelligence & Machine Learning</h4>
+<p>Understanding AI tools and their applications is becoming essential across industries. Familiarity with ChatGPT, automation tools, and data analysis is highly valued.</p>
+<h4 class="font-bold text-lg">2. Data Analysis</h4>
+<p>The ability to interpret data and make data-driven decisions is crucial. Skills in Excel, SQL, Python, and visualization tools like Tableau are in high demand.</p>
+<h4 class="font-bold text-lg">3. Digital Marketing</h4>
+<p>SEO, content marketing, social media management, and analytics are essential for modern businesses.</p>
+<h4 class="font-bold text-lg">4. Cloud Computing</h4>
+<p>Experience with AWS, Azure, or Google Cloud Platform is increasingly important as companies migrate to cloud infrastructure.</p>
+<h4 class="font-bold text-lg">5. Emotional Intelligence</h4>
+<p>Soft skills like empathy, communication, and collaboration are more important than ever in remote and hybrid work environments.</p>
+</div>
+</div>
+</div>
+
+<div class="bg-white rounded-xl shadow border border-gray-200">
+<div class="p-6 cursor-pointer" onclick="toggleArticle('article4')">
+<div class="flex justify-between items-center">
+<div>
+<span class="text-xs font-semibold text-primary">REMOTE WORK</span>
+<h3 class="text-2xl font-bold mt-2">Thriving in Remote Work</h3>
+</div>
+<span id="icon4" class="text-2xl">+</span>
+</div>
+</div>
+<div id="article4" class="hidden px-6 pb-6">
+<div class="border-t pt-6 space-y-4 text-gray-700">
+<p>Remote work offers flexibility but requires discipline and strategy to be successful.</p>
+<h4 class="font-bold text-lg">Create a Dedicated Workspace</h4>
+<p>Set up a specific area for work that's separate from your living space. Invest in a comfortable chair, good lighting, and necessary equipment.</p>
+<h4 class="font-bold text-lg">Establish a Routine</h4>
+<p>Maintain regular work hours and create morning rituals to signal the start of your workday. Take scheduled breaks and have a clear end-of-day routine.</p>
+<h4 class="font-bold text-lg">Over-Communicate</h4>
+<p>In remote settings, it's better to over-communicate than under-communicate. Keep your team updated on your progress and availability.</p>
+<h4 class="font-bold text-lg">Set Boundaries</h4>
+<p>Clearly communicate your working hours to family and colleagues. Learn to disconnect after work hours to prevent burnout.</p>
+<h4 class="font-bold text-lg">Stay Connected</h4>
+<p>Schedule regular video calls with colleagues, participate in virtual team activities, and make an effort to maintain relationships.</p>
+</div>
+</div>
+</div>
+
+<div class="bg-white rounded-xl shadow border border-gray-200">
+<div class="p-6 cursor-pointer" onclick="toggleArticle('article5')">
+<div class="flex justify-between items-center">
+<div>
+<span class="text-xs font-semibold text-primary">CAREER CHANGE</span>
+<h3 class="text-2xl font-bold mt-2">Switching Careers Successfully</h3>
+</div>
+<span id="icon5" class="text-2xl">+</span>
+</div>
+</div>
+<div id="article5" class="hidden px-6 pb-6">
+<div class="border-t pt-6 space-y-4 text-gray-700">
+<p>Changing careers can be daunting, but with the right approach, you can make a successful transition.</p>
+<h4 class="font-bold text-lg">Identify Transferable Skills</h4>
+<p>List all your skills and identify which ones apply to your target career. Focus on soft skills like leadership, communication, and problem-solving.</p>
+<h4 class="font-bold text-lg">Fill Knowledge Gaps</h4>
+<p>Take online courses, earn certifications, or pursue additional education to gain necessary skills for your new field.</p>
+<h4 class="font-bold text-lg">Network in Your Target Industry</h4>
+<p>Attend industry events, join professional groups, and conduct informational interviews with people in your desired field.</p>
+<h4 class="font-bold text-lg">Start with Side Projects</h4>
+<p>Build a portfolio by taking on freelance work, volunteering, or working on personal projects in your target field.</p>
+<h4 class="font-bold text-lg">Rebrand Yourself</h4>
+<p>Update your resume, LinkedIn profile, and online presence to reflect your new career direction. Craft a compelling narrative about your career change.</p>
+</div>
+</div>
+</div>
+
+<div class="bg-white rounded-xl shadow border border-gray-200">
+<div class="p-6 cursor-pointer" onclick="toggleArticle('article6')">
+<div class="flex justify-between items-center">
+<div>
+<span class="text-xs font-semibold text-primary">LEADERSHIP</span>
+<h3 class="text-2xl font-bold mt-2">Developing Leadership Skills</h3>
+</div>
+<span id="icon6" class="text-2xl">+</span>
+</div>
+</div>
+<div id="article6" class="hidden px-6 pb-6">
+<div class="border-t pt-6 space-y-4 text-gray-700">
+<p>Leadership isn't just for managers. Developing leadership skills can advance your career at any level.</p>
+<h4 class="font-bold text-lg">Lead by Example</h4>
+<p>Demonstrate the behaviors and work ethic you want to see in others. Be reliable, accountable, and maintain high standards.</p>
+<h4 class="font-bold text-lg">Develop Emotional Intelligence</h4>
+<p>Work on self-awareness, empathy, and relationship management. Understand how your emotions affect your decisions and interactions.</p>
+<h4 class="font-bold text-lg">Learn to Delegate</h4>
+<p>Trust your team members with responsibilities. Provide clear instructions and support, but allow them autonomy to complete tasks.</p>
+<h4 class="font-bold text-lg">Communicate Effectively</h4>
+<p>Practice active listening, provide clear direction, and give constructive feedback. Adapt your communication style to different audiences.</p>
+<h4 class="font-bold text-lg">Embrace Continuous Learning</h4>
+<p>Stay curious and open to new ideas. Read leadership books, attend workshops, and seek mentorship from experienced leaders.</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+</main>
+
+<footer class="w-full border-t border-gray-200 py-8 bg-white">
+<div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600">
+<p>&copy; 2024 JobSeek. All rights reserved.</p>
+</div>
+</footer>
+
+<script>
+function toggleArticle(articleId) {
+    const article = document.getElementById(articleId);
+    const icon = document.getElementById('icon' + articleId.slice(-1));
+    
+    if (article.classList.contains('hidden')) {
+        article.classList.remove('hidden');
+        icon.textContent = '−';
+    } else {
+        article.classList.add('hidden');
+        icon.textContent = '+';
+    }
+}
+</script>
+</body>
+</html>

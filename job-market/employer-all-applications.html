@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Applications - JobSeek</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+<script>
+tailwind.config = {theme: {extend: {colors: {primary: '#6366f1'}}}}
+</script>
+</head>
+<body class="bg-gray-50">
+<nav class="bg-white shadow-sm sticky top-0 z-40">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex items-center gap-8">
+<a href="job-marketplace-home.html" class="flex items-center gap-2">
+<div class="size-8 text-primary"><svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"/></svg></div>
+<span class="text-xl font-bold">JobSeek</span>
+</a>
+<div class="hidden md:flex gap-6">
+<a href="employer-profile.html" class="text-gray-700 hover:text-primary">Profile</a>
+<a href="employer-dashboard.html" class="text-gray-700 hover:text-primary">Dashboard</a>
+<a href="employer-job-posts.html" class="text-gray-700 hover:text-primary">Job Posts</a>
+<a href="employer-candidates.html" class="text-gray-700 hover:text-primary">Candidates</a>
+<a href="employer-messages.html" class="text-gray-700 hover:text-primary">Messages</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button onclick="location.href='employer-notifications.html'" class="relative">
+<span class="material-symbols-outlined text-gray-600">notifications</span>
+<span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">8</span>
+</button>
+<button onclick="location.href='employer-profile.html'" class="flex items-center gap-2 hover:opacity-80 transition">
+<img src="https://logo.clearbit.com/techcorp.com" class="w-8 h-8 rounded-full" alt="Company">
+<span class="hidden md:block text-sm font-medium">TechCorp Inc.</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<h1 class="text-3xl font-bold mb-6">All Applications</h1>
+
+<div class="bg-white rounded-xl p-6 shadow-sm mb-6">
+<div class="flex gap-4">
+<input type="text" placeholder="Search by name or skills..." class="flex-1 h-12 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary">
+<select class="h-12 px-4 rounded-lg border border-gray-300">
+<option>All Jobs</option>
+<option>Senior Frontend Developer</option>
+<option>Full Stack Engineer</option>
+<option>Product Designer</option>
+</select>
+<select class="h-12 px-4 rounded-lg border border-gray-300">
+<option>All Stages</option>
+<option>Receiving</option>
+<option>Shortlisted</option>
+<option>Interview</option>
+</select>
+<button class="bg-primary text-white px-6 rounded-lg hover:bg-primary/90 transition">Search</button>
+</div>
+</div>
+
+<div class="space-y-4">
+<div class="bg-white rounded-xl p-6 shadow-sm">
+<div class="flex items-center gap-4">
+<img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=6366f1&color=fff" class="w-14 h-14 rounded-full">
+<div class="flex-1">
+<h3 class="font-bold text-lg">Sarah Johnson</h3>
+<p class="text-sm text-gray-600">Applied for: Senior Frontend Developer</p>
+<p class="text-xs text-gray-500">5 years experience • Applied 2 hours ago</p>
+</div>
+<span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">Shortlisted</span>
+<button onclick="location.href='employer-candidate-application.html?id=1'" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition">View</button>
+</div>
+</div>
+
+<div class="bg-white rounded-xl p-6 shadow-sm">
+<div class="flex items-center gap-4">
+<img src="https://ui-avatars.com/api/?name=Michael+Chen&background=6366f1&color=fff" class="w-14 h-14 rounded-full">
+<div class="flex-1">
+<h3 class="font-bold text-lg">Michael Chen</h3>
+<p class="text-sm text-gray-600">Applied for: Full Stack Engineer</p>
+<p class="text-xs text-gray-500">7 years experience • Applied 5 hours ago</p>
+</div>
+<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Interview</span>
+<button onclick="location.href='employer-candidate-application.html?id=2'" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition">View</button>
+</div>
+</div>
+
+<div class="bg-white rounded-xl p-6 shadow-sm">
+<div class="flex items-center gap-4">
+<img src="https://ui-avatars.com/api/?name=Emily+Davis&background=6366f1&color=fff" class="w-14 h-14 rounded-full">
+<div class="flex-1">
+<h3 class="font-bold text-lg">Emily Davis</h3>
+<p class="text-sm text-gray-600">Applied for: Product Designer</p>
+<p class="text-xs text-gray-500">4 years experience • Applied 1 day ago</p>
+</div>
+<span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">Receiving</span>
+<button onclick="location.href='employer-candidate-application.html?id=3'" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition">View</button>
+</div>
+</div>
+
+<div class="bg-white rounded-xl p-6 shadow-sm">
+<div class="flex items-center gap-4">
+<img src="https://ui-avatars.com/api/?name=David+Lee&background=6366f1&color=fff" class="w-14 h-14 rounded-full">
+<div class="flex-1">
+<h3 class="font-bold text-lg">David Lee</h3>
+<p class="text-sm text-gray-600">Applied for: Senior Frontend Developer</p>
+<p class="text-xs text-gray-500">6 years experience • Applied 1 day ago</p>
+</div>
+<span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">Receiving</span>
+<button onclick="location.href='employer-candidate-application.html?id=4'" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition">View</button>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

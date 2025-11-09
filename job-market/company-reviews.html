@@ -60,9 +60,12 @@ fontFamily: {"display": ["Inter", "sans-serif"]}
 <p class="mt-6 text-lg text-gray-600 dark:text-gray-300">Get the inside scoop on companies with employee reviews, ratings, and salary info.</p>
 </div>
 <div class="mt-12 max-w-3xl mx-auto">
-<div class="relative">
+<div class="flex gap-3">
+<div class="relative flex-1">
 <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-2xl">search</span>
 <input class="w-full h-16 pl-14 pr-4 bg-white dark:bg-neutral-dark/40 border border-neutral-light dark:border-neutral-dark/60 rounded-xl shadow-lg focus:ring-2 focus:ring-primary focus:border-primary text-lg placeholder:text-gray-500" placeholder="Company name or keyword" type="text"/>
+</div>
+<button class="h-16 px-8 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-colors">Search</button>
 </div>
 </div>
 </div>
@@ -72,17 +75,26 @@ fontFamily: {"display": ["Inter", "sans-serif"]}
 <div class="mb-8">
 <h3 class="text-lg font-semibold mb-4">Filter by Industry</h3>
 <div class="flex flex-wrap gap-2">
-<button class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium">All</button>
-<button class="px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors">Technology</button>
-<button class="px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors">Finance</button>
-<button class="px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors">Healthcare</button>
-<button class="px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors">E-commerce</button>
-<button class="px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors">Education</button>
+<button onclick="toggleIndustry(this, 'all')" class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium">All</button>
+<button onclick="toggleIndustry(this, 'tech')" class="px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors">Technology & IT</button>
+<button onclick="toggleIndustry(this, 'design')" class="px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors">Design/Media/Creative</button>
+<button onclick="toggleIndustry(this, 'writing')" class="px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors">Writing & Content</button>
+<button onclick="toggleIndustry(this, 'marketing')" class="px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors">Marketing & Sales</button>
+<button onclick="toggleIndustry(this, 'finance')" class="px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors">Finance & Legal</button>
+<button onclick="toggleIndustry(this, 'business')" class="px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors">Business/Strategy/Operations</button>
+<button onclick="toggleIndustry(this, 'engineering')" class="px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors">Engineering/Science/Architecture</button>
+<button onclick="toggleIndustry(this, 'education')" class="px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors">Education & Training</button>
+<button onclick="toggleIndustry(this, 'healthcare')" class="px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors">Healthcare & Wellness</button>
+<button onclick="toggleIndustry(this, 'logistics')" class="px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors">Logistics & Infrastructure</button>
+<button onclick="toggleIndustry(this, 'public')" class="px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors">Public Sector & Impact</button>
+<button onclick="toggleIndustry(this, 'research')" class="px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors">Research & Science</button>
+<button onclick="toggleIndustry(this, 'trades')" class="px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors">Trades & Services</button>
+<button onclick="toggleIndustry(this, 'support')" class="px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors">Support & Admin</button>
 </div>
 </div>
 <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
 <h2 class="text-3xl font-bold">Companies with Recent Reviews</h2>
-<a class="font-semibold text-primary hover:underline" href="#">View All Companies</a>
+<a class="font-semibold text-primary hover:underline" href="all-companies.html">View All Companies</a>
 </div>
 <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 <div class="group flex flex-col rounded-xl border border-neutral-light dark:border-neutral-dark/60 bg-white dark:bg-neutral-dark/30 p-6 transition-shadow hover:shadow-lg hover:-translate-y-1 duration-300">
@@ -91,7 +103,7 @@ fontFamily: {"display": ["Inter", "sans-serif"]}
 <img alt="Google logo" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC_SJ8uovf4Mz1ARATdWYG42ytYVn5T1FZYNqB3bm9FGRSntmhYWvJ4JF6IyCCjRI7hUvOFzzrx8lBAw3iCHB6K4d6UDu2q4RE2_9IwpJhiaOsoFRhiq3FUCnG4usN9cyi1Va06-5A_R8_uSe2t8h51nNZZ2QsuWOz27x9_NxLeFHJQ4FlWcLFdvYy6LegM8HJxqi6e_9o-Bu5R9ABzeS1qRxYyAbVCh-XgCfM-pBsoNchwlaYfgpMW2WyG55Wi8W7OCEfn7Ng9VWv"/>
 </div>
 <div class="flex-1">
-<a class="font-bold text-lg hover:text-primary" href="#">Google</a>
+<a class="font-bold text-lg hover:text-primary" href="company-detail.html?company=google">Google</a>
 <div class="mt-1 flex items-center gap-1">
 <span class="font-bold text-amber">4.5</span>
 <div class="flex text-amber">
@@ -107,8 +119,8 @@ fontFamily: {"display": ["Inter", "sans-serif"]}
 </div>
 <p class="mt-4 text-base text-gray-500 dark:text-gray-400 line-clamp-2">"Great work-life balance and amazing perks. The projects are challenging and impactful. Collaboration is highly encouraged..."</p>
 <div class="mt-auto pt-4 flex justify-between items-center">
-<a class="text-primary font-semibold text-sm hover:underline" href="find-job.html">View jobs</a>
-<button class="h-9 px-4 bg-primary/10 text-primary text-sm font-bold rounded-lg hover:bg-primary/20">Write a Review</button>
+<a class="text-primary font-semibold text-sm hover:underline" href="company-jobs.html?company=google">View jobs</a>
+<button onclick="location.href='write-review.html?company=google'" class="h-9 px-4 bg-primary/10 text-primary text-sm font-bold rounded-lg hover:bg-primary/20">Write a Review</button>
 </div>
 </div>
 <div class="group flex flex-col rounded-xl border border-neutral-light dark:border-neutral-dark/60 bg-white dark:bg-neutral-dark/30 p-6 transition-shadow hover:shadow-lg hover:-translate-y-1 duration-300">
@@ -117,7 +129,7 @@ fontFamily: {"display": ["Inter", "sans-serif"]}
 <img alt="Stripe logo" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKyldawoqNgv4P3FN8fvOFXLUT9VVGb6kdmNR474Ju7oon7bh4ZnR4IToytcUumWbwIVWUvlGHeZoArnqx8LrJcDU09GE9mL05gbtrkfrhetddQLAwtCPWGboR1kPp-ghALhkpdkQOaV7JIluENpQ0XUQssvP55iQYb9_za_iPr_XtnppBM6LZ6Vkk92dl-j_yo7DfDoKr6C-PqQYgzxP5UW5otEY5FasDmDLnP2sRSNVBqWlQPwU3pbJxxLeitRwe5pSnoLhAiIZD"/>
 </div>
 <div class="flex-1">
-<a class="font-bold text-lg hover:text-primary" href="#">Stripe</a>
+<a class="font-bold text-lg hover:text-primary" href="company-detail.html?company=stripe">Stripe</a>
 <div class="mt-1 flex items-center gap-1">
 <span class="font-bold text-amber">4.2</span>
 <div class="flex text-amber">
@@ -133,8 +145,8 @@ fontFamily: {"display": ["Inter", "sans-serif"]}
 </div>
 <p class="mt-4 text-base text-gray-500 dark:text-gray-400 line-clamp-2">"Fast-paced environment with very smart people. You get a lot of autonomy. Compensation is competitive, but expect to work hard."</p>
 <div class="mt-auto pt-4 flex justify-between items-center">
-<a class="text-primary font-semibold text-sm hover:underline" href="find-job.html">View jobs</a>
-<button class="h-9 px-4 bg-primary/10 text-primary text-sm font-bold rounded-lg hover:bg-primary/20">Write a Review</button>
+<a class="text-primary font-semibold text-sm hover:underline" href="company-jobs.html?company=stripe">View jobs</a>
+<button onclick="location.href='write-review.html?company=stripe'" class="h-9 px-4 bg-primary/10 text-primary text-sm font-bold rounded-lg hover:bg-primary/20">Write a Review</button>
 </div>
 </div>
 <div class="group flex flex-col rounded-xl border border-neutral-light dark:border-neutral-dark/60 bg-white dark:bg-neutral-dark/30 p-6 transition-shadow hover:shadow-lg hover:-translate-y-1 duration-300">
@@ -143,7 +155,7 @@ fontFamily: {"display": ["Inter", "sans-serif"]}
 <img alt="Shopify logo" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRz6TU5NIK2W_JEBCk2yGqCoWNamJoTze-94qSvNZfvH3L-wqXZUXcaxRUoRYLAjwA4jarb2lZ5fNuRRpYn09yDaQDmdPeGthGi-8n5PfMDjqUC9afxzYdpImkznDePwwdemoVKCMdYaczQ-orBHHy8MDWCaNzqbkLQOuUJuh2JeRc1fuPOEhnzPuc_CiwkS1vUNDGYoSzarA3hNoreonylTO29UubPYP1xJlhthcN-BhDWO-g4_4sRaT1G6PtTgsksRYFezjbekDP"/>
 </div>
 <div class="flex-1">
-<a class="font-bold text-lg hover:text-primary" href="#">Shopify</a>
+<a class="font-bold text-lg hover:text-primary" href="company-detail.html?company=shopify">Shopify</a>
 <div class="mt-1 flex items-center gap-1">
 <span class="font-bold text-amber">4.6</span>
 <div class="flex text-amber">
@@ -159,8 +171,8 @@ fontFamily: {"display": ["Inter", "sans-serif"]}
 </div>
 <p class="mt-4 text-base text-gray-500 dark:text-gray-400 line-clamp-2">"Supportive culture and a mission you can believe in. Remote-first works really well here. Lots of opportunities for growth."</p>
 <div class="mt-auto pt-4 flex justify-between items-center">
-<a class="text-primary font-semibold text-sm hover:underline" href="find-job.html">View jobs</a>
-<button class="h-9 px-4 bg-primary/10 text-primary text-sm font-bold rounded-lg hover:bg-primary/20">Write a Review</button>
+<a class="text-primary font-semibold text-sm hover:underline" href="company-jobs.html?company=shopify">View jobs</a>
+<button onclick="location.href='write-review.html?company=shopify'" class="h-9 px-4 bg-primary/10 text-primary text-sm font-bold rounded-lg hover:bg-primary/20">Write a Review</button>
 </div>
 </div>
 </div>
@@ -240,7 +252,7 @@ fontFamily: {"display": ["Inter", "sans-serif"]}
 <div class="lg:col-span-2">
 <h2 class="text-3xl font-bold tracking-tight">Your opinion matters.</h2>
 <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Help millions of job seekers find the right company. Share your experience and contribute to a more transparent workplace.</p>
-<button class="mt-8 flex h-12 items-center justify-center whitespace-nowrap rounded-lg bg-primary px-8 text-base font-bold text-white shadow transition-transform hover:bg-primary/90">Write a Review</button>
+<button onclick="location.href='write-review.html'" class="mt-8 flex h-12 items-center justify-center whitespace-nowrap rounded-lg bg-primary px-8 text-base font-bold text-white shadow transition-transform hover:bg-primary/90">Write a Review</button>
 </div>
 <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-8">
 <div class="flex items-start gap-4">
@@ -359,5 +371,32 @@ fontFamily: {"display": ["Inter", "sans-serif"]}
 </div>
 </footer>
 </div>
+<script>
+let selectedIndustries = new Set(['all']);
+function toggleIndustry(btn, industry) {
+    if (industry === 'all') {
+        selectedIndustries.clear();
+        selectedIndustries.add('all');
+        document.querySelectorAll('[onclick*="toggleIndustry"]').forEach(b => {
+            b.className = 'px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors';
+        });
+        btn.className = 'px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium';
+    } else {
+        selectedIndustries.delete('all');
+        document.querySelectorAll('[onclick*="toggleIndustry"]')[0].className = 'px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors';
+        if (selectedIndustries.has(industry)) {
+            selectedIndustries.delete(industry);
+            btn.className = 'px-4 py-2 bg-neutral-light dark:bg-neutral-dark rounded-lg text-sm hover:bg-primary hover:text-white transition-colors';
+        } else {
+            selectedIndustries.add(industry);
+            btn.className = 'px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium';
+        }
+        if (selectedIndustries.size === 0) {
+            selectedIndustries.add('all');
+            document.querySelectorAll('[onclick*="toggleIndustry"]')[0].className = 'px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium';
+        }
+    }
+}
+</script>
 </body>
 </html>

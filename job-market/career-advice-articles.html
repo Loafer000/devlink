@@ -44,7 +44,16 @@ primary: '#20c997'
 <section class="py-16 bg-gradient-to-r from-primary to-emerald-600 text-white">
 <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center">
 <h1 class="text-5xl font-extrabold mb-4">Career Advice Articles</h1>
-<p class="text-xl max-w-2xl mx-auto">Click on any article to read the full content</p>
+<p class="text-xl max-w-2xl mx-auto mb-8">Click on any article to read the full content</p>
+<div class="max-w-2xl mx-auto">
+<div class="flex gap-3">
+<div class="relative flex-1">
+<input class="w-full h-14 pl-12 pr-4 rounded-xl text-gray-900 focus:ring-2 focus:ring-white" placeholder="Search articles..." type="text"/>
+<svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+</div>
+<button class="h-14 px-8 bg-white text-primary font-bold rounded-xl hover:bg-gray-100 transition-colors">Search</button>
+</div>
+</div>
 </div>
 </section>
 
@@ -226,6 +235,26 @@ primary: '#20c997'
 </footer>
 
 <script>
+const articleMap = {
+    'raise': 'article1',
+    'network': 'article2',
+    'skills': 'article3',
+    'remote': 'article4',
+    'career-change': 'article5',
+    'leadership': 'article6'
+};
+
+window.onload = function() {
+    const params = new URLSearchParams(window.location.search);
+    const article = params.get('article');
+    if (article && articleMap[article]) {
+        toggleArticle(articleMap[article]);
+        setTimeout(() => {
+            document.getElementById(articleMap[article]).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+    }
+};
+
 function toggleArticle(articleId) {
     const article = document.getElementById(articleId);
     const icon = document.getElementById('icon' + articleId.slice(-1));
@@ -233,6 +262,7 @@ function toggleArticle(articleId) {
     if (article.classList.contains('hidden')) {
         article.classList.remove('hidden');
         icon.textContent = '−';
+        article.parentElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
         article.classList.add('hidden');
         icon.textContent = '+';

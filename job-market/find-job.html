@@ -83,23 +83,12 @@
 </div>
 </div>
 </div>
-<div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
 <div>
-<select class="w-full h-11 rounded-lg border-neutral-light dark:border-neutral-dark bg-background-light dark:bg-neutral-dark/50 focus:ring-primary focus:border-primary">
-<option>Location</option>
-<option>New York, NY</option>
-<option>San Francisco, CA</option>
-<option>Austin, TX</option>
-<option>Remote</option>
-</select>
+<input class="w-full h-11 rounded-lg border-neutral-light dark:border-neutral-dark bg-background-light dark:bg-neutral-dark/50 focus:ring-primary focus:border-primary" placeholder="Location" type="text"/>
 </div>
 <div>
-<select class="w-full h-11 rounded-lg border-neutral-light dark:border-neutral-dark bg-background-light dark:bg-neutral-dark/50 focus:ring-primary focus:border-primary">
-<option>Role</option>
-<option>Software Engineer</option>
-<option>Product Manager</option>
-<option>UX Designer</option>
-</select>
+<input class="w-full h-11 rounded-lg border-neutral-light dark:border-neutral-dark bg-background-light dark:bg-neutral-dark/50 focus:ring-primary focus:border-primary" placeholder="Role" type="text"/>
 </div>
 <div>
 <select class="w-full h-11 rounded-lg border-neutral-light dark:border-neutral-dark bg-background-light dark:bg-neutral-dark/50 focus:ring-primary focus:border-primary">
@@ -117,6 +106,9 @@
 <option>$120k+</option>
 </select>
 </div>
+<div>
+<button class="w-full h-11 px-6 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-colors">Search</button>
+</div>
 </div>
 </div>
 </div>
@@ -124,43 +116,78 @@
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
 <aside class="lg:col-span-3">
 <div class="sticky top-28">
-<h2 class="text-xl font-bold mb-4">Advanced Filters</h2>
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-xl font-bold">Advanced Filters</h2>
+<button onclick="clearAllFilters()" class="text-sm text-primary hover:underline font-semibold">Clear All</button>
+</div>
 <div class="space-y-6">
 <div>
 <h3 class="font-semibold mb-2">Industry</h3>
-<div class="space-y-2">
-<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2">Technology</span></label>
-<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2">Finance</span></label>
-<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2">Healthcare</span></label>
-<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2">Marketing</span></label>
+<div class="space-y-2 max-h-48 overflow-y-auto">
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Technology & IT</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Design/Media/Creative</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Writing & Content</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Marketing & Sales</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Finance & Legal</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Business/Strategy/Operations</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Engineering/Science/Architecture</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Education & Training</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Healthcare & Wellness</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Logistics & Infrastructure</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Public Sector & Impact</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Research & Science</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Trades & Services</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Support & Admin</span></label>
 </div>
 </div>
 <div>
 <h3 class="font-semibold mb-2">Employment Type</h3>
 <div class="space-y-2">
-<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2">Full-time</span></label>
-<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2">Part-time</span></label>
-<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2">Contract</span></label>
-<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2">Internship</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Full-time</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Part-time</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Contract-based</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Internship</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Remote</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Hybrid</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">On-site</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Gig/Task-based</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Consultant</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Volunteer</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Shift-based</span></label>
 </div>
 </div>
 <div>
 <h3 class="font-semibold mb-2">Company Size</h3>
 <div class="space-y-2">
-<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2">1-50 employees</span></label>
-<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2">51-200 employees</span></label>
-<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2">201-1000 employees</span></label>
-<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2">1000+ employees</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">1-50 employees</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">51-200 employees</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">201-1000 employees</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">1000+ employees</span></label>
 </div>
 </div>
 <div>
 <h3 class="font-semibold mb-2">Posted Within</h3>
-<select class="w-full rounded-lg border-neutral-light dark:border-neutral-dark bg-background-light dark:bg-neutral-dark/50 focus:ring-primary focus:border-primary">
+<select class="w-full rounded-lg border-neutral-light dark:border-neutral-dark bg-background-light dark:bg-neutral-dark/50 focus:ring-primary focus:border-primary text-sm">
 <option>Any time</option>
 <option>Last 24 hours</option>
 <option>Last 7 days</option>
 <option>Last 30 days</option>
 </select>
+</div>
+<div>
+<h3 class="font-semibold mb-2">Urgency</h3>
+<div class="space-y-2">
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Urgent Jobs Only</span></label>
+</div>
+</div>
+<div>
+<h3 class="font-semibold mb-2">Benefits</h3>
+<div class="space-y-2">
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Health Insurance</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">401(k)</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Equity/Stock Options</span></label>
+<label class="flex items-center"><input class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/> <span class="ml-2 text-sm">Paid Time Off</span></label>
+</div>
 </div>
 </div>
 </div>
@@ -364,5 +391,11 @@
 </div>
 </main>
 </div>
-
+<script>
+function clearAllFilters() {
+    document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+    document.querySelectorAll('select').forEach(sel => sel.selectedIndex = 0);
+    document.querySelectorAll('input[type="text"]').forEach(inp => inp.value = '');
+}
+</script>
 </body></html>

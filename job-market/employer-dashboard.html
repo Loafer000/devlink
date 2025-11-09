@@ -32,21 +32,22 @@ primary: '#6366f1'
 <span class="text-xl font-bold">JobSeek</span>
 </a>
 <div class="hidden md:flex gap-6">
-<a href="#" class="text-gray-700 hover:text-primary">Dashboard</a>
-<a href="#" class="text-gray-700 hover:text-primary">Job Posts</a>
-<a href="#" class="text-gray-700 hover:text-primary">Candidates</a>
-<a href="#" class="text-gray-700 hover:text-primary">Messages</a>
+<a href="employer-profile.html" class="text-gray-700 hover:text-primary">Profile</a>
+<a href="employer-dashboard.html" class="text-primary font-semibold">Dashboard</a>
+<a href="employer-job-posts.html" class="text-gray-700 hover:text-primary">Job Posts</a>
+<a href="employer-candidates.html" class="text-gray-700 hover:text-primary">Candidates</a>
+<a href="employer-messages.html" class="text-gray-700 hover:text-primary">Messages</a>
 </div>
 </div>
 <div class="flex items-center gap-4">
-<button class="relative">
+<button onclick="location.href='employer-notifications.html'" class="relative">
 <span class="material-symbols-outlined text-gray-600">notifications</span>
 <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">8</span>
 </button>
-<div class="flex items-center gap-2">
+<button onclick="location.href='employer-profile.html'" class="flex items-center gap-2 hover:opacity-80 transition">
 <img src="https://logo.clearbit.com/techcorp.com" class="w-8 h-8 rounded-full" alt="Company">
 <span class="hidden md:block text-sm font-medium">TechCorp Inc.</span>
-</div>
+</button>
 </div>
 </div>
 </div>
@@ -58,7 +59,7 @@ primary: '#6366f1'
 <h1 class="text-3xl font-bold text-gray-900">Employer Dashboard</h1>
 <p class="text-gray-600 mt-1">Manage your hiring pipeline</p>
 </div>
-<button class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition flex items-center gap-2">
+<button onclick="location.href='post-job.html'" class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition flex items-center gap-2">
 <span class="material-symbols-outlined">add</span>
 Post New Job
 </button>
@@ -133,9 +134,16 @@ Post New Job
 <h3 class="font-semibold text-lg">Senior Frontend Developer</h3>
 <p class="text-sm text-gray-600">San Francisco, CA • Full-time</p>
 </div>
-<button class="text-gray-400 hover:text-gray-600">
+<div class="relative">
+<button onclick="toggleMenu(event, 'menu1')" class="text-gray-400 hover:text-gray-600">
 <span class="material-symbols-outlined">more_vert</span>
 </button>
+<div id="menu1" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-10">
+<button onclick="location.href='post-job.html?edit=1'" class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm">Edit Job</button>
+<button class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm">Duplicate</button>
+<button class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-red-600">Close Job</button>
+</div>
+</div>
 </div>
 <div class="flex items-center gap-6 text-sm">
 <div class="flex items-center gap-2">
@@ -152,8 +160,8 @@ Post New Job
 </div>
 </div>
 <div class="flex gap-2 mt-4">
-<button class="flex-1 bg-primary text-white py-2 rounded-lg text-sm hover:bg-primary/90 transition">View Applications</button>
-<button class="px-4 border border-gray-300 rounded-lg text-sm hover:bg-gray-50 transition">Edit</button>
+<button onclick="location.href='employer-view-applications.html?job=1'" class="flex-1 bg-primary text-white py-2 rounded-lg text-sm hover:bg-primary/90 transition">View Applications</button>
+<button onclick="location.href='post-job.html?edit=1'" class="px-4 border border-gray-300 rounded-lg text-sm hover:bg-gray-50 transition">Edit</button>
 </div>
 </div>
 
@@ -163,9 +171,16 @@ Post New Job
 <h3 class="font-semibold text-lg">Full Stack Engineer</h3>
 <p class="text-sm text-gray-600">Remote • Full-time</p>
 </div>
-<button class="text-gray-400 hover:text-gray-600">
+<div class="relative">
+<button onclick="toggleMenu(event, 'menu2')" class="text-gray-400 hover:text-gray-600">
 <span class="material-symbols-outlined">more_vert</span>
 </button>
+<div id="menu2" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-10">
+<button onclick="location.href='post-job.html?edit=2'" class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm">Edit Job</button>
+<button class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm">Duplicate</button>
+<button class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-red-600">Close Job</button>
+</div>
+</div>
 </div>
 <div class="flex items-center gap-6 text-sm">
 <div class="flex items-center gap-2">
@@ -182,8 +197,8 @@ Post New Job
 </div>
 </div>
 <div class="flex gap-2 mt-4">
-<button class="flex-1 bg-primary text-white py-2 rounded-lg text-sm hover:bg-primary/90 transition">View Applications</button>
-<button class="px-4 border border-gray-300 rounded-lg text-sm hover:bg-gray-50 transition">Edit</button>
+<button onclick="location.href='employer-view-applications.html?job=2'" class="flex-1 bg-primary text-white py-2 rounded-lg text-sm hover:bg-primary/90 transition">View Applications</button>
+<button onclick="location.href='post-job.html?edit=2'" class="px-4 border border-gray-300 rounded-lg text-sm hover:bg-gray-50 transition">Edit</button>
 </div>
 </div>
 
@@ -193,9 +208,16 @@ Post New Job
 <h3 class="font-semibold text-lg">Product Designer</h3>
 <p class="text-sm text-gray-600">New York, NY • Full-time</p>
 </div>
-<button class="text-gray-400 hover:text-gray-600">
+<div class="relative">
+<button onclick="toggleMenu(event, 'menu3')" class="text-gray-400 hover:text-gray-600">
 <span class="material-symbols-outlined">more_vert</span>
 </button>
+<div id="menu3" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-10">
+<button onclick="location.href='post-job.html?edit=3'" class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm">Edit Job</button>
+<button class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm">Duplicate</button>
+<button class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-red-600">Close Job</button>
+</div>
+</div>
 </div>
 <div class="flex items-center gap-6 text-sm">
 <div class="flex items-center gap-2">
@@ -212,8 +234,8 @@ Post New Job
 </div>
 </div>
 <div class="flex gap-2 mt-4">
-<button class="flex-1 bg-primary text-white py-2 rounded-lg text-sm hover:bg-primary/90 transition">View Applications</button>
-<button class="px-4 border border-gray-300 rounded-lg text-sm hover:bg-gray-50 transition">Edit</button>
+<button onclick="location.href='employer-view-applications.html?job=3'" class="flex-1 bg-primary text-white py-2 rounded-lg text-sm hover:bg-primary/90 transition">View Applications</button>
+<button onclick="location.href='post-job.html?edit=3'" class="px-4 border border-gray-300 rounded-lg text-sm hover:bg-gray-50 transition">Edit</button>
 </div>
 </div>
 </div>
@@ -222,10 +244,10 @@ Post New Job
 <div class="bg-white rounded-xl shadow-sm p-6">
 <div class="flex items-center justify-between mb-6">
 <h2 class="text-xl font-bold">Recent Applicants</h2>
-<a href="#" class="text-primary text-sm hover:underline">View All</a>
+<a href="employer-all-applications.html" class="text-primary text-sm hover:underline">View All</a>
 </div>
 <div class="space-y-4">
-<div class="flex items-center gap-4 p-3 border border-gray-200 rounded-lg hover:border-primary transition cursor-pointer">
+<div onclick="location.href='employer-candidate-application.html?id=1'" class="flex items-center gap-4 p-3 border border-gray-200 rounded-lg hover:border-primary transition cursor-pointer">
 <img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=6366f1&color=fff" class="w-12 h-12 rounded-full" alt="Candidate">
 <div class="flex-1">
 <h4 class="font-semibold">Sarah Johnson</h4>
@@ -235,10 +257,10 @@ Post New Job
 <span class="text-xs text-gray-500">2 hours ago</span>
 </div>
 </div>
-<button class="bg-primary text-white px-4 py-2 rounded-lg text-sm hover:bg-primary/90 transition">Review</button>
+<button onclick="event.stopPropagation(); location.href='employer-candidate-application.html?id=1'" class="bg-primary text-white px-4 py-2 rounded-lg text-sm hover:bg-primary/90 transition">Review</button>
 </div>
 
-<div class="flex items-center gap-4 p-3 border border-gray-200 rounded-lg hover:border-primary transition cursor-pointer">
+<div onclick="location.href='employer-candidate-application.html?id=2'" class="flex items-center gap-4 p-3 border border-gray-200 rounded-lg hover:border-primary transition cursor-pointer">
 <img src="https://ui-avatars.com/api/?name=Michael+Chen&background=6366f1&color=fff" class="w-12 h-12 rounded-full" alt="Candidate">
 <div class="flex-1">
 <h4 class="font-semibold">Michael Chen</h4>
@@ -248,10 +270,10 @@ Post New Job
 <span class="text-xs text-gray-500">5 hours ago</span>
 </div>
 </div>
-<button class="bg-primary text-white px-4 py-2 rounded-lg text-sm hover:bg-primary/90 transition">Review</button>
+<button onclick="event.stopPropagation(); location.href='employer-candidate-application.html?id=2'" class="bg-primary text-white px-4 py-2 rounded-lg text-sm hover:bg-primary/90 transition">Review</button>
 </div>
 
-<div class="flex items-center gap-4 p-3 border border-gray-200 rounded-lg hover:border-primary transition cursor-pointer">
+<div onclick="location.href='employer-candidate-application.html?id=3'" class="flex items-center gap-4 p-3 border border-gray-200 rounded-lg hover:border-primary transition cursor-pointer">
 <img src="https://ui-avatars.com/api/?name=Emily+Davis&background=6366f1&color=fff" class="w-12 h-12 rounded-full" alt="Candidate">
 <div class="flex-1">
 <h4 class="font-semibold">Emily Davis</h4>
@@ -261,7 +283,7 @@ Post New Job
 <span class="text-xs text-gray-500">1 day ago</span>
 </div>
 </div>
-<button class="bg-primary text-white px-4 py-2 rounded-lg text-sm hover:bg-primary/90 transition">Review</button>
+<button onclick="event.stopPropagation(); location.href='employer-candidate-application.html?id=3'" class="bg-primary text-white px-4 py-2 rounded-lg text-sm hover:bg-primary/90 transition">Review</button>
 </div>
 </div>
 </div>
@@ -271,28 +293,21 @@ Post New Job
 <div class="bg-white rounded-xl shadow-sm p-6">
 <h2 class="text-xl font-bold mb-4">Hiring Pipeline</h2>
 <div class="space-y-3">
-<div class="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
+<div onclick="location.href='employer-pipeline.html?stage=receiving'" class="flex items-center justify-between p-3 bg-blue-50 rounded-lg cursor-pointer hover:bg-blue-100 transition">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-blue-600">inbox</span>
-<span class="font-medium">New</span>
+<span class="font-medium">Receiving</span>
 </div>
 <span class="font-bold text-blue-600">89</span>
 </div>
-<div class="flex items-center justify-between p-3 bg-yellow-50 rounded-lg">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-yellow-600">visibility</span>
-<span class="font-medium">Reviewing</span>
-</div>
-<span class="font-bold text-yellow-600">45</span>
-</div>
-<div class="flex items-center justify-between p-3 bg-purple-50 rounded-lg">
+<div onclick="location.href='employer-pipeline.html?stage=shortlisted'" class="flex items-center justify-between p-3 bg-purple-50 rounded-lg cursor-pointer hover:bg-purple-100 transition">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-purple-600">star</span>
 <span class="font-medium">Shortlisted</span>
 </div>
 <span class="font-bold text-purple-600">28</span>
 </div>
-<div class="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+<div onclick="location.href='employer-pipeline.html?stage=interview'" class="flex items-center justify-between p-3 bg-green-50 rounded-lg cursor-pointer hover:bg-green-100 transition">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-green-600">event</span>
 <span class="font-medium">Interview</span>
@@ -329,19 +344,15 @@ Post New Job
 <div class="bg-white rounded-xl shadow-sm p-6">
 <h2 class="text-xl font-bold mb-4">Quick Actions</h2>
 <div class="space-y-2">
-<button class="w-full flex items-center gap-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
+<button onclick="location.href='post-job.html'" class="w-full flex items-center gap-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
 <span class="material-symbols-outlined text-primary">add_circle</span>
 <span class="text-sm font-medium">Post a Job</span>
 </button>
-<button class="w-full flex items-center gap-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
+<button onclick="location.href='employer-search-resumes.html'" class="w-full flex items-center gap-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
 <span class="material-symbols-outlined text-primary">search</span>
 <span class="text-sm font-medium">Search Resumes</span>
 </button>
-<button class="w-full flex items-center gap-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
-<span class="material-symbols-outlined text-primary">business</span>
-<span class="text-sm font-medium">Edit Company Profile</span>
-</button>
-<button class="w-full flex items-center gap-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
+<button onclick="location.href='employer-analytics.html'" class="w-full flex items-center gap-3 p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition">
 <span class="material-symbols-outlined text-primary">analytics</span>
 <span class="text-sm font-medium">View Analytics</span>
 </button>
@@ -350,5 +361,17 @@ Post New Job
 </div>
 </div>
 </div>
+<script>
+function toggleMenu(event, menuId) {
+    event.stopPropagation();
+    document.querySelectorAll('[id^="menu"]').forEach(m => {
+        if (m.id !== menuId) m.classList.add('hidden');
+    });
+    document.getElementById(menuId).classList.toggle('hidden');
+}
+document.addEventListener('click', () => {
+    document.querySelectorAll('[id^="menu"]').forEach(m => m.classList.add('hidden'));
+});
+</script>
 </body>
 </html>

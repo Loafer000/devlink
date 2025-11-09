@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jobs - JobSeek</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+<script>
+tailwind.config = {theme: {extend: {colors: {primary: '#6366f1'}}}}
+</script>
+</head>
+<body class="bg-gray-50">
+<nav class="bg-white shadow-sm sticky top-0 z-40">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex items-center gap-8">
+<a href="job-marketplace-home.html" class="flex items-center gap-2">
+<div class="size-8 text-primary"><svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"/></svg></div>
+<span class="text-xl font-bold">JobSeek</span>
+</a>
+<div class="hidden md:flex gap-6">
+<a href="candidate-profile.html" class="text-gray-700 hover:text-primary">Profile</a>
+<a href="candidate-dashboard.html" class="text-gray-700 hover:text-primary">Dashboard</a>
+<a href="find-job.html" class="text-gray-700 hover:text-primary">Find Jobs</a>
+<a href="candidate-applications.html" class="text-gray-700 hover:text-primary">My Applications</a>
+<a href="candidate-interviews.html" class="text-gray-700 hover:text-primary">Event Scheduler</a>
+<a href="company-reviews.html" class="text-gray-700 hover:text-primary">Companies</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button onclick="location.href='candidate-messages.html'" class="relative">
+<span class="material-symbols-outlined text-gray-600">mail</span>
+<span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">2</span>
+</button>
+<button onclick="location.href='candidate-notifications.html'" class="relative">
+<span class="material-symbols-outlined text-gray-600">notifications</span>
+<span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">3</span>
+</button>
+<button onclick="location.href='candidate-profile.html'" class="flex items-center gap-2 hover:opacity-80 transition">
+<img src="https://ui-avatars.com/api/?name=John+Doe&background=6366f1&color=fff" class="w-8 h-8 rounded-full" alt="Profile">
+<span class="hidden md:block text-sm font-medium">John Doe</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<h1 class="text-3xl font-bold mb-6">Jobs For You</h1>
+
+<div class="flex gap-4 mb-6">
+<button onclick="filterJobs('recommended')" class="px-4 py-2 bg-primary text-white rounded-lg">Recommended (18)</button>
+<button onclick="filterJobs('bookmarked')" class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">Bookmarked (12)</button>
+</div>
+
+<div class="space-y-4">
+<div class="bg-white rounded-xl p-6 shadow-sm">
+<div class="flex items-start justify-between mb-3">
+<div class="flex-1">
+<h3 class="text-xl font-bold">React Developer</h3>
+<p class="text-gray-600">Meta • Menlo Park, CA</p>
+<div class="flex items-center gap-4 mt-2 text-sm text-gray-600">
+<span>$120k - $180k</span>
+<span>•</span>
+<span>Full-time</span>
+<span>•</span>
+<span>Posted 2 days ago</span>
+</div>
+</div>
+<button class="text-primary hover:text-primary/80">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+<p class="text-sm text-gray-700 mb-4">Looking for an experienced React developer to join our team...</p>
+<div class="flex gap-2">
+<button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition">Apply Now</button>
+<button class="border border-gray-300 px-6 py-2 rounded-lg hover:bg-gray-50 transition">View Details</button>
+</div>
+</div>
+
+<div class="bg-white rounded-xl p-6 shadow-sm">
+<div class="flex items-start justify-between mb-3">
+<div class="flex-1">
+<h3 class="text-xl font-bold">Backend Engineer</h3>
+<p class="text-gray-600">Netflix • Los Gatos, CA</p>
+<div class="flex items-center gap-4 mt-2 text-sm text-gray-600">
+<span>$130k - $200k</span>
+<span>•</span>
+<span>Full-time</span>
+<span>•</span>
+<span>Posted 3 days ago</span>
+</div>
+</div>
+<button class="text-primary hover:text-primary/80">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+<p class="text-sm text-gray-700 mb-4">Join our backend team to build scalable microservices...</p>
+<div class="flex gap-2">
+<button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition">Apply Now</button>
+<button class="border border-gray-300 px-6 py-2 rounded-lg hover:bg-gray-50 transition">View Details</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+function filterJobs(type) {
+    document.querySelectorAll('button[onclick^="filterJobs"]').forEach(btn => {
+        btn.className = 'px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50';
+    });
+    event.target.className = 'px-4 py-2 bg-primary text-white rounded-lg';
+}
+</script>
+</body>
+</html>

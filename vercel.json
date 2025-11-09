@@ -1,7 +1,6 @@
 {
+  "buildCommand": "echo 'No build required'",
+  "outputDirectory": "job-market",
   "cleanUrls": true,
-  "trailingSlash": false,
-  "redirects": [
-    { "source": "/index.html", "destination": "/job-marketplace-home.html" }
-  ]
+  "trailingSlash": false
 }

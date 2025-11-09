@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Resources - JobSeek</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#10b981',
+'neutral-light': '#f3f4f6',
+'neutral-dark': '#1f2937'
+}
+}
+}
+}
+</script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-white to-green-50 min-h-screen">
+<header class="sticky top-0 z-10 w-full border-b border-gray-200 bg-white/80 backdrop-blur-sm">
+<div class="mx-auto flex max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8 py-4">
+<a href="job-marketplace-home.html" class="flex items-center gap-3 hover:opacity-80 transition">
+<div class="size-9 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"/>
+</svg>
+</div>
+<h2 class="text-2xl font-bold">JobSeek</h2>
+</a>
+<nav class="hidden items-center gap-8 md:flex">
+<a class="text-base font-medium hover:text-primary" href="find-job.html">Find Jobs</a>
+<a class="text-base font-medium hover:text-primary" href="company-reviews.html">Companies</a>
+<div class="relative group">
+<a href="career-resources.html" class="text-base font-medium text-primary inline-block">Resources ▾</a>
+<div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+<a href="resume-builder.html" class="block px-4 py-2 hover:bg-gray-100">Resume Builder</a>
+<a href="interview-prep.html" class="block px-4 py-2 hover:bg-gray-100">Interview Prep</a>
+<a href="career-advice.html" class="block px-4 py-2 hover:bg-gray-100">Career Advice</a>
+<a href="salary-guide.html" class="block px-4 py-2 hover:bg-gray-100">Salary Guide</a>
+</div>
+</div>
+</nav>
+<a href="login.html" class="px-6 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition">Sign In</a>
+</div>
+</header>
+
+<main class="w-full">
+<section class="py-16 bg-gradient-to-r from-primary to-emerald-600 text-white">
+<div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center">
+<h1 class="text-5xl font-extrabold mb-4">Career Resources</h1>
+<p class="text-xl max-w-2xl mx-auto">Everything you need to advance your career - from resume tips to interview prep</p>
+</div>
+</section>
+
+<section class="py-16 bg-gray-50">
+<div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+<h2 class="text-4xl font-bold mb-4">Latest Articles & Guides</h2>
+<p class="text-gray-600 mb-8">Stay updated with the latest career advice and industry insights</p>
+<div class="grid md:grid-cols-3 gap-6 mb-12">
+<article class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition">
+<span class="text-xs font-semibold text-primary">RESUME TIPS</span>
+<h3 class="text-lg font-bold mt-2 mb-2">5 Tips to Make Your Resume Stand Out in 2024</h3>
+<p class="text-gray-600 text-sm mb-4">Learn how to craft a resume that grabs the attention of recruiters and hiring managers.</p>
+<a href="resume-builder.html" class="text-primary font-semibold hover:underline text-sm">Read More →</a>
+</article>
+<article class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition">
+<span class="text-xs font-semibold text-primary">SALARY</span>
+<h3 class="text-lg font-bold mt-2 mb-2">How to Negotiate Your Salary Like a Pro</h3>
+<p class="text-gray-600 text-sm mb-4">Practical advice and proven strategies to help you get the compensation you deserve.</p>
+<a href="salary-guide.html" class="text-primary font-semibold hover:underline text-sm">Read More →</a>
+</article>
+<article class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition">
+<span class="text-xs font-semibold text-primary">WORK-LIFE</span>
+<h3 class="text-lg font-bold mt-2 mb-2">The Rise of Hybrid Work: Is It Right for You?</h3>
+<p class="text-gray-600 text-sm mb-4">Explore the pros and cons of hybrid work models and find your ideal work setup.</p>
+<a href="career-advice.html" class="text-primary font-semibold hover:underline text-sm">Read More →</a>
+</article>
+</div>
+
+<h2 class="text-3xl font-bold mb-6">Quick Access</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition">
+<div class="size-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+<svg class="text-blue-600" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/></svg>
+</div>
+<h3 class="text-xl font-bold mb-2">Resume Builder</h3>
+<p class="text-gray-600 mb-4">Create professional resumes with our templates and AI-powered suggestions</p>
+<a href="resume-builder.html" class="text-primary font-semibold hover:underline">Get Started →</a>
+</div>
+
+<div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition">
+<div class="size-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+<svg class="text-green-600" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+</div>
+<h3 class="text-xl font-bold mb-2">Interview Prep</h3>
+<p class="text-gray-600 mb-4">Practice common questions and learn winning strategies for your next interview</p>
+<a href="interview-prep.html" class="text-primary font-semibold hover:underline">Start Practicing →</a>
+</div>
+
+<div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition">
+<div class="size-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+<svg class="text-purple-600" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+</div>
+<h3 class="text-xl font-bold mb-2">Career Advice</h3>
+<p class="text-gray-600 mb-4">Expert tips on career growth, salary negotiation, and professional development</p>
+<a href="career-advice.html" class="text-primary font-semibold hover:underline">Read Articles →</a>
+</div>
+
+<div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition">
+<div class="size-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+<svg class="text-yellow-600" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+</div>
+<h3 class="text-xl font-bold mb-2">Salary Guide</h3>
+<p class="text-gray-600 mb-4">Know your worth with comprehensive salary data and negotiation strategies</p>
+<a href="salary-guide.html" class="text-primary font-semibold hover:underline">View Salaries →</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="resume" class="py-16 bg-white">
+<div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+<h2 class="text-4xl font-bold mb-8">Resume Writing Guide</h2>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="space-y-6">
+<div class="border-l-4 border-primary pl-4">
+<h3 class="text-xl font-bold mb-2">1. Choose the Right Format</h3>
+<p class="text-gray-600">Chronological, functional, or combination - pick the format that best showcases your experience</p>
+</div>
+<div class="border-l-4 border-primary pl-4">
+<h3 class="text-xl font-bold mb-2">2. Write a Compelling Summary</h3>
+<p class="text-gray-600">Start with a powerful 2-3 sentence summary highlighting your key achievements and skills</p>
+</div>
+<div class="border-l-4 border-primary pl-4">
+<h3 class="text-xl font-bold mb-2">3. Quantify Your Achievements</h3>
+<p class="text-gray-600">Use numbers and metrics to demonstrate your impact (e.g., "Increased sales by 35%")</p>
+</div>
+<div class="border-l-4 border-primary pl-4">
+<h3 class="text-xl font-bold mb-2">4. Tailor for Each Job</h3>
+<p class="text-gray-600">Customize your resume for each application using keywords from the job description</p>
+</div>
+</div>
+<div class="bg-gray-50 rounded-xl p-8">
+<h4 class="text-lg font-bold mb-4">Resume Templates</h4>
+<div class="space-y-3">
+<button class="w-full text-left px-4 py-3 bg-white rounded-lg border hover:border-primary transition">
+<div class="font-semibold">Professional Template</div>
+<div class="text-sm text-gray-600">Clean and modern design for corporate roles</div>
+</button>
+<button class="w-full text-left px-4 py-3 bg-white rounded-lg border hover:border-primary transition">
+<div class="font-semibold">Creative Template</div>
+<div class="text-sm text-gray-600">Stand out with a unique design for creative fields</div>
+</button>
+<button class="w-full text-left px-4 py-3 bg-white rounded-lg border hover:border-primary transition">
+<div class="font-semibold">Technical Template</div>
+<div class="text-sm text-gray-600">Highlight your technical skills and projects</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="interview" class="py-16">
+<div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+<h2 class="text-4xl font-bold mb-8">Interview Preparation</h2>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="bg-white rounded-xl p-6 shadow">
+<h3 class="text-lg font-bold mb-3">Common Questions</h3>
+<ul class="space-y-2 text-gray-600">
+<li>• Tell me about yourself</li>
+<li>• Why do you want this job?</li>
+<li>• What are your strengths?</li>
+<li>• Where do you see yourself in 5 years?</li>
+<li>• Why should we hire you?</li>
+</ul>
+<button class="mt-4 w-full px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90">Practice Now</button>
+</div>
+
+<div class="bg-white rounded-xl p-6 shadow">
+<h3 class="text-lg font-bold mb-3">Behavioral Questions</h3>
+<ul class="space-y-2 text-gray-600">
+<li>• Describe a challenge you faced</li>
+<li>• Tell me about a conflict</li>
+<li>• Share a leadership example</li>
+<li>• Discuss a failure</li>
+<li>• Explain a team success</li>
+</ul>
+<button class="mt-4 w-full px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90">Practice Now</button>
+</div>
+
+<div class="bg-white rounded-xl p-6 shadow">
+<h3 class="text-lg font-bold mb-3">Technical Questions</h3>
+<ul class="space-y-2 text-gray-600">
+<li>• Coding challenges</li>
+<li>• System design</li>
+<li>• Problem-solving scenarios</li>
+<li>• Technical case studies</li>
+<li>• Domain-specific questions</li>
+</ul>
+<button class="mt-4 w-full px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90">Practice Now</button>
+</div>
+</div>
+
+<div class="mt-12 bg-gradient-to-r from-blue-50 to-green-50 rounded-xl p-8">
+<h3 class="text-2xl font-bold mb-4">Interview Tips</h3>
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<h4 class="font-bold mb-2">Before the Interview</h4>
+<ul class="space-y-1 text-gray-700">
+<li>✓ Research the company thoroughly</li>
+<li>✓ Prepare your STAR stories</li>
+<li>✓ Practice with mock interviews</li>
+<li>✓ Prepare questions to ask</li>
+<li>✓ Plan your outfit and route</li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-2">During the Interview</h4>
+<ul class="space-y-1 text-gray-700">
+<li>✓ Arrive 10-15 minutes early</li>
+<li>✓ Make strong eye contact</li>
+<li>✓ Listen carefully to questions</li>
+<li>✓ Be specific with examples</li>
+<li>✓ Ask thoughtful questions</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="advice" class="py-16 bg-white">
+<div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center mb-8">
+<h2 class="text-4xl font-bold">Career Advice & Articles</h2>
+<a href="career-advice.html" class="text-primary font-semibold hover:underline">Read More →</a>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+<article class="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition">
+<div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600"></div>
+<div class="p-6">
+<span class="text-xs font-semibold text-primary">CAREER GROWTH</span>
+<a href="career-advice-articles.html"><h3 class="text-xl font-bold mt-2 mb-2 hover:text-primary cursor-pointer">How to Ask for a Raise</h3></a>
+<p class="text-gray-600 text-sm">Learn the best strategies and timing for negotiating a salary increase</p>
+</div>
+</article>
+
+<article class="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition">
+<div class="h-48 bg-gradient-to-br from-green-400 to-green-600"></div>
+<div class="p-6">
+<span class="text-xs font-semibold text-primary">NETWORKING</span>
+<a href="career-advice-articles.html"><h3 class="text-xl font-bold mt-2 mb-2 hover:text-primary cursor-pointer">Building Your Professional Network</h3></a>
+<p class="text-gray-600 text-sm">Tips for expanding your network and making meaningful connections</p>
+</div>
+</article>
+
+<article class="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition">
+<div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600"></div>
+<div class="p-6">
+<span class="text-xs font-semibold text-primary">SKILLS</span>
+<a href="career-advice-articles.html"><h3 class="text-xl font-bold mt-2 mb-2 hover:text-primary cursor-pointer">Top Skills Employers Want in 2024</h3></a>
+<p class="text-gray-600 text-sm">Stay ahead with the most in-demand skills across industries</p>
+</div>
+</article>
+
+<article class="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition">
+<div class="h-48 bg-gradient-to-br from-orange-400 to-orange-600"></div>
+<div class="p-6">
+<span class="text-xs font-semibold text-primary">REMOTE WORK</span>
+<a href="career-advice-articles.html"><h3 class="text-xl font-bold mt-2 mb-2 hover:text-primary cursor-pointer">Thriving in Remote Work</h3></a>
+<p class="text-gray-600 text-sm">Best practices for productivity and work-life balance while remote</p>
+</div>
+</article>
+
+<article class="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition">
+<div class="h-48 bg-gradient-to-br from-pink-400 to-pink-600"></div>
+<div class="p-6">
+<span class="text-xs font-semibold text-primary">CAREER CHANGE</span>
+<a href="career-advice-articles.html"><h3 class="text-xl font-bold mt-2 mb-2 hover:text-primary cursor-pointer">Switching Careers Successfully</h3></a>
+<p class="text-gray-600 text-sm">A complete guide to transitioning to a new career path</p>
+</div>
+</article>
+
+<article class="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition">
+<div class="h-48 bg-gradient-to-br from-indigo-400 to-indigo-600"></div>
+<div class="p-6">
+<span class="text-xs font-semibold text-primary">LEADERSHIP</span>
+<a href="career-advice-articles.html"><h3 class="text-xl font-bold mt-2 mb-2 hover:text-primary cursor-pointer">Developing Leadership Skills</h3></a>
+<p class="text-gray-600 text-sm">Essential skills and habits of effective leaders</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section class="py-16 bg-gradient-to-r from-primary to-emerald-600 text-white">
+<div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-3xl font-bold mb-4">Ready to Take the Next Step?</h2>
+<p class="text-xl mb-8">Join thousands of professionals advancing their careers with JobSeek</p>
+<div class="flex gap-4 justify-center">
+<a href="signup.html" class="px-8 py-3 bg-white text-primary rounded-lg font-bold hover:bg-gray-100 transition">Get Started Free</a>
+<a href="find-job.html" class="px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-bold hover:bg-white/10 transition">Browse Jobs</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="w-full border-t border-gray-200 py-8 bg-white">
+<div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600">
+<p>&copy; 2024 JobSeek. All rights reserved.</p>
+</div>
+</footer>
+</body>
+</html>

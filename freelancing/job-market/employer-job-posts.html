@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Posts - JobSeek</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+<script>
+tailwind.config = {theme: {extend: {colors: {primary: '#6366f1'}}}}
+</script>
+</head>
+<body class="bg-gray-50">
+<nav class="bg-white shadow-sm sticky top-0 z-40">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex items-center gap-8">
+<a href="job-marketplace-home.html" class="flex items-center gap-2">
+<div class="size-8 text-primary"><svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"/></svg></div>
+<span class="text-xl font-bold">JobSeek</span>
+</a>
+<div class="hidden md:flex gap-6">
+<a href="employer-profile.html" class="text-gray-700 hover:text-primary">Profile</a>
+<a href="employer-dashboard.html" class="text-gray-700 hover:text-primary">Dashboard</a>
+<a href="employer-job-posts.html" class="text-primary font-semibold">Job Posts</a>
+<a href="employer-candidates.html" class="text-gray-700 hover:text-primary">Candidates</a>
+<a href="employer-messages.html" class="text-gray-700 hover:text-primary">Messages</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button onclick="location.href='employer-notifications.html'" class="relative">
+<span class="material-symbols-outlined text-gray-600">notifications</span>
+<span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">8</span>
+</button>
+<button onclick="location.href='employer-profile.html'" class="flex items-center gap-2 hover:opacity-80 transition">
+<img src="https://logo.clearbit.com/techcorp.com" class="w-8 h-8 rounded-full" alt="Company">
+<span class="hidden md:block text-sm font-medium">TechCorp Inc.</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex items-center justify-between mb-8">
+<h1 class="text-3xl font-bold">Job Posts</h1>
+<button onclick="location.href='post-job.html'" class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition flex items-center gap-2">
+<span class="material-symbols-outlined">add</span>
+Post New Job
+</button>
+</div>
+
+<div class="flex gap-4 mb-6">
+<button onclick="filterJobs('active')" class="px-4 py-2 bg-primary text-white rounded-lg">Active (12)</button>
+<button onclick="filterJobs('draft')" class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">Drafts (3)</button>
+<button onclick="filterJobs('closed')" class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">Closed (8)</button>
+</div>
+
+<div class="space-y-4">
+<div class="bg-white rounded-xl p-6 shadow-sm">
+<div class="flex items-start justify-between mb-4">
+<div>
+<h3 class="text-xl font-bold">Senior Frontend Developer</h3>
+<p class="text-gray-600">San Francisco, CA • Full-time • $120k-$160k</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">Active</span>
+<div class="relative">
+<button onclick="toggleMenu(event, 'jobmenu1')" class="text-gray-400 hover:text-gray-600">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+<div id="jobmenu1" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-10">
+<button onclick="location.href='post-job.html?edit=1'" class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm">Edit Job</button>
+<button class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm">Duplicate</button>
+<button class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-red-600">Close Job</button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-6 text-sm mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-600">person</span>
+<span><strong>45</strong> applicants</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-600">visibility</span>
+<span><strong>234</strong> views</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-purple-600">schedule</span>
+<span>Posted 3 days ago</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button onclick="location.href='employer-view-applications.html?job=1'" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition">View Applications</button>
+<button onclick="location.href='post-job.html?edit=1'" class="border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50">Edit</button>
+</div>
+</div>
+
+<div class="bg-white rounded-xl p-6 shadow-sm">
+<div class="flex items-start justify-between mb-4">
+<div>
+<h3 class="text-xl font-bold">Full Stack Engineer</h3>
+<p class="text-gray-600">Remote • Full-time • $100k-$140k</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">Active</span>
+<div class="relative">
+<button onclick="toggleMenu(event, 'jobmenu2')" class="text-gray-400 hover:text-gray-600">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+<div id="jobmenu2" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-10">
+<button onclick="location.href='post-job.html?edit=2'" class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm">Edit Job</button>
+<button class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm">Duplicate</button>
+<button class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-red-600">Close Job</button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-6 text-sm mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-600">person</span>
+<span><strong>67</strong> applicants</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-600">visibility</span>
+<span><strong>412</strong> views</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-purple-600">schedule</span>
+<span>Posted 1 week ago</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button onclick="location.href='employer-view-applications.html?job=2'" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition">View Applications</button>
+<button onclick="location.href='post-job.html?edit=2'" class="border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50">Edit</button>
+</div>
+</div>
+
+<div class="bg-white rounded-xl p-6 shadow-sm">
+<div class="flex items-start justify-between mb-4">
+<div>
+<h3 class="text-xl font-bold">Product Designer</h3>
+<p class="text-gray-600">New York, NY • Full-time • $90k-$130k</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">Active</span>
+<div class="relative">
+<button onclick="toggleMenu(event, 'jobmenu3')" class="text-gray-400 hover:text-gray-600">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+<div id="jobmenu3" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-10">
+<button onclick="location.href='post-job.html?edit=3'" class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm">Edit Job</button>
+<button class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm">Duplicate</button>
+<button class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-red-600">Close Job</button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-6 text-sm mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-600">person</span>
+<span><strong>32</strong> applicants</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-600">visibility</span>
+<span><strong>189</strong> views</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-purple-600">schedule</span>
+<span>Posted 5 days ago</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button onclick="location.href='employer-view-applications.html?job=3'" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition">View Applications</button>
+<button onclick="location.href='post-job.html?edit=3'" class="border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50">Edit</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+function filterJobs(type) {
+    document.querySelectorAll('button[onclick^="filterJobs"]').forEach(btn => {
+        btn.className = 'px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50';
+    });
+    event.target.className = 'px-4 py-2 bg-primary text-white rounded-lg';
+}
+function toggleMenu(event, menuId) {
+    event.stopPropagation();
+    document.querySelectorAll('[id^="jobmenu"]').forEach(m => {
+        if (m.id !== menuId) m.classList.add('hidden');
+    });
+    document.getElementById(menuId).classList.toggle('hidden');
+}
+document.addEventListener('click', () => {
+    document.querySelectorAll('[id^="jobmenu"]').forEach(m => m.classList.add('hidden'));
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Messages - JobSeek</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+<script>
+tailwind.config = {theme: {extend: {colors: {primary: '#6366f1'}}}}
+</script>
+</head>
+<body class="bg-gray-50">
+<nav class="bg-white shadow-sm sticky top-0 z-40">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex items-center gap-8">
+<a href="job-marketplace-home.html" class="flex items-center gap-2">
+<div class="size-8 text-primary"><svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"/></svg></div>
+<span class="text-xl font-bold">JobSeek</span>
+</a>
+<div class="hidden md:flex gap-6">
+<a href="employer-profile.html" class="text-gray-700 hover:text-primary">Profile</a>
+<a href="employer-dashboard.html" class="text-gray-700 hover:text-primary">Dashboard</a>
+<a href="employer-job-posts.html" class="text-gray-700 hover:text-primary">Job Posts</a>
+<a href="employer-candidates.html" class="text-gray-700 hover:text-primary">Candidates</a>
+<a href="employer-messages.html" class="text-primary font-semibold">Messages</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button onclick="location.href='employer-notifications.html'" class="relative">
+<span class="material-symbols-outlined text-gray-600">notifications</span>
+<span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">8</span>
+</button>
+<button onclick="location.href='employer-profile.html'" class="flex items-center gap-2 hover:opacity-80 transition">
+<img src="https://logo.clearbit.com/techcorp.com" class="w-8 h-8 rounded-full" alt="Company">
+<span class="hidden md:block text-sm font-medium">TechCorp Inc.</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<h1 class="text-3xl font-bold mb-6">Messages</h1>
+<div class="grid grid-cols-12 gap-6 h-[calc(100vh-200px)]">
+<div class="col-span-4 bg-white rounded-xl shadow-sm overflow-hidden">
+<div class="p-4 border-b">
+<input type="text" placeholder="Search conversations..." class="w-full h-10 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary">
+</div>
+<div class="overflow-y-auto h-full">
+<div onclick="selectChat(1)" class="p-4 border-b hover:bg-gray-50 cursor-pointer bg-blue-50">
+<div class="flex items-center gap-3">
+<img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=6366f1&color=fff" class="w-12 h-12 rounded-full">
+<div class="flex-1 min-w-0">
+<h4 class="font-semibold truncate">Sarah Johnson</h4>
+<p class="text-sm text-gray-600 truncate">Thanks for reaching out!</p>
+<span class="text-xs text-gray-500">2 hours ago</span>
+</div>
+<span class="bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">2</span>
+</div>
+</div>
+<div onclick="selectChat(2)" class="p-4 border-b hover:bg-gray-50 cursor-pointer">
+<div class="flex items-center gap-3">
+<img src="https://ui-avatars.com/api/?name=Michael+Chen&background=6366f1&color=fff" class="w-12 h-12 rounded-full">
+<div class="flex-1 min-w-0">
+<h4 class="font-semibold truncate">Michael Chen</h4>
+<p class="text-sm text-gray-600 truncate">I'd love to discuss the role</p>
+<span class="text-xs text-gray-500">1 day ago</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-8 bg-white rounded-xl shadow-sm flex flex-col">
+<div class="p-4 border-b flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=6366f1&color=fff" class="w-10 h-10 rounded-full">
+<div>
+<h4 class="font-semibold">Sarah Johnson</h4>
+<p class="text-xs text-gray-500">Applied for Senior Frontend Developer</p>
+</div>
+</div>
+<button onclick="location.href='employer-candidate-application.html?id=1'" class="text-sm text-primary hover:underline">View Application</button>
+</div>
+<div class="flex-1 overflow-y-auto p-4 space-y-4">
+<div class="flex gap-3">
+<img src="https://logo.clearbit.com/techcorp.com" class="w-8 h-8 rounded-full">
+<div class="bg-blue-50 rounded-lg p-3 max-w-md">
+<p class="text-sm">Hi Sarah, I reviewed your application and I'm impressed with your experience. Would you be available for a quick call this week?</p>
+<span class="text-xs text-gray-500 mt-1 block">Yesterday, 3:45 PM</span>
+</div>
+</div>
+<div class="flex gap-3 justify-end">
+<div class="bg-primary text-white rounded-lg p-3 max-w-md">
+<p class="text-sm">Thanks for reaching out! I'd be happy to chat. I'm available Thursday or Friday afternoon.</p>
+<span class="text-xs opacity-80 mt-1 block">Today, 10:20 AM</span>
+</div>
+<img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=6366f1&color=fff" class="w-8 h-8 rounded-full">
+</div>
+<div class="flex gap-3">
+<img src="https://logo.clearbit.com/techcorp.com" class="w-8 h-8 rounded-full">
+<div class="bg-blue-50 rounded-lg p-3 max-w-md">
+<p class="text-sm">Perfect! Let's schedule for Thursday at 2 PM. I'll send you a calendar invite.</p>
+<span class="text-xs text-gray-500 mt-1 block">Today, 10:45 AM</span>
+</div>
+</div>
+</div>
+<div class="p-4 border-t">
+<div class="flex gap-2">
+<input type="text" placeholder="Type your message..." class="flex-1 h-12 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary">
+<button class="bg-primary text-white px-6 rounded-lg hover:bg-primary/90 transition">Send</button>
+</div>
+<p class="text-xs text-gray-500 mt-2">Note: Only candidates you message first can reply to you</p>
+</div>
+</div>
+</div>
+</div>
+<script>
+function selectChat(id) {
+    document.querySelectorAll('.col-span-4 > div > div').forEach(el => el.classList.remove('bg-blue-50'));
+    event.currentTarget.classList.add('bg-blue-50');
+}
+</script>
+</body>
+</html>

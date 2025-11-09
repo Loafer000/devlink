@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salary Guide - JobSeek</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#20c997'
+}
+}
+}
+}
+</script>
+</head>
+<body class="bg-gray-50">
+<header class="sticky top-0 z-10 w-full border-b border-gray-200 bg-white/80 backdrop-blur-sm">
+<div class="mx-auto flex max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8 py-4">
+<a href="job-marketplace-home.html" class="flex items-center gap-3 hover:opacity-80 transition">
+<h2 class="text-2xl font-bold">JobSeek</h2>
+</a>
+<nav class="hidden items-center gap-8 md:flex">
+<a class="text-base font-medium hover:text-primary" href="find-job.html">Find Jobs</a>
+<a class="text-base font-medium hover:text-primary" href="company-reviews.html">Companies</a>
+<div class="relative group">
+<a href="career-resources.html" class="text-base font-medium text-primary inline-block">Resources ▾</a>
+<div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+<a href="resume-builder.html" class="block px-4 py-2 hover:bg-gray-100">Resume Builder</a>
+<a href="interview-prep.html" class="block px-4 py-2 hover:bg-gray-100">Interview Prep</a>
+<a href="career-advice.html" class="block px-4 py-2 hover:bg-gray-100">Career Advice</a>
+<a href="salary-guide.html" class="block px-4 py-2 hover:bg-gray-100">Salary Guide</a>
+</div>
+</div>
+</nav>
+<a href="login.html" class="px-6 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition">Sign In</a>
+</div>
+</header>
+
+<main class="w-full">
+<section class="py-16 bg-gradient-to-r from-primary to-emerald-600 text-white">
+<div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center">
+<h1 class="text-5xl font-extrabold mb-4">Salary Guide 2024</h1>
+<p class="text-xl max-w-2xl mx-auto">Know your worth and negotiate with confidence</p>
+</div>
+</section>
+
+<section class="py-16 bg-white">
+<div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8">
+<h2 class="text-3xl font-bold mb-4">Know Your Salary</h2>
+<p class="text-gray-700 mb-6">Get personalized salary insights based on your role, experience, and location</p>
+<div class="space-y-4">
+<input class="w-full h-12 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Job Title" type="text"/>
+<select class="w-full h-12 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary">
+<option>Industry/Domain</option>
+<option>Technology & IT</option>
+<option>Design/Media/Creative</option>
+<option>Writing & Content</option>
+<option>Marketing & Sales</option>
+<option>Finance & Legal</option>
+<option>Business/Strategy/Operations</option>
+<option>Engineering/Science/Architecture</option>
+<option>Education & Training</option>
+<option>Healthcare & Wellness</option>
+<option>Logistics & Infrastructure</option>
+<option>Public Sector & Impact</option>
+<option>Research & Science</option>
+<option>Trades & Services</option>
+<option>Support & Admin</option>
+</select>
+<input class="w-full h-12 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Company (Optional)" type="text"/>
+<select class="w-full h-12 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary">
+<option>Experience Level</option>
+<option>Entry Level (0-2 years)</option>
+<option>Mid Level (3-5 years)</option>
+<option>Senior Level (6-10 years)</option>
+<option>Lead/Principal (10+ years)</option>
+</select>
+<input class="w-full h-12 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Location (City, State)" type="text"/>
+<button class="w-full h-12 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-colors">Get Salary Estimate</button>
+</div>
+</div>
+
+<div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8">
+<h2 class="text-3xl font-bold mb-4">Submit Your Salary</h2>
+<p class="text-gray-700 mb-6">Help others by anonymously sharing your salary information</p>
+<div class="space-y-4">
+<input class="w-full h-12 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Job Title" type="text"/>
+<select class="w-full h-12 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary">
+<option>Industry/Domain</option>
+<option>Technology & IT</option>
+<option>Design/Media/Creative</option>
+<option>Writing & Content</option>
+<option>Marketing & Sales</option>
+<option>Finance & Legal</option>
+<option>Business/Strategy/Operations</option>
+<option>Engineering/Science/Architecture</option>
+<option>Education & Training</option>
+<option>Healthcare & Wellness</option>
+<option>Logistics & Infrastructure</option>
+<option>Public Sector & Impact</option>
+<option>Research & Science</option>
+<option>Trades & Services</option>
+<option>Support & Admin</option>
+</select>
+<input class="w-full h-12 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Company (Optional)" type="text"/>
+<input class="w-full h-12 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Annual Salary ($)" type="number"/>
+<select class="w-full h-12 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary">
+<option>Years of Experience</option>
+<option>0-2 years</option>
+<option>3-5 years</option>
+<option>6-10 years</option>
+<option>10+ years</option>
+</select>
+<input class="w-full h-12 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary" placeholder="Location (City, State)" type="text"/>
+<select class="w-full h-12 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary">
+<option>Employment Type</option>
+<option>Full-time</option>
+<option>Part-time</option>
+<option>Contract-based</option>
+<option>Internship</option>
+<option>Remote</option>
+<option>Hybrid</option>
+<option>On-site</option>
+<option>Gig/Task-based</option>
+<option>Consultant</option>
+<option>Volunteer</option>
+<option>Shift-based</option>
+</select>
+<button class="w-full h-12 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-colors">Submit Anonymously</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-16 bg-gray-50">
+<div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold mb-8">Average Salaries by Role</h2>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white rounded-xl p-6 shadow">
+<h3 class="text-xl font-bold mb-2">Software Engineer</h3>
+<p class="text-3xl font-bold text-primary mb-2">$95k - $160k</p>
+<p class="text-sm text-gray-600">Average: $125k/year</p>
+<div class="mt-4 space-y-2 text-sm">
+<div class="flex justify-between"><span>Entry Level:</span><span class="font-semibold">$75k - $95k</span></div>
+<div class="flex justify-between"><span>Mid Level:</span><span class="font-semibold">$95k - $140k</span></div>
+<div class="flex justify-between"><span>Senior Level:</span><span class="font-semibold">$140k - $200k</span></div>
+</div>
+</div>
+
+<div class="bg-white rounded-xl p-6 shadow">
+<h3 class="text-xl font-bold mb-2">Product Manager</h3>
+<p class="text-3xl font-bold text-primary mb-2">$90k - $150k</p>
+<p class="text-sm text-gray-600">Average: $118k/year</p>
+<div class="mt-4 space-y-2 text-sm">
+<div class="flex justify-between"><span>Entry Level:</span><span class="font-semibold">$70k - $90k</span></div>
+<div class="flex justify-between"><span>Mid Level:</span><span class="font-semibold">$90k - $130k</span></div>
+<div class="flex justify-between"><span>Senior Level:</span><span class="font-semibold">$130k - $180k</span></div>
+</div>
+</div>
+
+<div class="bg-white rounded-xl p-6 shadow">
+<h3 class="text-xl font-bold mb-2">UX Designer</h3>
+<p class="text-3xl font-bold text-primary mb-2">$70k - $130k</p>
+<p class="text-sm text-gray-600">Average: $95k/year</p>
+<div class="mt-4 space-y-2 text-sm">
+<div class="flex justify-between"><span>Entry Level:</span><span class="font-semibold">$55k - $75k</span></div>
+<div class="flex justify-between"><span>Mid Level:</span><span class="font-semibold">$75k - $110k</span></div>
+<div class="flex justify-between"><span>Senior Level:</span><span class="font-semibold">$110k - $150k</span></div>
+</div>
+</div>
+
+<div class="bg-white rounded-xl p-6 shadow">
+<h3 class="text-xl font-bold mb-2">Data Scientist</h3>
+<p class="text-3xl font-bold text-primary mb-2">$85k - $145k</p>
+<p class="text-sm text-gray-600">Average: $112k/year</p>
+<div class="mt-4 space-y-2 text-sm">
+<div class="flex justify-between"><span>Entry Level:</span><span class="font-semibold">$70k - $90k</span></div>
+<div class="flex justify-between"><span>Mid Level:</span><span class="font-semibold">$90k - $130k</span></div>
+<div class="flex justify-between"><span>Senior Level:</span><span class="font-semibold">$130k - $170k</span></div>
+</div>
+</div>
+
+<div class="bg-white rounded-xl p-6 shadow">
+<h3 class="text-xl font-bold mb-2">Marketing Manager</h3>
+<p class="text-3xl font-bold text-primary mb-2">$65k - $120k</p>
+<p class="text-sm text-gray-600">Average: $88k/year</p>
+<div class="mt-4 space-y-2 text-sm">
+<div class="flex justify-between"><span>Entry Level:</span><span class="font-semibold">$50k - $70k</span></div>
+<div class="flex justify-between"><span>Mid Level:</span><span class="font-semibold">$70k - $100k</span></div>
+<div class="flex justify-between"><span>Senior Level:</span><span class="font-semibold">$100k - $140k</span></div>
+</div>
+</div>
+
+<div class="bg-white rounded-xl p-6 shadow">
+<h3 class="text-xl font-bold mb-2">Sales Representative</h3>
+<p class="text-3xl font-bold text-primary mb-2">$55k - $110k</p>
+<p class="text-sm text-gray-600">Average: $78k/year (base + commission)</p>
+<div class="mt-4 space-y-2 text-sm">
+<div class="flex justify-between"><span>Entry Level:</span><span class="font-semibold">$45k - $65k</span></div>
+<div class="flex justify-between"><span>Mid Level:</span><span class="font-semibold">$65k - $95k</span></div>
+<div class="flex justify-between"><span>Senior Level:</span><span class="font-semibold">$95k - $150k</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-16 bg-white">
+<div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold mb-8">Salary by Location</h2>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="bg-gray-50 rounded-xl p-6">
+<h3 class="text-xl font-bold mb-4">Top Paying Cities</h3>
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<span class="font-semibold">San Francisco, CA</span>
+<span class="text-primary font-bold">+35%</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-semibold">New York, NY</span>
+<span class="text-primary font-bold">+28%</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-semibold">Seattle, WA</span>
+<span class="text-primary font-bold">+22%</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-semibold">Boston, MA</span>
+<span class="text-primary font-bold">+18%</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-semibold">Austin, TX</span>
+<span class="text-primary font-bold">+12%</span>
+</div>
+</div>
+</div>
+
+<div class="bg-gray-50 rounded-xl p-6">
+<h3 class="text-xl font-bold mb-4">Remote Work Impact</h3>
+<p class="text-gray-600 mb-4">Remote positions typically offer:</p>
+<ul class="space-y-2 text-gray-700">
+<li>• 10-15% lower than top-tier cities</li>
+<li>• Location-based adjustments common</li>
+<li>• More flexibility in negotiations</li>
+<li>• Additional benefits to offset salary</li>
+<li>• Growing trend toward location-agnostic pay</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-16">
+<div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold mb-8">Negotiation Tips</h2>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-gradient-to-br from-blue-50 to-green-50 rounded-xl p-8">
+<h3 class="text-2xl font-bold mb-6">Do's</h3>
+<ul class="space-y-3 text-gray-700">
+<li class="flex items-start gap-3">
+<span class="text-primary font-bold text-xl">✓</span>
+<span>Research market rates thoroughly before negotiating</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-primary font-bold text-xl">✓</span>
+<span>Consider total compensation, not just base salary</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-primary font-bold text-xl">✓</span>
+<span>Practice your negotiation conversation beforehand</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-primary font-bold text-xl">✓</span>
+<span>Be prepared to justify your requested salary</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-primary font-bold text-xl">✓</span>
+<span>Get everything in writing before accepting</span>
+</li>
+</ul>
+</div>
+
+<div class="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl p-8">
+<h3 class="text-2xl font-bold mb-6">Don'ts</h3>
+<ul class="space-y-3 text-gray-700">
+<li class="flex items-start gap-3">
+<span class="text-red-500 font-bold text-xl">✗</span>
+<span>Don't share your current salary unless required</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-red-500 font-bold text-xl">✗</span>
+<span>Don't accept the first offer immediately</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-red-500 font-bold text-xl">✗</span>
+<span>Don't make ultimatums or threats</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-red-500 font-bold text-xl">✗</span>
+<span>Don't negotiate via email if possible</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-red-500 font-bold text-xl">✗</span>
+<span>Don't forget to negotiate benefits and perks</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-16 bg-white">
+<div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold mb-8">Beyond Base Salary</h2>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="bg-gray-50 rounded-xl p-6">
+<h3 class="text-xl font-bold mb-3">Equity & Stock Options</h3>
+<p class="text-gray-600">Understand vesting schedules, strike prices, and potential value</p>
+</div>
+<div class="bg-gray-50 rounded-xl p-6">
+<h3 class="text-xl font-bold mb-3">Bonuses</h3>
+<p class="text-gray-600">Performance bonuses, signing bonuses, and annual incentives</p>
+</div>
+<div class="bg-gray-50 rounded-xl p-6">
+<h3 class="text-xl font-bold mb-3">Benefits</h3>
+<p class="text-gray-600">Health insurance, 401k matching, PTO, and other perks</p>
+</div>
+<div class="bg-gray-50 rounded-xl p-6">
+<h3 class="text-xl font-bold mb-3">Professional Development</h3>
+<p class="text-gray-600">Training budgets, conference attendance, and education reimbursement</p>
+</div>
+<div class="bg-gray-50 rounded-xl p-6">
+<h3 class="text-xl font-bold mb-3">Work-Life Balance</h3>
+<p class="text-gray-600">Flexible hours, remote work options, and unlimited PTO</p>
+</div>
+<div class="bg-gray-50 rounded-xl p-6">
+<h3 class="text-xl font-bold mb-3">Other Perks</h3>
+<p class="text-gray-600">Gym memberships, commuter benefits, and wellness programs</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="w-full border-t border-gray-200 py-8 bg-white">
+<div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-600">
+<p>&copy; 2024 JobSeek. All rights reserved.</p>
+</div>
+</footer>
+</body>
+</html>
